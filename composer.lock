@@ -4,8 +4,57 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "88970a0117c062eed55fa8728fc43833",
+    "content-hash": "d71251fb8283e883ad4d94f90e9bf0d4",
     "packages": [
+        {
+            "name": "avplab/php-html-builder",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/avplab/php-html-builder.git",
+                "reference": "65f9d0c096ed1f7acfb109a1a99505f9f015e4c7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/avplab/php-html-builder/zipball/65f9d0c096ed1f7acfb109a1a99505f9f015e4c7",
+                "reference": "65f9d0c096ed1f7acfb109a1a99505f9f015e4c7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.2"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "AvpLab\\": "./src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrew Polupanov",
+                    "email": "andrewfortalking@gmail.com"
+                }
+            ],
+            "description": "PHP Html builder simplifies creation of an html code in php scripts. Allows to build (or generate) the html in simple natural way, similarly as create a html page.",
+            "homepage": "http://github.com/avplab/php-html-builder",
+            "keywords": [
+                "builder",
+                "html",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/avplab/php-html-builder/issues",
+                "source": "https://github.com/avplab/php-html-builder/tree/v2.0.3"
+            },
+            "time": "2024-06-27T03:13:11+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.13.1",
@@ -1054,6 +1103,860 @@
             "time": "2025-02-03T10:55:03+00:00"
         },
         {
+            "name": "jaxon-php/jaxon-annotations",
+            "version": "v3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jaxon-php/jaxon-annotations.git",
+                "reference": "dc1e3a698ff81504a4ffc0ea4004a5cd3c82c289"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jaxon-php/jaxon-annotations/zipball/dc1e3a698ff81504a4ffc0ea4004a5cd3c82c289",
+                "reference": "dc1e3a698ff81504a4ffc0ea4004a5cd3c82c289",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "jaxon-php/jaxon-core": "^5.0",
+                "mindplay/annotations": "^1.3",
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.5",
+                "phpunit/phpcov": "^8.2",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/register.php"
+                ],
+                "psr-4": {
+                    "Jaxon\\Annotations\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Thierry Feuzeu"
+                }
+            ],
+            "description": "Annotations support for the Jaxon ajax PHP library",
+            "homepage": "https://www.jaxon-php.org",
+            "keywords": [
+                "Jaxon",
+                "ajax",
+                "annotations",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/jaxon-php/jaxon-annotations/issues",
+                "source": "https://github.com/jaxon-php/jaxon-annotations"
+            },
+            "time": "2025-06-24T01:23:42+00:00"
+        },
+        {
+            "name": "jaxon-php/jaxon-config",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jaxon-php/jaxon-config.git",
+                "reference": "d2a0781943eeae324d28061c726dddd37ca6abb8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jaxon-php/jaxon-config/zipball/d2a0781943eeae324d28061c726dddd37ca6abb8",
+                "reference": "d2a0781943eeae324d28061c726dddd37ca6abb8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.5",
+                "phpunit/phpcov": "^8.2",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jaxon\\Config\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Thierry Feuzeu"
+                }
+            ],
+            "description": "Save config options in immutable objects.",
+            "homepage": "https://www.jaxon-php.org",
+            "keywords": [
+                "config",
+                "immutable",
+                "options"
+            ],
+            "support": {
+                "issues": "https://github.com/jaxon-php/jaxon-config/issues",
+                "source": "https://github.com/jaxon-php/jaxon-config"
+            },
+            "time": "2025-03-03T12:04:35+00:00"
+        },
+        {
+            "name": "jaxon-php/jaxon-core",
+            "version": "v5.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jaxon-php/jaxon-core.git",
+                "reference": "139bd74aa07bd7be1d86ba127d0634b0602d9d22"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jaxon-php/jaxon-core/zipball/139bd74aa07bd7be1d86ba127d0634b0602d9d22",
+                "reference": "139bd74aa07bd7be1d86ba127d0634b0602d9d22",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "jaxon-php/jaxon-config": "^1.0",
+                "jaxon-php/jaxon-utils": "^2.0",
+                "nyholm/psr7": "^1.8",
+                "nyholm/psr7-server": "^1.1",
+                "php": ">=8.0",
+                "pimple/pimple": "^3.0",
+                "psr/container": "^1.0|^2.0",
+                "psr/http-message": "^1.0|^2.0",
+                "psr/http-server-handler": "^1.0|^2.0",
+                "psr/http-server-middleware": "^1.0|^2.0",
+                "psr/log": "^1.0|^2.0|^3.0"
+            },
+            "require-dev": {
+                "jaxon-php/jaxon-dialogs": "^5.0",
+                "jaxon-php/jaxon-upload": "^2.0",
+                "php-coveralls/php-coveralls": "^2.5",
+                "phpunit/phpcov": "^8.2",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/jaxon_ns.php",
+                    "src/jaxon_fn.php"
+                ],
+                "psr-4": {
+                    "Jaxon\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Thierry Feuzeu"
+                },
+                {
+                    "name": "Jared White"
+                },
+                {
+                    "name": "J. Max Wilson"
+                },
+                {
+                    "name": "Joseph Woolley"
+                },
+                {
+                    "name": "Steffen Konerow"
+                }
+            ],
+            "description": "Jaxon is an open source PHP library for easily creating Ajax web applications",
+            "homepage": "https://www.jaxon-php.org",
+            "keywords": [
+                "Jaxon",
+                "ajax",
+                "asynchronous",
+                "php",
+                "xajax"
+            ],
+            "support": {
+                "issues": "https://github.com/jaxon-php/jaxon-core/issues",
+                "source": "https://github.com/jaxon-php/jaxon-core"
+            },
+            "time": "2025-08-14T03:44:30+00:00"
+        },
+        {
+            "name": "jaxon-php/jaxon-dialogs",
+            "version": "v5.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jaxon-php/jaxon-dialogs.git",
+                "reference": "f392d432432cb73e0540d3c348cb29734df65960"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jaxon-php/jaxon-dialogs/zipball/f392d432432cb73e0540d3c348cb29734df65960",
+                "reference": "f392d432432cb73e0540d3c348cb29734df65960",
+                "shasum": ""
+            },
+            "require": {
+                "jaxon-php/jaxon-core": "^5.0",
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.5",
+                "phpunit/phpcov": "^8.2",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/register.php"
+                ],
+                "psr-4": {
+                    "Jaxon\\Dialogs\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Thierry Feuzeu"
+                }
+            ],
+            "description": "Modal, alerts and confirmation dialogs for Jaxon with various javascript libraries",
+            "homepage": "https://github.com/jaxon-php/jaxon-dialogs",
+            "keywords": [
+                "Jaxon",
+                "ajax",
+                "alert",
+                "confirmation",
+                "dialog",
+                "javascript",
+                "modal",
+                "php",
+                "xajax"
+            ],
+            "support": {
+                "issues": "https://github.com/jaxon-php/jaxon-dialogs/issues",
+                "source": "https://github.com/jaxon-php/jaxon-dialogs"
+            },
+            "time": "2025-07-22T12:25:22+00:00"
+        },
+        {
+            "name": "jaxon-php/jaxon-laravel",
+            "version": "v5.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jaxon-php/jaxon-laravel.git",
+                "reference": "63ef31809bf52f9e95d9a6c382462fcff57c3b85"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jaxon-php/jaxon-laravel/zipball/63ef31809bf52f9e95d9a6c382462fcff57c3b85",
+                "reference": "63ef31809bf52f9e95d9a6c382462fcff57c3b85",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "7.*|8.*|9.*|10.*|11.*|12.*",
+                "jaxon-php/jaxon-core": "^5.0"
+            },
+            "provide": {
+                "jaxon-php/jaxon-view-blade": "^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Jaxon\\Laravel\\JaxonServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/functions.php"
+                ],
+                "psr-4": {
+                    "Jaxon\\Laravel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Thierry Feuzeu",
+                    "email": "thierry.feuzeu@lagdo-software.net"
+                }
+            ],
+            "description": "Jaxon library integration for the Laravel framework",
+            "keywords": [
+                "Jaxon",
+                "ajax",
+                "laravel",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/jaxon-php/jaxon-laravel/issues",
+                "source": "https://github.com/jaxon-php/jaxon-laravel/tree/v5.0.6"
+            },
+            "time": "2025-07-23T14:47:22+00:00"
+        },
+        {
+            "name": "jaxon-php/jaxon-upload",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jaxon-php/jaxon-upload.git",
+                "reference": "71974fe505d17f21b159d3e8b9b69e37e1c7e949"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jaxon-php/jaxon-upload/zipball/71974fe505d17f21b159d3e8b9b69e37e1c7e949",
+                "reference": "71974fe505d17f21b159d3e8b9b69e37e1c7e949",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "jaxon-php/jaxon-core": "^5.0",
+                "league/flysystem": "^3.0|^2.2",
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.5",
+                "phpunit/phpcov": "^8.2",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/register.php"
+                ],
+                "psr-4": {
+                    "Jaxon\\Upload\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Thierry Feuzeu"
+                }
+            ],
+            "description": "File upload with the Jaxon ajax PHP library",
+            "homepage": "https://www.jaxon-php.org",
+            "keywords": [
+                "Jaxon",
+                "ajax",
+                "php",
+                "upload"
+            ],
+            "support": {
+                "issues": "https://github.com/jaxon-php/jaxon-upload/issues",
+                "source": "https://github.com/jaxon-php/jaxon-upload"
+            },
+            "time": "2025-06-24T00:37:41+00:00"
+        },
+        {
+            "name": "jaxon-php/jaxon-utils",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jaxon-php/jaxon-utils.git",
+                "reference": "3a877f2e7dae410377b65a252c50cf04fe2091f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jaxon-php/jaxon-utils/zipball/3a877f2e7dae410377b65a252c50cf04fe2091f0",
+                "reference": "3a877f2e7dae410377b65a252c50cf04fe2091f0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0",
+                "tedivm/jshrink": "^1.4"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.5",
+                "phpunit/phpcov": "^8.2",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jaxon\\Utils\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Thierry Feuzeu"
+                }
+            ],
+            "description": "Utilities for the Jaxon library.",
+            "homepage": "https://www.jaxon-php.org",
+            "keywords": [
+                "config",
+                "minifier",
+                "template",
+                "translation",
+                "validation"
+            ],
+            "support": {
+                "issues": "https://github.com/jaxon-php/jaxon-utils/issues",
+                "source": "https://github.com/jaxon-php/jaxon-utils"
+            },
+            "time": "2025-05-25T08:40:47+00:00"
+        },
+        {
+            "name": "lagdo/dbadmin-driver",
+            "version": "v0.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lagdo/dbadmin-driver.git",
+                "reference": "8674572f58cc676aed855b3e0a257b42ea4ae28a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lagdo/dbadmin-driver/zipball/8674572f58cc676aed855b3e0a257b42ea4ae28a",
+                "reference": "8674572f58cc676aed855b3e0a257b42ea4ae28a",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lagdo\\DbAdmin\\Driver\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Thierry Feuzeu",
+                    "email": "thierry.feuzeu@gmail.com"
+                }
+            ],
+            "description": "Common classes for DbAdmin drivers.",
+            "homepage": "https://github.com/lagdo/dbadmin-driver",
+            "keywords": [
+                "admin",
+                "adminer",
+                "dashboard",
+                "database",
+                "sql"
+            ],
+            "support": {
+                "issues": "https://github.com/lagdo/dbadmin-driver/issues",
+                "source": "https://github.com/lagdo/dbadmin-driver"
+            },
+            "time": "2025-08-13T22:49:55+00:00"
+        },
+        {
+            "name": "lagdo/dbadmin-driver-mysql",
+            "version": "v0.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lagdo/dbadmin-driver-mysql.git",
+                "reference": "be2a6f1d2f116006f9d6ddbc30cb1fa9c4cfcb44"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lagdo/dbadmin-driver-mysql/zipball/be2a6f1d2f116006f9d6ddbc30cb1fa9c4cfcb44",
+                "reference": "be2a6f1d2f116006f9d6ddbc30cb1fa9c4cfcb44",
+                "shasum": ""
+            },
+            "require": {
+                "lagdo/dbadmin-driver": "^0.12"
+            },
+            "require-dev": {
+                "behat/behat": "^3.10",
+                "dvdoug/behat-code-coverage": "5.0.*",
+                "php-coveralls/php-coveralls": "^2.5",
+                "phpunit/phpcov": "^8.2",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/register.php"
+                ],
+                "psr-4": {
+                    "Lagdo\\DbAdmin\\Driver\\MySql\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Thierry Feuzeu",
+                    "email": "thierry.feuzeu@gmail.com"
+                }
+            ],
+            "description": "DbAdmin driver for MySQL.",
+            "homepage": "https://github.com/lagdo/dbadmin-driver-mysql",
+            "keywords": [
+                "admin",
+                "adminer",
+                "dashboard",
+                "database",
+                "mysql",
+                "sql"
+            ],
+            "support": {
+                "issues": "https://github.com/lagdo/dbadmin-driver-mysql/issues",
+                "source": "https://github.com/lagdo/dbadmin-driver-mysql"
+            },
+            "time": "2025-08-18T19:21:44+00:00"
+        },
+        {
+            "name": "lagdo/dbadmin-driver-pgsql",
+            "version": "v0.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lagdo/dbadmin-driver-pgsql.git",
+                "reference": "31b3af62000c5cbb72bd0462b8cd577ade9b5009"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lagdo/dbadmin-driver-pgsql/zipball/31b3af62000c5cbb72bd0462b8cd577ade9b5009",
+                "reference": "31b3af62000c5cbb72bd0462b8cd577ade9b5009",
+                "shasum": ""
+            },
+            "require": {
+                "lagdo/dbadmin-driver": "^0.12"
+            },
+            "require-dev": {
+                "behat/behat": "^3.10",
+                "dvdoug/behat-code-coverage": "5.0.*",
+                "php-coveralls/php-coveralls": "^2.5",
+                "phpunit/phpcov": "^8.2",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/register.php"
+                ],
+                "psr-4": {
+                    "Lagdo\\DbAdmin\\Driver\\PgSql\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Thierry Feuzeu",
+                    "email": "thierry.feuzeu@gmail.com"
+                }
+            ],
+            "description": "DbAdmin driver for PostgreSQL.",
+            "homepage": "https://github.com/lagdo/dbadmin-driver-pgsql",
+            "keywords": [
+                "admin",
+                "adminer",
+                "dashboard",
+                "database",
+                "postgresql",
+                "sql"
+            ],
+            "support": {
+                "issues": "https://github.com/lagdo/dbadmin-driver-pgsql/issues",
+                "source": "https://github.com/lagdo/dbadmin-driver-pgsql"
+            },
+            "time": "2025-08-18T19:21:44+00:00"
+        },
+        {
+            "name": "lagdo/dbadmin-driver-sqlite",
+            "version": "v0.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lagdo/dbadmin-driver-sqlite.git",
+                "reference": "d636241cf331ec4912e04b307b3ca7686052ac13"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lagdo/dbadmin-driver-sqlite/zipball/d636241cf331ec4912e04b307b3ca7686052ac13",
+                "reference": "d636241cf331ec4912e04b307b3ca7686052ac13",
+                "shasum": ""
+            },
+            "require": {
+                "lagdo/dbadmin-driver": "^0.12"
+            },
+            "require-dev": {
+                "behat/behat": "^3.10",
+                "dvdoug/behat-code-coverage": "5.0.*",
+                "php-coveralls/php-coveralls": "^2.5",
+                "phpunit/phpcov": "^8.2",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/register.php"
+                ],
+                "psr-4": {
+                    "Lagdo\\DbAdmin\\Driver\\Sqlite\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Thierry Feuzeu",
+                    "email": "thierry.feuzeu@gmail.com"
+                }
+            ],
+            "description": "DbAdmin driver for SQLite.",
+            "homepage": "https://github.com/lagdo/dbadmin-driver-sqlite",
+            "keywords": [
+                "admin",
+                "adminer",
+                "dashboard",
+                "database",
+                "sql",
+                "sqlite"
+            ],
+            "support": {
+                "issues": "https://github.com/lagdo/dbadmin-driver-sqlite/issues",
+                "source": "https://github.com/lagdo/dbadmin-driver-sqlite"
+            },
+            "time": "2025-08-18T19:21:44+00:00"
+        },
+        {
+            "name": "lagdo/jaxon-dbadmin",
+            "version": "0.14.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lagdo/jaxon-dbadmin.git",
+                "reference": "368bd5cd70f224c4c2957a127bc2d38852f13193"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lagdo/jaxon-dbadmin/zipball/368bd5cd70f224c4c2957a127bc2d38852f13193",
+                "reference": "368bd5cd70f224c4c2957a127bc2d38852f13193",
+                "shasum": ""
+            },
+            "require": {
+                "ext-iconv": "*",
+                "ext-json": "*",
+                "jaxon-php/jaxon-annotations": "^3.0",
+                "jaxon-php/jaxon-core": "^5.0",
+                "jaxon-php/jaxon-dialogs": "^5.0",
+                "lagdo/dbadmin-driver": "^0.12",
+                "lagdo/jaxon-ui-builder": "^0.1",
+                "lagdo/ui-builder": "^0.2",
+                "php": ">=8.0.0"
+            },
+            "require-dev": {
+                "behat/behat": "^3.10",
+                "dvdoug/behat-code-coverage": "5.0.*",
+                "php-coveralls/php-coveralls": "^2.5",
+                "phpunit/phpcov": "^8.2",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "application",
+            "autoload": {
+                "psr-4": {
+                    "Lagdo\\DbAdmin\\": "src/",
+                    "Lagdo\\DbAdmin\\Ui\\": "app/ui/",
+                    "Lagdo\\DbAdmin\\Ajax\\": "app/ajax/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Thierry Feuzeu",
+                    "email": "thierry.feuzeu@gmail.com"
+                }
+            ],
+            "description": "Database management dashboard based on Jaxon and Adminer",
+            "homepage": "https://github.com/lagdo/jaxon-dbadmin",
+            "keywords": [
+                "Jaxon",
+                "admin",
+                "ajax",
+                "dashboard",
+                "database",
+                "mysql",
+                "postgresql",
+                "sql",
+                "sqlite"
+            ],
+            "support": {
+                "issues": "https://github.com/lagdo/jaxon-dbadmin/issues",
+                "source": "https://github.com/lagdo/jaxon-dbadmin"
+            },
+            "time": "2025-08-18T19:21:44+00:00"
+        },
+        {
+            "name": "lagdo/jaxon-ui-builder",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lagdo/jaxon-ui-builder.git",
+                "reference": "10dbf1e990113140c97bbb555de70e051266a2e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lagdo/jaxon-ui-builder/zipball/10dbf1e990113140c97bbb555de70e051266a2e8",
+                "reference": "10dbf1e990113140c97bbb555de70e051266a2e8",
+                "shasum": ""
+            },
+            "require": {
+                "jaxon-php/jaxon-core": "^5.0",
+                "lagdo/ui-builder": "^0.2",
+                "php": ">=8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/register.php"
+                ],
+                "psr-4": {
+                    "Lagdo\\UiBuilder\\Jaxon\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thierry Feuzeu",
+                    "email": "thierry.feuzeu@gmail.com"
+                }
+            ],
+            "description": "UI Builder helpers for Jaxon custom attributes.",
+            "homepage": "https://github.com/lagdo/jaxon-ui-builder",
+            "keywords": [
+                "Jaxon",
+                "builder",
+                "html",
+                "ui"
+            ],
+            "support": {
+                "issues": "https://github.com/lagdo/jaxon-ui-builder/issues",
+                "source": "https://github.com/lagdo/jaxon-ui-builder"
+            },
+            "time": "2025-08-18T19:06:35+00:00"
+        },
+        {
+            "name": "lagdo/ui-builder",
+            "version": "v0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lagdo/ui-builder.git",
+                "reference": "ad7356dbe2378657fd1571130af90420ef5e03bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lagdo/ui-builder/zipball/ad7356dbe2378657fd1571130af90420ef5e03bb",
+                "reference": "ad7356dbe2378657fd1571130af90420ef5e03bb",
+                "shasum": ""
+            },
+            "require": {
+                "avplab/php-html-builder": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lagdo\\UiBuilder\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thierry Feuzeu",
+                    "email": "thierry.feuzeu@gmail.com"
+                }
+            ],
+            "description": "A customizable and extensible HTML UI builder.",
+            "homepage": "https://github.com/lagdo/ui-builder",
+            "keywords": [
+                "builder",
+                "html",
+                "ui"
+            ],
+            "support": {
+                "issues": "https://github.com/lagdo/ui-builder/issues",
+                "source": "https://github.com/lagdo/ui-builder"
+            },
+            "time": "2025-08-18T19:02:04+00:00"
+        },
+        {
+            "name": "lagdo/ui-builder-bootstrap5",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lagdo/ui-builder-bootstrap5.git",
+                "reference": "bb4708913dfff6fdba98f782c40100bca62e06db"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lagdo/ui-builder-bootstrap5/zipball/bb4708913dfff6fdba98f782c40100bca62e06db",
+                "reference": "bb4708913dfff6fdba98f782c40100bca62e06db",
+                "shasum": ""
+            },
+            "require": {
+                "lagdo/ui-builder": "^0.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lagdo\\UiBuilder\\Bootstrap5\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thierry Feuzeu",
+                    "email": "thierry.feuzeu@gmail.com"
+                }
+            ],
+            "description": "UI Builder extensions for the Bootstrap 5 framework.",
+            "homepage": "https://github.com/lagdo/ui-builder-bootstrap",
+            "keywords": [
+                "UI Builder",
+                "bootstrap",
+                "html"
+            ],
+            "support": {
+                "issues": "https://github.com/lagdo/ui-builder-bootstrap/issues",
+                "source": "https://github.com/lagdo/ui-builder-bootstrap"
+            },
+            "time": "2025-08-18T19:06:35+00:00"
+        },
+        {
             "name": "laravel/framework",
             "version": "v12.24.0",
             "source": {
@@ -2008,6 +2911,60 @@
             "time": "2024-12-08T08:18:47+00:00"
         },
         {
+            "name": "mindplay/annotations",
+            "version": "1.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-annotations/php-annotations.git",
+                "reference": "6d5bfc47218cb013b0b3026374c6ffb0b1cad989"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-annotations/php-annotations/zipball/6d5bfc47218cb013b0b3026374c6ffb0b1cad989",
+                "reference": "6d5bfc47218cb013b0b3026374c6ffb0b1cad989",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/php-code-coverage": "~1.2.1",
+                "phpunit/php-file-iterator": ">=1.3.0@stable <2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "mindplay\\annotations\\": "src\\annotations"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Rasmus Schultz",
+                    "email": "rasmus@mindplay.dk"
+                }
+            ],
+            "description": "Industrial-strength annotations for PHP",
+            "homepage": "http://blog.mindplay.dk/",
+            "keywords": [
+                "annotations",
+                "framework"
+            ],
+            "support": {
+                "issues": "https://github.com/php-annotations/php-annotations/issues",
+                "source": "https://github.com/php-annotations/php-annotations/tree/1.3.4"
+            },
+            "time": "2024-02-17T16:21:25+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "3.9.0",
             "source": {
@@ -2512,6 +3469,150 @@
             "time": "2025-05-08T08:14:37+00:00"
         },
         {
+            "name": "nyholm/psr7",
+            "version": "1.8.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Nyholm/psr7.git",
+                "reference": "a71f2b11690f4b24d099d6b16690a90ae14fc6f3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Nyholm/psr7/zipball/a71f2b11690f4b24d099d6b16690a90ae14fc6f3",
+                "reference": "a71f2b11690f4b24d099d6b16690a90ae14fc6f3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2",
+                "psr/http-factory": "^1.0",
+                "psr/http-message": "^1.1 || ^2.0"
+            },
+            "provide": {
+                "php-http/message-factory-implementation": "1.0",
+                "psr/http-factory-implementation": "1.0",
+                "psr/http-message-implementation": "1.0"
+            },
+            "require-dev": {
+                "http-interop/http-factory-tests": "^0.9",
+                "php-http/message-factory": "^1.0",
+                "php-http/psr7-integration-tests": "^1.0",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.4",
+                "symfony/error-handler": "^4.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Nyholm\\Psr7\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com"
+                },
+                {
+                    "name": "Martijn van der Ven",
+                    "email": "martijn@vanderven.se"
+                }
+            ],
+            "description": "A fast PHP7 implementation of PSR-7",
+            "homepage": "https://tnyholm.se",
+            "keywords": [
+                "psr-17",
+                "psr-7"
+            ],
+            "support": {
+                "issues": "https://github.com/Nyholm/psr7/issues",
+                "source": "https://github.com/Nyholm/psr7/tree/1.8.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/Zegnat",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nyholm",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-09-09T07:06:30+00:00"
+        },
+        {
+            "name": "nyholm/psr7-server",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Nyholm/psr7-server.git",
+                "reference": "4335801d851f554ca43fa6e7d2602141538854dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Nyholm/psr7-server/zipball/4335801d851f554ca43fa6e7d2602141538854dc",
+                "reference": "4335801d851f554ca43fa6e7d2602141538854dc",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 || ^8.0",
+                "psr/http-factory": "^1.0",
+                "psr/http-message": "^1.0 || ^2.0"
+            },
+            "require-dev": {
+                "nyholm/nsa": "^1.1",
+                "nyholm/psr7": "^1.3",
+                "phpunit/phpunit": "^7.0 || ^8.5 || ^9.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Nyholm\\Psr7Server\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com"
+                },
+                {
+                    "name": "Martijn van der Ven",
+                    "email": "martijn@vanderven.se"
+                }
+            ],
+            "description": "Helper classes to handle PSR-7 server requests",
+            "homepage": "http://tnyholm.se",
+            "keywords": [
+                "psr-17",
+                "psr-7"
+            ],
+            "support": {
+                "issues": "https://github.com/Nyholm/psr7-server/issues",
+                "source": "https://github.com/Nyholm/psr7-server/tree/1.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/Zegnat",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nyholm",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-11-08T09:30:43+00:00"
+        },
+        {
             "name": "phpoption/phpoption",
             "version": "1.9.3",
             "source": {
@@ -2585,6 +3686,59 @@
                 }
             ],
             "time": "2024-07-20T21:41:07+00:00"
+        },
+        {
+            "name": "pimple/pimple",
+            "version": "v3.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silexphp/Pimple.git",
+                "reference": "a94b3a4db7fb774b3d78dad2315ddc07629e1bed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/a94b3a4db7fb774b3d78dad2315ddc07629e1bed",
+                "reference": "a94b3a4db7fb774b3d78dad2315ddc07629e1bed",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "psr/container": "^1.1 || ^2.0"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "^5.4@dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Pimple": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Pimple, a simple Dependency Injection Container",
+            "homepage": "https://pimple.symfony.com",
+            "keywords": [
+                "container",
+                "dependency injection"
+            ],
+            "support": {
+                "source": "https://github.com/silexphp/Pimple/tree/v3.5.0"
+            },
+            "time": "2021-10-28T11:13:42+00:00"
         },
         {
             "name": "psr/clock",
@@ -2896,6 +4050,119 @@
                 "source": "https://github.com/php-fig/http-message/tree/2.0"
             },
             "time": "2023-04-04T09:54:51+00:00"
+        },
+        {
+            "name": "psr/http-server-handler",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-server-handler.git",
+                "reference": "84c4fb66179be4caaf8e97bd239203245302e7d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-server-handler/zipball/84c4fb66179be4caaf8e97bd239203245302e7d4",
+                "reference": "84c4fb66179be4caaf8e97bd239203245302e7d4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0",
+                "psr/http-message": "^1.0 || ^2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Server\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP server-side request handler",
+            "keywords": [
+                "handler",
+                "http",
+                "http-interop",
+                "psr",
+                "psr-15",
+                "psr-7",
+                "request",
+                "response",
+                "server"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/http-server-handler/tree/1.0.2"
+            },
+            "time": "2023-04-10T20:06:20+00:00"
+        },
+        {
+            "name": "psr/http-server-middleware",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-server-middleware.git",
+                "reference": "c1481f747daaa6a0782775cd6a8c26a1bf4a3829"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-server-middleware/zipball/c1481f747daaa6a0782775cd6a8c26a1bf4a3829",
+                "reference": "c1481f747daaa6a0782775cd6a8c26a1bf4a3829",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0",
+                "psr/http-message": "^1.0 || ^2.0",
+                "psr/http-server-handler": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Server\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP server-side middleware",
+            "keywords": [
+                "http",
+                "http-interop",
+                "middleware",
+                "psr",
+                "psr-15",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "support": {
+                "issues": "https://github.com/php-fig/http-server-middleware/issues",
+                "source": "https://github.com/php-fig/http-server-middleware/tree/1.0.2"
+            },
+            "time": "2023-04-11T06:14:47+00:00"
         },
         {
             "name": "psr/log",
@@ -5705,6 +6972,66 @@
             "time": "2025-07-29T20:02:46+00:00"
         },
         {
+            "name": "tedivm/jshrink",
+            "version": "v1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tedious/JShrink.git",
+                "reference": "29ee510d684c22060040f4260a527206eb8199f1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tedious/JShrink/zipball/29ee510d684c22060040f4260a527206eb8199f1",
+                "reference": "29ee510d684c22060040f4260a527206eb8199f1",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0|^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.14",
+                "php-coveralls/php-coveralls": "^2.5.0",
+                "phpunit/phpunit": "^9|^10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "JShrink": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Robert Hafner",
+                    "email": "tedivm@tedivm.com"
+                }
+            ],
+            "description": "Javascript Minifier built in PHP",
+            "homepage": "http://github.com/tedious/JShrink",
+            "keywords": [
+                "javascript",
+                "minifier"
+            ],
+            "support": {
+                "issues": "https://github.com/tedious/JShrink/issues",
+                "source": "https://github.com/tedious/JShrink/tree/v1.8.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/tedivm",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/tedivm/jshrink",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2025-07-28T17:09:23+00:00"
+        },
+        {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "v2.3.0",
             "source": {
@@ -8333,7 +9660,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
-    "prefer-stable": true,
+    "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.2"
