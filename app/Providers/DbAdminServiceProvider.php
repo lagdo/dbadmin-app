@@ -2,22 +2,25 @@
 
 namespace App\Providers;
 
+use Dotenv\Dotenv;
 use Illuminate\Support\ServiceProvider;
 use Lagdo\DbAdmin\Config\AuthInterface;
 use Lagdo\DbAdmin\Config\UserFileReader;
 
 use function auth;
+use function dirname;
+use function env;
 use function config_path;
 use function is_file;
 
 class DbAdminServiceProvider extends ServiceProvider
 {
     /**
-     * Get the DbAdmin config path
+     * Get the DbAdmin config file path
      *
      * @return string
      */
-    private function getDbAdminConfigPath(): string
+    private function getDbAdminConfigFile(): string
     {
         foreach (['json', 'yaml', 'yml', 'php'] as $ext) {
             $path = config_path("dbadmin.$ext");
@@ -47,7 +50,9 @@ class DbAdminServiceProvider extends ServiceProvider
 
         $this->app->singleton(UserFileReader::class, function($app) {
             $auth = $app->make(AuthInterface::class);
-            return new UserFileReader($auth, $this->getDbAdminConfigPath());
+            $configFile = $this->getDbAdminConfigFile();
+            $useEnv = env('DBA_USE_ENV', true);
+            return new UserFileReader($auth, $configFile, $useEnv);
         });
     }
 
@@ -56,6 +61,9 @@ class DbAdminServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // Load the custom env file
+        $path = dirname(__DIR__, 2);
+        $dotenv = Dotenv::createImmutable($path, '.env.dbadmin');
+        $dotenv->safeLoad();
     }
 }
