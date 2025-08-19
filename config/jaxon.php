@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Middleware\JaxonException;
 use Lagdo\DbAdmin\Config\UserFileReader;
 
 return [
@@ -9,7 +8,6 @@ return [
             'route' => 'jaxon.ajax', // The route name
             'middlewares' => [
                 'web',
-                JaxonException::class,
             ],
         ],
         'directories' => [],
