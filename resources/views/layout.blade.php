@@ -17,7 +17,7 @@
       <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
         @yield('sidebar')
 
-				<div class="sb-sidenav-footer">
+				<div class="sb-sidenav-footer py-4">
           @include('page.user')
         </div>
       </nav>
@@ -28,7 +28,7 @@
 				@yield('content')
 			</main>
 
-			<footer class="py-4 bg-light mt-auto">
+			<footer class="bg-light py-4 mt-auto">
         <div class="container-fluid px-4">
           @include('page.footer')
         </div>
