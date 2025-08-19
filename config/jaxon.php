@@ -7,7 +7,8 @@ return [
         'request' => [
             'route' => 'jaxon.ajax', // The route name
             'middlewares' => [
-                'web',
+                'web', // Includes the Illuminate\Session\Middleware\StartSession
+                // middleware, which returns a 419 error when the sessions has expired.
             ],
         ],
         'directories' => [],
@@ -55,13 +56,13 @@ return [
         ],
         'js' => [
             'lib' => [
-                // 'uri' => '',
             ],
             'app' => [
-                // 'uri' => '',
-                // 'dir' => '',
-                // 'export' => true,
-                // 'minify' => true,
+                'uri' => '/jaxon/',
+                'dir' => public_path('/jaxon/'),
+                'export' => true,
+                'minify' => true,
+                'file' => 'app',
             ],
         ],
     ],
