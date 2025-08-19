@@ -10931,7 +10931,7 @@ body {
 }
 .sb-nav-fixed #layoutSidenav #layoutSidenav_content {
   padding-left: 295px;
-  top: 56px;
+  padding-top: 56px;
 }
 
 #layoutError {

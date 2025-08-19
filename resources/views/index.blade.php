@@ -3,21 +3,6 @@
 @section('page-title', 'Database administration')
 
 @section('css')
-  <style>
-    html {
-      font-size: 14px;
-    }
-    .row {
-      margin-bottom: 10px;
-    }
-    .sb-sidenav-menu {
-      padding-top: 20px;
-      padding-left: 7px;
-    }
-    .sb-sidenav-menu > .row {
-      margin-right: 0px;
-    }
-  </style>
   @jxnCss
 @endsection
 
