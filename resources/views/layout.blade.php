@@ -33,7 +33,7 @@
 </head>
 
 <body class="sb-nav-fixed">
-  <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+  <nav class="sb-topnav navbar navbar-expand navbar-dark bg-primary">
     @include('page.header')
   </nav>
 
