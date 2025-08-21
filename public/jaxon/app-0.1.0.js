@@ -384,6 +384,9 @@ Lagdo.DbAdmin.Ajax.App.Db.Server.Variables.visible = function() {
 if(Lagdo.DbAdmin.Ajax.App.Db.Table.Ddl.Create === undefined) {
     Lagdo.DbAdmin.Ajax.App.Db.Table.Ddl.Create = {};
 }
+Lagdo.DbAdmin.Ajax.App.Db.Table.Ddl.Create.show = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Table.Ddl.Create', method: 'show' }, { parameters: arguments, bags: ["dbadmin","dbadmin.table"] });
+};
 Lagdo.DbAdmin.Ajax.App.Db.Table.Ddl.Create.save = function() {
     return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Table.Ddl.Create', method: 'save' }, { parameters: arguments, bags: ["dbadmin","dbadmin.table"] });
 };
