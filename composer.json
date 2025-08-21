@@ -4,7 +4,7 @@
     "type": "project",
     "description": "A web based database management tool with multiple DBMS support.",
     "keywords": ["Database", "PostgreSQL", "MySQL", "MariaDB", "SQLite", "Laravel", "PHP"],
-    "license": "BSD 3",
+    "license": "BSD-3-Clause",
     "require": {
         "php": "^8.2",
         "jaxon-php/jaxon-annotations": "^3.0",
