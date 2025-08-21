@@ -6,6 +6,7 @@ use Illuminate\Foundation\Configuration\Middleware;
 use Jaxon\Exception\Exception as JaxonException;
 use Jaxon\Laravel\App\Jaxon;
 use Lagdo\DbAdmin\Ajax\AppException;
+use Lagdo\DbAdmin\Db\Exception\DbException;
 use Symfony\Component\HttpFoundation\Response;
 
 if (!function_exists('showMessage')) {
@@ -56,6 +57,13 @@ return Application::configure(basePath: dirname(__DIR__))
         // Show the error messages in a dialog
         $exceptions->render(fn (AppException $e) =>
             showMessage($e->getMessage(), false));
+        $exceptions->render(fn (DbException $e) =>
+            showMessage($e->getMessage(), true));
         $exceptions->render(fn (JaxonException $e) =>
             showMessage($e->getMessage(), true));
+        $exceptions->render(function (Exception $e) {
+            if (jaxon()->canProcessRequest()) {
+                return showMessage('Unable to process the request. Unexpected error.', true);
+            }
+        });
     })->create();
