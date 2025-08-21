@@ -1,10 +1,10 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/laravel",
+    "name": "lagdo/dbadmin-app",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
-    "license": "MIT",
+    "description": "A web based database management tool with multiple DBMS support.",
+    "keywords": ["Database", "PostgreSQL", "MySQL", "MariaDB", "SQLite", "Laravel", "PHP"],
+    "license": "BSD 3",
     "require": {
         "php": "^8.2",
         "jaxon-php/jaxon-annotations": "^3.0",
