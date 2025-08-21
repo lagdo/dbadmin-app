@@ -8,22 +8,24 @@ use Jaxon\Laravel\App\Jaxon;
 use Lagdo\DbAdmin\Ajax\AppException;
 use Symfony\Component\HttpFoundation\Response;
 
-/**
- * @param string $message
- * @param bool $isError
- *
- * @return Response
- */
-function showMessage(string $message, bool $isError): Response
-{
-    /** @var Jaxon */
-    $jaxon = app()->make(Jaxon::class);
-    $ajaxResponse = $jaxon->ajaxResponse();
-    $messageType = $isError ? 'error' : 'warning';
-    $messageTitle = $isError ? trans('Error') : trans('Warning');
-    $ajaxResponse->dialog->title($messageTitle)->$messageType($message);
+if (!function_exists('showMessage')) {
+    /**
+     * @param string $message
+     * @param bool $isError
+     *
+     * @return Response
+     */
+    function showMessage(string $message, bool $isError): Response
+    {
+        /** @var Jaxon */
+        $jaxon = app()->make(Jaxon::class);
+        $ajaxResponse = $jaxon->ajaxResponse();
+        $messageType = $isError ? 'error' : 'warning';
+        $messageTitle = $isError ? trans('Error') : trans('Warning');
+        $ajaxResponse->dialog->title($messageTitle)->$messageType($message);
 
-    return $jaxon->httpResponse();
+        return $jaxon->httpResponse();
+    }
 }
 
 return Application::configure(basePath: dirname(__DIR__))

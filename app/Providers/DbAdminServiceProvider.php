@@ -9,7 +9,6 @@ use Lagdo\DbAdmin\Config\UserFileReader;
 
 use function auth;
 use function dirname;
-use function env;
 use function config_path;
 use function is_file;
 
@@ -51,8 +50,7 @@ class DbAdminServiceProvider extends ServiceProvider
         $this->app->singleton(UserFileReader::class, function($app) {
             $auth = $app->make(AuthInterface::class);
             $configFile = $this->getDbAdminConfigFile();
-            $useEnv = env('DBA_USE_ENV', true);
-            return new UserFileReader($auth, $configFile, $useEnv);
+            return new UserFileReader($auth, $configFile);
         });
     }
 
