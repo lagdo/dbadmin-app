@@ -1790,16 +1790,16 @@
         },
         {
             "name": "lagdo/dbadmin-driver-sqlite",
-            "version": "v0.12.0",
+            "version": "v0.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lagdo/dbadmin-driver-sqlite.git",
-                "reference": "d636241cf331ec4912e04b307b3ca7686052ac13"
+                "reference": "b6f12401fb47db19d38e2f0ba337beb44908cf24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lagdo/dbadmin-driver-sqlite/zipball/d636241cf331ec4912e04b307b3ca7686052ac13",
-                "reference": "d636241cf331ec4912e04b307b3ca7686052ac13",
+                "url": "https://api.github.com/repos/lagdo/dbadmin-driver-sqlite/zipball/b6f12401fb47db19d38e2f0ba337beb44908cf24",
+                "reference": "b6f12401fb47db19d38e2f0ba337beb44908cf24",
                 "shasum": ""
             },
             "require": {
@@ -1845,7 +1845,7 @@
                 "issues": "https://github.com/lagdo/dbadmin-driver-sqlite/issues",
                 "source": "https://github.com/lagdo/dbadmin-driver-sqlite"
             },
-            "time": "2025-08-18T19:21:44+00:00"
+            "time": "2025-08-22T11:20:53+00:00"
         },
         {
             "name": "lagdo/jaxon-dbadmin",
