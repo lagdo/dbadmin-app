@@ -2,6 +2,10 @@
 
 **A database admin dashboard with multiple DBMS support, and a custom and extensible authentication system**
 
+[Installation](#installation) • [Docker](#running-with-docker) • [Authentication](#user-management-and-authentication) • [Configuration](#database-access-configuration) • [Features](#features-and-current-status)
+
+![screenshot](screenshots/jaxon-dbadmin-sqlite-chinook.png)
+
 ---
 
 ## About Jaxon DbAdmin
@@ -11,9 +15,7 @@ Jaxon DbAdmin is a web-based database management tool built with [Jaxon](https:/
 It currently supports 3 database servers: PostgreSQL, MySQL (and MariaDB), and SQLite.
 
 The database access code (and thus the provided features) originates from [Adminer](https://github.com/vrana/adminer).
-The original code was separated into multiple Composer packages, and refactored to take advantage of the latest PHP features: namespaces, interfaces, DI, and so on.
-
-The Jaxon DbAdmin application is actually the integration of the [Jaxon DbAdmin package](https://github.com/lagdo/jaxon-dbadmin), which is an [extension of the Jaxon library](https://www.jaxon-php.org/docs/v5x/extensions/packages.html), with the Laravel framework, using the [Laravel integration extension](https://github.com/jaxon-php/jaxon-laravel).
+The original code was separated into multiple Composer packages, and refactored to take advantage of the latest PHP features: namespaces, interfaces, dependency injection, and so on.
 
 ## Installation
 
@@ -54,7 +56,7 @@ or
 docker run --rm -p 8080:8080 -v ./config/dbadmin.json:/var/www/config/dbadmin.json lagdo/jaxon-dbadmin:latest
 ```
 
-It can also be added in a `docker-compose.yml` file.
+In a `docker-compose.yml` file.
 
 ```yaml
   dbadmin:
@@ -85,14 +87,14 @@ php artisan user:create --name <user name> --email <user email>
 ```
 
 If the `--name` and `--email` are not provided, the CLI command will ask for them.
-It will then ask to provide and confirm the user password, and if all the data are valid, the user account will be created.
+It will then ask to provide and confirm the user password, and if all the inputs are valid, the user account will be created.
 
 Thanks to Laravel, more advanced authentication mechanisms can be implemented quite easily.
 For example, Jaxon DbAdmin can be setup to authenticate its users on a company SSO service.
 
 ## Database access configuration
 
-Jaxon DbAdmin supports 3 file formats for its access configuration options: `json`, `yaml` and `php`.
+Jaxon DbAdmin supports 3 file formats for its database access configuration options: `json`, `yaml` and `php`.
 
 It will successively look for the `config/dbadmin.json`, `config/dbadmin.yaml`, `config/dbadmin.yml` and `config/dbadmin.php`, and loads the first it will find.
 It will then parse the content of the config file, and return the authenticated user specific options.
@@ -156,7 +158,7 @@ This is an example of a `json` config file.
         },
         "access": {
             "server": true,
-            "system": false
+            "system": true
         },
         "servers": {
             "db-mariadb": {
@@ -177,7 +179,7 @@ This is an example of a `json` config file.
 }
 ```
 
-The Jaxon DbAdmin config file can contain 3 sections, all optional.
+The Jaxon DbAdmin config file can contain 3 sections, all of which are optional.
 
 #### The `common` section
 
@@ -228,6 +230,10 @@ The option need to be set in a specific format like `env(DBA_PGSQL_HOST)`, where
 After the merge with the options in the `common` section, the entries in the `servers` options are filtered on valid values.
 As a consequence, only the entries for which all the required options (except `port`) are provided will be returned in the final list.
 
+### The `default` option
+
+The `default` option defines a server the application will connect to right after user login.
+
 ### The `access` option
 
 The `access` option is an object which contains multiple options which define to which databases and to which part of the application the user will have access.
@@ -240,7 +246,7 @@ The `server` option defines if the user has access to server specific pages. If 
 
 The `databases` and `schemas` options restrict the user access to the listed databases and schemas.
 
-## Current status
+## Features and current status
 
 This application and the related packages are still being actively developed, and the provided features are still basic and need improvements.
 
@@ -250,8 +256,10 @@ The following features are currently available:
 - Query a table.
 - Execute queries in the query editor.
 
-The following features are currently disabled or unavailable:
+The following features are either disabled or unavailable:
 - Query a view.
+- Save queries in user account.
+- Save and show the query history.
 - Navigate through related tables.
 - Create, alter or drop a database, table or view.
 - Insert, modify or delete data from a table.
@@ -274,6 +282,10 @@ Feel free to open issues or pull requests. Even small improvements are appreciat
 - **Backend**: Laravel (PHP), [Jaxon](https://www.jaxon-php.org)
 - **Frontend**: Bootstrap, Blade, [UI Builder](https://github.com/lagdo/ui-builder)
 - **Containerization**: Docker support included
+
+The Jaxon DbAdmin application is actually the integration of the [Jaxon DbAdmin package](https://github.com/lagdo/jaxon-dbadmin), which is an [extension of the Jaxon library](https://www.jaxon-php.org/docs/v5x/extensions/packages.html), with the Laravel framework, using the [Laravel integration extension](https://github.com/jaxon-php/jaxon-laravel).
+
+The UI is built with the [HTML UI Builder](https://github.com/lagdo/ui-builder) package, and generated with the [Bootstrap 5 HTML UI Builder](https://github.com/lagdo/ui-builder-bootstrap5) adapter package.
 
 ## License
 
