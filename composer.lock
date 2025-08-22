@@ -1849,16 +1849,16 @@
         },
         {
             "name": "lagdo/jaxon-dbadmin",
-            "version": "v0.16.1",
+            "version": "v0.16.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lagdo/jaxon-dbadmin.git",
-                "reference": "f9eb471318ca3314f948a296871f28f901422da2"
+                "reference": "d060c853ce040819fd22195fae8e2bcdf7794bd9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lagdo/jaxon-dbadmin/zipball/f9eb471318ca3314f948a296871f28f901422da2",
-                "reference": "f9eb471318ca3314f948a296871f28f901422da2",
+                "url": "https://api.github.com/repos/lagdo/jaxon-dbadmin/zipball/d060c853ce040819fd22195fae8e2bcdf7794bd9",
+                "reference": "d060c853ce040819fd22195fae8e2bcdf7794bd9",
                 "shasum": ""
             },
             "require": {
@@ -1914,7 +1914,7 @@
                 "issues": "https://github.com/lagdo/jaxon-dbadmin/issues",
                 "source": "https://github.com/lagdo/jaxon-dbadmin"
             },
-            "time": "2025-08-22T11:33:48+00:00"
+            "time": "2025-08-22T20:06:55+00:00"
         },
         {
             "name": "lagdo/jaxon-ui-builder",

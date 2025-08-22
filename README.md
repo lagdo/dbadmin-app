@@ -14,7 +14,7 @@ Jaxon DbAdmin is built with [Jaxon](https://www.jaxon-php.org), [Laravel](https:
 
 It currently supports 3 database servers: PostgreSQL, MySQL (and MariaDB), and SQLite.
 
-Unlike other database management tools, Jaxon DbAdmin uses the Laravel authentication system instead the database servers credentials to authenticate the application users.
+Unlike other database management tools, Jaxon DbAdmin uses the Laravel authentication system instead of the database servers credentials to authenticate the application users.
 
 ## Installation
 
