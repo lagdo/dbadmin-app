@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cb6fe21e84167e81ef678e2a6d6c4dd8",
+    "content-hash": "82ab474b7959e0543a1b1f3fe5027a3b",
     "packages": [
         {
             "name": "avplab/php-html-builder",
@@ -1849,16 +1849,16 @@
         },
         {
             "name": "lagdo/jaxon-dbadmin",
-            "version": "v0.16.0",
+            "version": "v0.16.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lagdo/jaxon-dbadmin.git",
-                "reference": "0d66ce383271c960a686780f8ce9c16a2d63451f"
+                "reference": "f9eb471318ca3314f948a296871f28f901422da2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lagdo/jaxon-dbadmin/zipball/0d66ce383271c960a686780f8ce9c16a2d63451f",
-                "reference": "0d66ce383271c960a686780f8ce9c16a2d63451f",
+                "url": "https://api.github.com/repos/lagdo/jaxon-dbadmin/zipball/f9eb471318ca3314f948a296871f28f901422da2",
+                "reference": "f9eb471318ca3314f948a296871f28f901422da2",
                 "shasum": ""
             },
             "require": {
@@ -1914,7 +1914,7 @@
                 "issues": "https://github.com/lagdo/jaxon-dbadmin/issues",
                 "source": "https://github.com/lagdo/jaxon-dbadmin"
             },
-            "time": "2025-08-21T16:35:11+00:00"
+            "time": "2025-08-22T11:33:48+00:00"
         },
         {
             "name": "lagdo/jaxon-ui-builder",
@@ -9986,7 +9986,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
