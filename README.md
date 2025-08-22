@@ -1,6 +1,6 @@
-# Jaxon DbAdmin: a web-based database management tool
+# A web-based database management tool
 
-**A database admin dashboard with multiple DBMS support, and a custom and extensible authentication system**
+**Jaxon DbAdmin is a database admin dashboard with multiple DBMS support, and a custom and extensible authentication system**
 
 [Installation](#installation) • [Docker](#running-with-docker) • [Authentication](#user-management-and-authentication) • [Configuration](#database-access-configuration) • [Features](#features-and-current-status)
 
@@ -10,12 +10,11 @@
 
 ## About Jaxon DbAdmin
 
-Jaxon DbAdmin is a web-based database management tool built with [Jaxon](https://www.jaxon-php.org), [Laravel](https://laravel.com) and [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction).
+Jaxon DbAdmin is built with [Jaxon](https://www.jaxon-php.org), [Laravel](https://laravel.com) and [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction).
 
 It currently supports 3 database servers: PostgreSQL, MySQL (and MariaDB), and SQLite.
 
-The database access code (and thus the provided features) originates from [Adminer](https://github.com/vrana/adminer).
-The original code was separated into multiple Composer packages, and refactored to take advantage of the latest PHP features: namespaces, interfaces, dependency injection, and so on.
+Unlike other database management tools, Jaxon DbAdmin uses the Laravel authentication system instead the database servers credentials to authenticate the application users.
 
 ## Installation
 
@@ -286,6 +285,9 @@ Feel free to open issues or pull requests. Even small improvements are appreciat
 The Jaxon DbAdmin application is actually the integration of the [Jaxon DbAdmin package](https://github.com/lagdo/jaxon-dbadmin), which is an [extension of the Jaxon library](https://www.jaxon-php.org/docs/v5x/extensions/packages.html), with the Laravel framework, using the [Laravel integration extension](https://github.com/jaxon-php/jaxon-laravel).
 
 The UI is built with the [HTML UI Builder](https://github.com/lagdo/ui-builder) package, and generated with the [Bootstrap 5 HTML UI Builder](https://github.com/lagdo/ui-builder-bootstrap5) adapter package.
+
+The database access code (and thus the provided features) originates from [Adminer](https://github.com/vrana/adminer).
+The original code was separated into multiple Composer packages, and refactored to take advantage of the latest PHP features: namespaces, interfaces, dependency injection, and so on.
 
 ## License
 
