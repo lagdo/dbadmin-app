@@ -62,8 +62,13 @@ return Application::configure(basePath: dirname(__DIR__))
         $exceptions->render(fn (JaxonException $e) =>
             showMessage($e->getMessage(), true));
         $exceptions->render(function (Exception $e) {
+            $errorMessage = 'Unable to process the request. Unexpected error.';
+            // Also show the exception message in debug env.
+            if (env('APP_DEBUG', false)) {
+                $errorMessage .= ' ' . $e->getMessage();
+            }
             if (jaxon()->canProcessRequest()) {
-                return showMessage('Unable to process the request. Unexpected error.', true);
+                return showMessage($errorMessage, true);
             }
         });
     })->create();
