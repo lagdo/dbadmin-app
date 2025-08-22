@@ -48,7 +48,7 @@ ENV PHP_USER=${PHP_USER}
 ENV PHP_UID=${PHP_UID}
 ENV PHP_GID=${PHP_GID}
 
-RUN set -xe && apk add --no-cache --virtual .build-deps pcre
+RUN set -xe && apk add --no-cache --virtual .build-deps curl pcre
 
 RUN --mount=type=bind,from=mlocati/php-extension-installer:2,source=/usr/bin/install-php-extensions,target=/usr/local/bin/install-php-extensions \
   install-php-extensions zip tokenizer bcmath ctype curl dom fileinfo mbstring openssl \
@@ -63,8 +63,6 @@ COPY . /var/www
 # Configure Nginx Unit
 COPY docker/config/unit.json /docker-entrypoint.d/config.json
 COPY docker/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
-
-ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh && \
   addgroup -g ${PHP_GID} --system ${PHP_USER} && \
@@ -81,4 +79,5 @@ COPY --from=composer-builder --chown=${PHP_USER} ["/app/vendor/", "/var/www/vend
 WORKDIR /var/www
 EXPOSE 8080
 
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 CMD [ "unitd", "--no-daemon", "--control", "unix:/var/run/control.unit.sock" ]
