@@ -2,7 +2,7 @@
 
 **Jaxon DbAdmin is a database admin dashboard with multiple DBMS support, and a custom and extensible authentication system**
 
-[Installation](#installation) • [Docker](#running-with-docker) • [Authentication](#user-management-and-authentication) • [Configuration](#database-access-configuration) • [Features](#features-and-current-status)
+[Features](#features-and-current-status) • [Installation](#installation) • [Docker](#running-with-docker) • [Authentication](#user-management-and-authentication) • [Configuration](#database-access-configuration)
 
 ![screenshot](screenshots/jaxon-dbadmin-sqlite-chinook.png)
 
@@ -15,6 +15,27 @@ Jaxon DbAdmin is built with [Jaxon](https://www.jaxon-php.org), [Laravel](https:
 It currently supports 3 database servers: PostgreSQL, MySQL (and MariaDB), and SQLite.
 
 Unlike other database management tools, Jaxon DbAdmin uses the Laravel authentication system instead of the database servers credentials to authenticate the application users.
+
+The database access code (and thus the provided features) originates from [Adminer](https://github.com/vrana/adminer).
+
+## Features and current status
+
+This application and the related packages are still being actively developed, and the provided features are still basic and need improvements.
+
+The following features are currently available:
+- Browse servers and databases.
+- Show tables and views details.
+- Query a table.
+- Execute queries in the query editor.
+
+The following features are either disabled or not yet available:
+- Query a view.
+- Save queries in user account.
+- Save and show the query history.
+- Navigate through related tables.
+- Create, alter or drop a database, table or view.
+- Insert, modify or delete data in a table.
+- Import or export data.
 
 ## Installation
 
@@ -36,10 +57,10 @@ composer run post-root-package-install
 composer run post-create-project-cmd
 ```
 
-By default, an SQLite database located in the `database/database.sqlite` subdir will be created and migrated.
+By default, Jaxon DbAdmin stores the user credentials in a database. An SQLite database located at `database/database.sqlite` will be created and migrated during the installation.
 A different database can be used. In this case, the `.env` and `config/database.php` file must be updated accordingly. See the Laravel [database documention](https://laravel.com/docs/12.x/database) for more information.
 
-Finally, a web server must be configured to give access to the application directory, with the `public` subdir as index.
+The last step is to configure a web server to give access to the application directory, with the `public` subdir as index.
 
 ## Running with Docker
 
@@ -71,14 +92,14 @@ The content of the `config/dbadmin.json` config file is described in the [Databa
 
 ## User management and authentication
 
-Unlike other database management tools, Jaxon DbAdmin does not use the database servers credentials to authenticate the application users.
+Unlike other database management tools, Jaxon DbAdmin does not use the database server credentials to authenticate the application users.
 
-The user authentication is a separate process, which here is provided by the [Laravel framework](https://laravel.com/docs/12.x/authentication).
+The user authentication is a separate process, which in this case is provided by the [Laravel framework](https://laravel.com/docs/12.x/authentication).
 
-By default, the user accounts and credentials are stored in the application database (different from the managed databases), and by default a fresh Laravel installation will create and migrate an SQLite database located in the `database/database.sqlite`.
+By default, the user accounts and credentials are stored in the application database (different from the managed databases), and by default a fresh Laravel installation will create and migrate an SQLite database located in the `database/database.sqlite` file.
 The application database can be changed in the [Laravel database configuration](https://laravel.com/docs/12.x/database).
 
-Jaxon DbAdmin provides a CLI command to create user accounts.
+Jaxon DbAdmin provides a CLI command to create user accounts in its database.
 It is executed from the application install dir.
 
 ```bash
@@ -88,7 +109,7 @@ php artisan user:create --name <user name> --email <user email>
 If the `--name` and `--email` are not provided, the CLI command will ask for them.
 It will then ask to provide and confirm the user password, and if all the inputs are valid, the user account will be created.
 
-Thanks to Laravel, more advanced authentication mechanisms can be implemented quite easily.
+Thanks to Laravel, more advanced authentication systems can be implemented quite easily.
 For example, Jaxon DbAdmin can be setup to authenticate its users on a company SSO service.
 
 ## Database access configuration
@@ -96,7 +117,7 @@ For example, Jaxon DbAdmin can be setup to authenticate its users on a company S
 Jaxon DbAdmin supports 3 file formats for its database access configuration options: `json`, `yaml` and `php`.
 
 It will successively look for the `config/dbadmin.json`, `config/dbadmin.yaml`, `config/dbadmin.yml` and `config/dbadmin.php`, and loads the first it will find.
-It will then parse the content of the config file, and return the authenticated user specific options.
+It will then parse the content of the config file, and return the options specific to the authenticated user.
 
 This is an example of a `json` config file.
 
@@ -194,7 +215,7 @@ These options will be merged with the `common` options.
 
 #### The `users` section
 
-This section must provide an array of options, each for a given user or group of users.
+This section must contain an array of options, each for a given user or group of users.
 
 Each entry in the array must have an attribute with `id` key, which itself is an object with 4 possible attributes to identify the corresponding users:
 - `user`: a single user email.
@@ -219,50 +240,32 @@ The `name` option is the name to be displayed in the application UI.
 The other options depend on the DBMS.
 
 For SQLite, the `directory` option is a directory where to look for database files.
-Each file in the directory with the `db`, `sdb` or `sqlite` is listed as a database.
+Each file in the directory with the `db`, `sdb` or `sqlite` extension is listed as a database.
 
-For the others, the `host`, `port`, `username` and `password` options will be used to connect to the database server. The `port` option is the only optional value.
+For the other DBMS, the `host`, `port`, `username` and `password` options will be used to connect to the database server. Only the `port` option optional.
 
-Except for `driver` and `name`, the values for all the other options can be load from env vars.
-The option need to be set in a specific format like `env(DBA_PGSQL_HOST)`, where the value in the parenthesis is the env var name.
+Except for `driver` and `name`, the values for all the other options can be loaded from env vars.
+In this case, the option need to be set in a specific format like `env(DBA_PGSQL_HOST)`, where the value in the parenthesis is the env var name.
 
 After the merge with the options in the `common` section, the entries in the `servers` options are filtered on valid values.
 As a consequence, only the entries for which all the required options (except `port`) are provided will be returned in the final list.
 
 ### The `default` option
 
-The `default` option defines a server the application will connect to right after user login.
+The `default` option defines a server the application will connect to when the web page is loaded or refreshed.
 
 ### The `access` option
 
-The `access` option is an object which contains multiple options which define to which databases and to which part of the application the user will have access.
+The `access` option is an object that contains multiple options to define to which databases and to which part of the application the user will have access.
 
 The `access` option can be defined at top level, in this case it applies to all the database servers, or it can be defined in a specific server options, to be applied only to that server.
 
 In the `access` object, the `system` option defines if the user has access to system databases and schemas. If set to `false`, which is the default, the system databases will not be listed in the user account.
 
 The `server` option defines if the user has access to server specific pages. If set to `false`, which is the default, the user will not have access to the `Databases`, `Process list` and `Variables` pages, as well as the server-related `Query`, `Import` and `Export` pages.
+The corresponding menu entries will not be displayed in the sidebar menu.
 
 The `databases` and `schemas` options restrict the user access to the listed databases and schemas.
-
-## Features and current status
-
-This application and the related packages are still being actively developed, and the provided features are still basic and need improvements.
-
-The following features are currently available:
-- Browse servers and databases.
-- Show tables and views details.
-- Query a table.
-- Execute queries in the query editor.
-
-The following features are either disabled or unavailable:
-- Query a view.
-- Save queries in user account.
-- Save and show the query history.
-- Navigate through related tables.
-- Create, alter or drop a database, table or view.
-- Insert, modify or delete data from a table.
-- Import or export data.
 
 ## Contributing
 
@@ -287,7 +290,7 @@ The Jaxon DbAdmin application is actually the integration of the [Jaxon DbAdmin 
 The UI is built with the [HTML UI Builder](https://github.com/lagdo/ui-builder) package, and generated with the [Bootstrap 5 HTML UI Builder](https://github.com/lagdo/ui-builder-bootstrap5) adapter package.
 
 The database access code (and thus the provided features) originates from [Adminer](https://github.com/vrana/adminer).
-The original code was separated into multiple Composer packages, and refactored to take advantage of the latest PHP features: namespaces, interfaces, dependency injection, and so on.
+The original code was separated into multiple Composer packages, and refactored to take advantage of advanced PHP features: namespaces, interfaces, dependency injection, and so on.
 
 ## License
 
