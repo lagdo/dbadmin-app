@@ -11,6 +11,10 @@
   @jxnJs
 
   @jxnScript
+
+  <script type='text/javascript'>
+    @jxnPackage(Lagdo\DbAdmin\Package::class, 'ready');
+  </script>
 @endsection
 
 @php
