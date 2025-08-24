@@ -4,31 +4,6 @@
 <head>
   @include('html.header')
 
-  <style>
-    html {
-      font-size: 14px;
-    }
-    .row {
-      margin-bottom: 10px;
-    }
-    .sb-sidenav-menu {
-      padding-top: 20px;
-      padding-left: 7px;
-    }
-    .sb-sidenav-menu > .row {
-      margin-right: 0px;
-    }
-    /*
-     * This fixes the <footer> at the bottom of the page. 
-     */
-    #layoutSidenav_content {
-      height: 100vh;
-    }
-    #layoutSidenav_content > main {
-      overflow-y: auto;
-      margin-bottom: 3px;
-    }
-  </style>
   @yield('css')
 </head>
 
