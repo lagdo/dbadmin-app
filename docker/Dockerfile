@@ -32,7 +32,7 @@ RUN set -eux && \
 FROM composer AS composer-builder
 COPY . /app
 WORKDIR /app/
-RUN composer install && \
+RUN composer install --no-dev && \
 #  composer run post-root-package-install && \
   cp .env.docker .env && \
   composer run post-create-project-cmd
