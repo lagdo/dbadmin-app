@@ -247,6 +247,8 @@ For the other DBMS, the `host`, `port`, `username` and `password` options will b
 Except for `driver` and `name`, the values for all the other options can be loaded from env vars.
 In this case, the option need to be set in a specific format like `env(DBA_PGSQL_HOST)`, where the value in the parenthesis is the env var name.
 
+In addition to the default `.env`, the application also loads the `.env.dbadmin` file, which can be used to define the Jaxon DbAdmin specific env vars.
+
 After the merge with the options in the `common` section, the entries in the `servers` options are filtered on valid values.
 As a consequence, only the entries for which all the required options (except `port`) are provided will be returned in the final list.
 
