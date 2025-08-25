@@ -1,6 +1,6 @@
 # A web-based database management tool
 
-**Jaxon DbAdmin is a database admin dashboard with multiple DBMS support, and a custom and extensible authentication system**
+**Jaxon DbAdmin is a database admin dashboard with multiple DBMS support, and a custom and extensible authentication system.**
 
 [Features](#features-and-current-status) • [Installation](#installation) • [Docker](#running-with-docker) • [Authentication](#user-management-and-authentication) • [Configuration](#database-access-configuration)
 
@@ -28,7 +28,8 @@ The following features are currently available:
 - Query a table.
 - Execute queries in the query editor.
 
-The following features are either disabled or not yet available:
+The following features are either disabled or not yet implemented:
+- Use a better editor for SQL queries.
 - Query a view.
 - Save queries in user account.
 - Save and show the query history.
@@ -62,6 +63,8 @@ A different database can be used. In this case, the `.env` and `config/database.
 
 The last step is to configure a web server to give access to the application directory, with the `public` subdir as index.
 
+The database servers to be managed are listed in a config file, whose location and content are described in the [Database access configuration](#database-access-configuration) section below.
+
 ## Running with Docker
 
 The Jaxon DbAdmin application can also be started with Docker.
@@ -88,7 +91,7 @@ In a `docker-compose.yml` file.
       - 8080:8080
 ```
 
-The content of the `config/dbadmin.json` config file is described in the [Database access configuration](#database-access-configuration) above.
+The content of the `config/dbadmin.json` config file is described in the [Database access configuration](#database-access-configuration) section below.
 
 ## User management and authentication
 
@@ -225,9 +228,11 @@ Each entry in the array must have an attribute with `id` key, which itself is an
 
 The other attributes are the database options, described in the following paragraph.
 
+If any entry is found here for the current user, its value will be merged with the `common` options.
+
 ## The database options
 
-The `common`, `fallback` and each entry in `users` array can contain the same options.
+The `common`, `fallback` and each entry in `users` array contain the same options, excepted the `id` option in the `servers` array items.
 
 ### The `servers` option
 
