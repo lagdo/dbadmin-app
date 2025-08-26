@@ -29,7 +29,7 @@ The following features are currently available:
 - Execute queries in the query editor.
 
 The following features are either disabled or not yet implemented:
-- Use a better editor for SQL queries.
+- Setup code completion for DB tables and columns.
 - Query a view.
 - Save queries in user account.
 - Save and show the query history.
