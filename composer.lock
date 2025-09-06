@@ -1316,16 +1316,16 @@
         },
         {
             "name": "jaxon-php/jaxon-core",
-            "version": "v5.0.7",
+            "version": "v5.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jaxon-php/jaxon-core.git",
-                "reference": "584f5513bd5f8a41922ef7ec24755a588c62494b"
+                "reference": "0c8587e716954e37ee8273c10a3b52280a159be6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jaxon-php/jaxon-core/zipball/584f5513bd5f8a41922ef7ec24755a588c62494b",
-                "reference": "584f5513bd5f8a41922ef7ec24755a588c62494b",
+                "url": "https://api.github.com/repos/jaxon-php/jaxon-core/zipball/0c8587e716954e37ee8273c10a3b52280a159be6",
+                "reference": "0c8587e716954e37ee8273c10a3b52280a159be6",
                 "shasum": ""
             },
             "require": {
@@ -1393,7 +1393,7 @@
                 "issues": "https://github.com/jaxon-php/jaxon-core/issues",
                 "source": "https://github.com/jaxon-php/jaxon-core"
             },
-            "time": "2025-08-24T14:52:23+00:00"
+            "time": "2025-09-02T19:19:21+00:00"
         },
         {
             "name": "jaxon-php/jaxon-dialogs",
@@ -1731,16 +1731,16 @@
         },
         {
             "name": "lagdo/dbadmin-driver-pgsql",
-            "version": "v0.12.0",
+            "version": "v0.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lagdo/dbadmin-driver-pgsql.git",
-                "reference": "31b3af62000c5cbb72bd0462b8cd577ade9b5009"
+                "reference": "0d55ef494a6330b333f9e0fdae80de2bee07aad4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lagdo/dbadmin-driver-pgsql/zipball/31b3af62000c5cbb72bd0462b8cd577ade9b5009",
-                "reference": "31b3af62000c5cbb72bd0462b8cd577ade9b5009",
+                "url": "https://api.github.com/repos/lagdo/dbadmin-driver-pgsql/zipball/0d55ef494a6330b333f9e0fdae80de2bee07aad4",
+                "reference": "0d55ef494a6330b333f9e0fdae80de2bee07aad4",
                 "shasum": ""
             },
             "require": {
@@ -1786,7 +1786,7 @@
                 "issues": "https://github.com/lagdo/dbadmin-driver-pgsql/issues",
                 "source": "https://github.com/lagdo/dbadmin-driver-pgsql"
             },
-            "time": "2025-08-18T19:21:44+00:00"
+            "time": "2025-09-04T03:21:25+00:00"
         },
         {
             "name": "lagdo/dbadmin-driver-sqlite",
@@ -1849,16 +1849,16 @@
         },
         {
             "name": "lagdo/jaxon-dbadmin",
-            "version": "v0.16.4",
+            "version": "v0.16.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lagdo/jaxon-dbadmin.git",
-                "reference": "f332dfbb7a98dc96e5a6c8ba020310515b3f1c47"
+                "reference": "2c1d448a0e95cf4eb808d3feb2a40ad153e3f9d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lagdo/jaxon-dbadmin/zipball/f332dfbb7a98dc96e5a6c8ba020310515b3f1c47",
-                "reference": "f332dfbb7a98dc96e5a6c8ba020310515b3f1c47",
+                "url": "https://api.github.com/repos/lagdo/jaxon-dbadmin/zipball/2c1d448a0e95cf4eb808d3feb2a40ad153e3f9d3",
+                "reference": "2c1d448a0e95cf4eb808d3feb2a40ad153e3f9d3",
                 "shasum": ""
             },
             "require": {
@@ -1914,7 +1914,7 @@
                 "issues": "https://github.com/lagdo/jaxon-dbadmin/issues",
                 "source": "https://github.com/lagdo/jaxon-dbadmin"
             },
-            "time": "2025-08-25T22:35:59+00:00"
+            "time": "2025-09-04T04:26:58+00:00"
         },
         {
             "name": "lagdo/jaxon-ui-builder",

@@ -26,17 +26,18 @@ The following features are currently available:
 - Browse servers and databases.
 - Show tables and views details.
 - Query a table.
+- Query a view.
 - Execute queries in the query editor.
+- Use a better editor for SQL queries.
 
 The following features are either disabled or not yet implemented:
-- Use a better editor for SQL queries.
-- Query a view.
-- Save queries in user account.
 - Save and show the query history.
+- Save user favorite queries.
 - Navigate through related tables.
 - Create, alter or drop a database, table or view.
 - Insert, modify or delete data in a table.
 - Import or export data.
+- Code completion for table and field names in the SQL editor.
 
 ## Installation
 

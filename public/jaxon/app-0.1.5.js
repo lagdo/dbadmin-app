@@ -26,6 +26,8 @@ Lagdo.DbAdmin.Ajax.App.Db.Table.Dql.Options = {};
 Lagdo.DbAdmin.Ajax.App.Db.Table.Dql.Options.Fields = {};
 Lagdo.DbAdmin.Ajax.App.Db.Table.Dql.Options.Fields.Form = {};
 Lagdo.DbAdmin.Ajax.App.Db.View = {};
+Lagdo.DbAdmin.Ajax.App.Db.View.Ddl = {};
+Lagdo.DbAdmin.Ajax.App.Db.View.Dql = {};
 Lagdo.DbAdmin.Ajax.App.Menu = {};
 Lagdo.DbAdmin.Ajax.App.Menu.Database = {};
 Lagdo.DbAdmin.Ajax.App.Menu.Server = {};
@@ -44,27 +46,6 @@ Lagdo.DbAdmin.Ajax.App.Admin.clear = function() {
 };
 Lagdo.DbAdmin.Ajax.App.Admin.visible = function() {
     return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Admin', method: 'visible' }, { parameters: arguments, bags: ["dbadmin"] });
-};
-if(Lagdo.DbAdmin.Ajax.App.Db.View.View === undefined) {
-    Lagdo.DbAdmin.Ajax.App.Db.View.View = {};
-}
-Lagdo.DbAdmin.Ajax.App.Db.View.View.show = function() {
-    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.View', method: 'show' }, { parameters: arguments, bags: ["dbadmin"] });
-};
-Lagdo.DbAdmin.Ajax.App.Db.View.View.add = function() {
-    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.View', method: 'add' }, { parameters: arguments, bags: ["dbadmin"] });
-};
-Lagdo.DbAdmin.Ajax.App.Db.View.View.create = function() {
-    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.View', method: 'create' }, { parameters: arguments, bags: ["dbadmin"] });
-};
-Lagdo.DbAdmin.Ajax.App.Db.View.View.edit = function() {
-    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.View', method: 'edit' }, { parameters: arguments, bags: ["dbadmin"] });
-};
-Lagdo.DbAdmin.Ajax.App.Db.View.View.update = function() {
-    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.View', method: 'update' }, { parameters: arguments, bags: ["dbadmin"] });
-};
-Lagdo.DbAdmin.Ajax.App.Db.View.View.drop = function() {
-    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.View', method: 'drop' }, { parameters: arguments, bags: ["dbadmin"] });
 };
 if(Lagdo.DbAdmin.Ajax.App.Page.Content === undefined) {
     Lagdo.DbAdmin.Ajax.App.Page.Content = {};
@@ -170,6 +151,27 @@ Lagdo.DbAdmin.Ajax.App.Db.Server.Status.clear = function() {
 };
 Lagdo.DbAdmin.Ajax.App.Db.Server.Status.visible = function() {
     return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Server.Status', method: 'visible' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+if(Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View === undefined) {
+    Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View = {};
+}
+Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View.show = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View', method: 'show' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View.add = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View', method: 'add' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View.create = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View', method: 'create' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View.edit = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View', method: 'edit' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View.update = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View', method: 'update' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View.drop = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View', method: 'drop' }, { parameters: arguments, bags: ["dbadmin"] });
 };
 if(Lagdo.DbAdmin.Ajax.App.Db.Database.Query === undefined) {
     Lagdo.DbAdmin.Ajax.App.Db.Database.Query = {};
@@ -320,6 +322,24 @@ Lagdo.DbAdmin.Ajax.App.Db.Table.Ddl.Table.clear = function() {
 };
 Lagdo.DbAdmin.Ajax.App.Db.Table.Ddl.Table.visible = function() {
     return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Table.Ddl.Table', method: 'visible' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+if(Lagdo.DbAdmin.Ajax.App.Db.View.Dql.Select === undefined) {
+    Lagdo.DbAdmin.Ajax.App.Db.View.Dql.Select = {};
+}
+Lagdo.DbAdmin.Ajax.App.Db.View.Dql.Select.show = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.Dql.Select', method: 'show' }, { parameters: arguments, bags: ["dbadmin","dbadmin.select"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.View.Dql.Select.edit = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.Dql.Select', method: 'edit' }, { parameters: arguments, bags: ["dbadmin","dbadmin.select"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.View.Dql.Select.render = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.Dql.Select', method: 'render' }, { parameters: arguments, bags: ["dbadmin","dbadmin.select"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.View.Dql.Select.clear = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.Dql.Select', method: 'clear' }, { parameters: arguments, bags: ["dbadmin","dbadmin.select"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.View.Dql.Select.visible = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.Dql.Select', method: 'visible' }, { parameters: arguments, bags: ["dbadmin","dbadmin.select"] });
 };
 if(Lagdo.DbAdmin.Ajax.App.Db.Server.Databases === undefined) {
     Lagdo.DbAdmin.Ajax.App.Db.Server.Databases = {};
@@ -777,6 +797,7 @@ jaxon.dbadmin = (function() {
 
     const editor = {
         page: '',
+        fontSize: '13px',
         modes: {
             sql: 'ace/mode/sql',
             mysql: 'ace/mode/mysql',
@@ -795,6 +816,7 @@ jaxon.dbadmin = (function() {
         });
         editor.ace.setTheme("ace/theme/textmate");
         editor.ace.session.setUseWrapMode(true);
+        document.getElementById(containerId).style.fontSize = editor.fontSize;
     };
 
     const createSqlSelectEditor = (containerId, driver) => {
@@ -811,6 +833,7 @@ jaxon.dbadmin = (function() {
         editor.ace.setTheme("ace/theme/textmate");
         editor.ace.session.setUseWrapMode(true);
         editor.ace.resize();
+        document.getElementById(containerId).style.fontSize = editor.fontSize;
     };
 
     const getSqlQuery = () => {
