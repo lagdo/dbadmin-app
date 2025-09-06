@@ -1,6 +1,8 @@
 ARG ALPINE_VERSION=3.22
 ARG PHP_VERSION=8.4
 ARG UNIT_VERSION=1.34.2
+ARG DBADMIN_VERSION=0.1.4
+ARG PHP_ALPINE_VERSION=${PHP_VERSION}-zts-alpine${ALPINE_VERSION}
 
 # Nginx Unit downloader
 FROM alpine:${ALPINE_VERSION} AS nginx-unit-downloader
@@ -11,17 +13,15 @@ ADD ["https://codeload.github.com/nginx/unit/tar.gz/refs/tags/${UNIT_VERSION}", 
 RUN tar zxvf /tmp/unit.tar.gz --strip=1 -C "/tmp/unit"
 
 # Nginx Unit builder
-ARG PHP_VERSION
-ARG ALPINE_VERSION
-FROM php:${PHP_VERSION}-zts-alpine${ALPINE_VERSION} AS nginx-unit-builder
+ARG PHP_ALPINE_VERSION
+FROM php:${PHP_ALPINE_VERSION} AS nginx-unit-builder
 
 COPY --from=nginx-unit-downloader ["/tmp/unit", "/build/unit/"]
 ENV DESTDIR=/opt/unit/
 WORKDIR "/build/unit/"
-ARG PHP_VERSION
 
 RUN set -eux && \
-  apk add --update --no-cache alpine-sdk curl pcre openssl-dev pcre-dev && \
+  apk add --update --no-cache alpine-sdk openssl-dev pcre-dev pcre curl && \
   ./configure --log=/var/log/unitd.log && \
   ./configure php --module="php" && \
   make -j "$(nproc)" && \
@@ -29,7 +29,7 @@ RUN set -eux && \
   make clean
 
 # Composer installer
-FROM composer AS composer-builder
+FROM jitesoft/composer AS composer-builder
 COPY . /app
 WORKDIR /app/
 RUN composer install --no-dev && \
@@ -38,21 +38,22 @@ RUN composer install --no-dev && \
   composer run post-create-project-cmd
 
 # Root builder
-FROM alpine:${ALPINE_VERSION}
-FROM php:${PHP_VERSION}-zts-alpine${ALPINE_VERSION}
+ARG PHP_ALPINE_VERSION
+FROM php:${PHP_ALPINE_VERSION}
 
 ARG PHP_USER
 ARG PHP_UID
 ARG PHP_GID
+ARG DBADMIN_VERSION
 ENV PHP_USER=${PHP_USER}
 ENV PHP_UID=${PHP_UID}
 ENV PHP_GID=${PHP_GID}
 
-RUN set -xe && apk add --no-cache --virtual .build-deps curl pcre
+RUN set -xe && apk add --no-cache --virtual .build-deps curl pcre pcre-dev
 
 RUN --mount=type=bind,from=mlocati/php-extension-installer:2,source=/usr/bin/install-php-extensions,target=/usr/local/bin/install-php-extensions \
-  install-php-extensions zip tokenizer bcmath ctype curl dom fileinfo mbstring openssl \
-  pdo pdo_sqlite sqlite3 pdo_mysql mysqlnd mysqli pdo_pgsql pgsql
+  install-php-extensions zip tokenizer bcmath ctype curl dom fileinfo mbstring opcache \
+  openssl pdo pdo_sqlite sqlite3 pdo_mysql mysqlnd mysqli pdo_pgsql pgsql
 
 # Nginx Unit
 COPY --from=nginx-unit-builder ["/opt/unit/", "/opt/unit/"]
@@ -78,6 +79,12 @@ COPY --from=composer-builder --chown=${PHP_USER} ["/app/vendor/", "/var/www/vend
 
 WORKDIR /var/www
 EXPOSE 8080
+
+LABEL maintainer="Thierry Feuzeu <thierry.feuzeu@gmail.com>" \
+  org.opencontainers.image.source="https://github.com/lagdo/dbadmin-app" \
+  org.opencontainers.image.description="Jaxon DbAdmin: a web-based database management tool." \
+  org.opencontainers.image.licenses="BSD 3-Clause" \
+  org.opencontainers.image.version="${DBADMIN_VERSION}"
 
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 CMD [ "unitd", "--no-daemon", "--control", "unix:/var/run/control.unit.sock" ]
