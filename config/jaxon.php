@@ -15,8 +15,9 @@ return [
         'packages' => [
             Lagdo\DbAdmin\Package::class => [
                 'provider' => function(array $options) {
-                    $reader = app()->make(UserFileReader::class);
-                    return $reader->getOptions($options);
+                    $reader = jaxon()->di()->g(UserFileReader::class);
+                    $cfgFilePath = app()->make(UserFileReader::class . '_config');
+                    return $reader->getOptions($cfgFilePath, $options);
                 },
                 'access' => [
                     'server' => true,
@@ -60,9 +61,9 @@ return [
             'app' => [
                 'uri' => '/jaxon/',
                 'dir' => public_path('/jaxon/'),
-                'export' => true,
-                'minify' => true,
-                'file' => 'app-0.1.5',
+                // 'export' => true,
+                // 'minify' => true,
+                // 'file' => 'app-0.1.6',
             ],
         ],
     ],

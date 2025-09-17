@@ -11,6 +11,7 @@ use function auth;
 use function dirname;
 use function config_path;
 use function is_file;
+use function jaxon;
 
 class DbAdminServiceProvider extends ServiceProvider
 {
@@ -35,7 +36,7 @@ class DbAdminServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->singleton(AuthInterface::class,
+        jaxon()->di()->set(AuthInterface::class,
             fn() => new class implements AuthInterface {
                 public function user(): string
                 {
@@ -46,12 +47,8 @@ class DbAdminServiceProvider extends ServiceProvider
                     return auth()->user()?->role?->name ?? '';
                 }
             });
-
-        $this->app->singleton(UserFileReader::class, function($app) {
-            $auth = $app->make(AuthInterface::class);
-            $configFile = $this->getDbAdminConfigFile();
-            return new UserFileReader($auth, $configFile);
-        });
+        $this->app->singleton(UserFileReader::class . '_config',
+            fn() => $this->getDbAdminConfigFile());
     }
 
     /**
