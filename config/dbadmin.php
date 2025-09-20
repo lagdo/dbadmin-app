@@ -11,4 +11,15 @@ return [
     ],
     'users' => [
     ],
+    'logging' => [
+        'database' => [
+            // Same as the "servers" items, but "name" is the database name.
+            // 'driver' => 'pgsql',
+            // 'host' => "env(LOGGING_DB_HOST)",
+            // 'port' => "env(LOGGING_DB_PORT)",
+            // 'username' => "env(LOGGING_DB_USERNAME)",
+            // 'password' => "env(LOGGING_DB_PASSWORD)",
+            // 'name' => 'logging',
+        ],
+    ],
 ];

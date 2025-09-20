@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('page-title', 'Database administration')
+@section('page-title', 'Database log viewer')
 
 @section('css')
   @jxnCss
@@ -13,13 +13,13 @@
   @jxnScript
 
   <script type='text/javascript'>
-    @jxnPackage(Lagdo\DbAdmin\Package::class, 'ready');
+    @jxnPackage(Lagdo\DbAdmin\LoggingPackage::class, 'ready');
   </script>
 @endsection
 
 @php
-$rqSidebar = rq(Lagdo\DbAdmin\Ajax\App\Sidebar::class);
-$rqWrapper = rq(Lagdo\DbAdmin\Ajax\App\Wrapper::class);
+$rqSidebar = rq(Lagdo\DbAdmin\Ajax\Log\Sidebar::class);
+$rqWrapper = rq(Lagdo\DbAdmin\Ajax\Log\Wrapper::class);
 @endphp
 
 @section('sidebar')

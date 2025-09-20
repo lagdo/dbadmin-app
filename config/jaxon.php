@@ -13,15 +13,39 @@ return [
         ],
         'directories' => [],
         'packages' => [
-            Lagdo\DbAdmin\Package::class => [
+            Lagdo\DbAdmin\DbAdminPackage::class => [
                 'provider' => function(array $options) {
                     $reader = jaxon()->di()->g(UserFileReader::class);
-                    $cfgFilePath = app()->make(UserFileReader::class . '_config');
+                    $cfgFilePath = app()->make('dbadmin_config_file_path');
                     return $reader->getOptions($cfgFilePath, $options);
                 },
                 'access' => [
                     'server' => true,
                     'system' => false,
+                ],
+                'logging' => [
+                    'options' => [
+                        'library' => [
+                            'enabled' => false,
+                        ],
+                        'enduser' => [
+                            'enabled' => false,
+                        ],
+                        'history' => [
+                            'enabled' => false,
+                            'distinct' => true,
+                            'limit' => 15,
+                        ],
+                    ],
+                    'database' => [
+                        // Same as the "servers" items, but "name" is the database name.
+                        // 'driver' => 'pgsql',
+                        // 'host' => "env(LOGGING_DB_HOST)",
+                        // 'port' => "env(LOGGING_DB_PORT)",
+                        // 'username' => "env(LOGGING_DB_USERNAME)",
+                        // 'password' => "env(LOGGING_DB_PASSWORD)",
+                        // 'name' => 'logging',
+                    ],
                 ],
             ],
         ],
@@ -61,9 +85,9 @@ return [
             'app' => [
                 'uri' => '/jaxon/',
                 'dir' => public_path('/jaxon/'),
-                // 'export' => true,
-                // 'minify' => true,
-                // 'file' => 'app-0.1.6',
+                'export' => true,
+                'minify' => true,
+                'file' => 'app-0.1.6',
             ],
         ],
     ],

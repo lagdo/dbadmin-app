@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "25dc48f18d5ab657c91c7f973759f205",
+    "content-hash": "0b41b6c8053151950f9a55d9759cd1ed",
     "packages": [
         {
             "name": "avplab/php-html-builder",
@@ -1900,16 +1900,16 @@
         },
         {
             "name": "lagdo/jaxon-dbadmin",
-            "version": "v0.17.0",
+            "version": "v0.17.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lagdo/jaxon-dbadmin.git",
-                "reference": "33f9f8b9b4ed150521736aea7c673134e5f9bfe2"
+                "reference": "2415713191e175f765949b83ec2866c5723bc74a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lagdo/jaxon-dbadmin/zipball/33f9f8b9b4ed150521736aea7c673134e5f9bfe2",
-                "reference": "33f9f8b9b4ed150521736aea7c673134e5f9bfe2",
+                "url": "https://api.github.com/repos/lagdo/jaxon-dbadmin/zipball/2415713191e175f765949b83ec2866c5723bc74a",
+                "reference": "2415713191e175f765949b83ec2866c5723bc74a",
                 "shasum": ""
             },
             "require": {
@@ -1966,7 +1966,7 @@
                 "issues": "https://github.com/lagdo/jaxon-dbadmin/issues",
                 "source": "https://github.com/lagdo/jaxon-dbadmin"
             },
-            "time": "2025-09-17T22:41:34+00:00"
+            "time": "2025-09-18T00:02:40+00:00"
         },
         {
             "name": "lagdo/jaxon-ui-builder",
@@ -2019,6 +2019,66 @@
                 "source": "https://github.com/lagdo/jaxon-ui-builder"
             },
             "time": "2025-08-18T19:06:35+00:00"
+        },
+        {
+            "name": "lagdo/laravel-facades",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lagdo/laravel-facades.git",
+                "reference": "9d19b7717a6fa54c461dc86dc0fa8d86365da805"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lagdo/laravel-facades/zipball/9d19b7717a6fa54c461dc86dc0fa8d86365da805",
+                "reference": "9d19b7717a6fa54c461dc86dc0fa8d86365da805",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "7.*|8.*|9.*|10.*|11.*|12.*",
+                "lagdo/facades": "^1.0"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.4",
+                "phpunit/phpcov": "^8.2",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Lagdo\\Laravel\\Facades\\FacadesServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Lagdo\\Laravel\\Facades\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Thierry Feuzeu"
+                }
+            ],
+            "description": "Call Laravel services using facades.",
+            "homepage": "https://github.com/lagdo/laravel-facades",
+            "keywords": [
+                "facades",
+                "framework",
+                "laravel",
+                "php",
+                "services"
+            ],
+            "support": {
+                "issues": "https://github.com/lagdo/laravel-facades/issues",
+                "source": "https://github.com/lagdo/laravel-facades"
+            },
+            "time": "2025-03-31T19:48:08+00:00"
         },
         {
             "name": "lagdo/ui-builder",

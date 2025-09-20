@@ -5,7 +5,6 @@ namespace App\Providers;
 use Dotenv\Dotenv;
 use Illuminate\Support\ServiceProvider;
 use Lagdo\DbAdmin\Config\AuthInterface;
-use Lagdo\DbAdmin\Config\UserFileReader;
 
 use function auth;
 use function dirname;
@@ -47,7 +46,7 @@ class DbAdminServiceProvider extends ServiceProvider
                     return auth()->user()?->role?->name ?? '';
                 }
             });
-        $this->app->singleton(UserFileReader::class . '_config',
+        $this->app->singleton('dbadmin_config_file_path',
             fn() => $this->getDbAdminConfigFile());
     }
 

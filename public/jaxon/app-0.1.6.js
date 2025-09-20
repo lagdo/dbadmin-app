@@ -152,20 +152,32 @@ Lagdo.DbAdmin.Ajax.App.Db.Server.Status.clear = function() {
 Lagdo.DbAdmin.Ajax.App.Db.Server.Status.visible = function() {
     return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Server.Status', method: 'visible' }, { parameters: arguments, bags: ["dbadmin"] });
 };
+if(Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.Form === undefined) {
+    Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.Form = {};
+}
+Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.Form.add = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.Form', method: 'add' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.Form.edit = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.Form', method: 'edit' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.Form.render = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.Form', method: 'render' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.Form.clear = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.Form', method: 'clear' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.Form.visible = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.Form', method: 'visible' }, { parameters: arguments, bags: ["dbadmin"] });
+};
 if(Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View === undefined) {
     Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View = {};
 }
 Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View.show = function() {
     return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View', method: 'show' }, { parameters: arguments, bags: ["dbadmin"] });
 };
-Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View.add = function() {
-    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View', method: 'add' }, { parameters: arguments, bags: ["dbadmin"] });
-};
 Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View.create = function() {
     return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View', method: 'create' }, { parameters: arguments, bags: ["dbadmin"] });
-};
-Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View.edit = function() {
-    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View', method: 'edit' }, { parameters: arguments, bags: ["dbadmin"] });
 };
 Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View.update = function() {
     return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View', method: 'update' }, { parameters: arguments, bags: ["dbadmin"] });
@@ -217,6 +229,15 @@ Lagdo.DbAdmin.Ajax.App.Page.DbConnection.clear = function() {
 };
 Lagdo.DbAdmin.Ajax.App.Page.DbConnection.visible = function() {
     return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Page.DbConnection', method: 'visible' }, { parameters: arguments });
+};
+if(Lagdo.DbAdmin.Ajax.App.Db.Command.Storage === undefined) {
+    Lagdo.DbAdmin.Ajax.App.Db.Command.Storage = {};
+}
+Lagdo.DbAdmin.Ajax.App.Db.Command.Storage.showCommandList = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.Storage', method: 'showCommandList' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.Command.Storage.loadCommand = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.Storage', method: 'loadCommand' }, { parameters: arguments, bags: ["dbadmin"] });
 };
 if(Lagdo.DbAdmin.Ajax.App.Db.Database.Events === undefined) {
     Lagdo.DbAdmin.Ajax.App.Db.Database.Events = {};
@@ -641,6 +662,18 @@ Lagdo.DbAdmin.Ajax.App.Menu.Server.Databases.clear = function() {
 Lagdo.DbAdmin.Ajax.App.Menu.Server.Databases.visible = function() {
     return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Menu.Server.Databases', method: 'visible' }, { parameters: arguments });
 };
+if(Lagdo.DbAdmin.Ajax.App.Db.Command.QueryHistory === undefined) {
+    Lagdo.DbAdmin.Ajax.App.Db.Command.QueryHistory = {};
+}
+Lagdo.DbAdmin.Ajax.App.Db.Command.QueryHistory.render = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.QueryHistory', method: 'render' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.Command.QueryHistory.clear = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.QueryHistory', method: 'clear' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.Command.QueryHistory.visible = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.QueryHistory', method: 'visible' }, { parameters: arguments, bags: ["dbadmin"] });
+};
 if(Lagdo.DbAdmin.Ajax.App.Db.Table.Dql.Options.Fields === undefined) {
     Lagdo.DbAdmin.Ajax.App.Db.Table.Dql.Options.Fields = {};
 }
@@ -796,6 +829,7 @@ jaxon.dbadmin = (function() {
     };
 
     const editor = {
+        ace: null,
         page: '',
         fontSize: '13px',
         modes: {
@@ -842,7 +876,15 @@ jaxon.dbadmin = (function() {
         return selectedText ? selectedText : editor.ace.getValue();
     };
 
-    const saveSqlEditorContent = () => editor.container.save();
+    // Set the SQL query value and reset the undo history.
+    const setSqlQuery = (query) => editor.ace.session.setValue(query);
+
+    const getCommandQuery = (commandId) => $(`#dbadmin-history-command-${commandId}`).text();
+
+    const history = {
+        editSqlQuery: (commandId) => setSqlQuery(getCommandQuery(commandId)),
+        insertSqlQuery: (commandId) => editor.ace.insert(getCommandQuery(commandId)),
+    };
 
     return {
         countTableCheckboxes,
@@ -852,6 +894,7 @@ jaxon.dbadmin = (function() {
         createSqlQueryEditor,
         createSqlSelectEditor,
         getSqlQuery,
-        saveSqlEditorContent,
+        setSqlQuery,
+        history,
     };
 })();
