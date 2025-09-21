@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\DbAdminLogWriter;
 use Lagdo\DbAdmin\Config\UserFileReader;
 
 return [
@@ -9,6 +10,7 @@ return [
             'middlewares' => [
                 'web', // Includes the Illuminate\Session\Middleware\StartSession
                 // middleware, which returns a 419 error when the sessions has expired.
+                DbAdminLogWriter::class,
             ],
         ],
         'directories' => [],
