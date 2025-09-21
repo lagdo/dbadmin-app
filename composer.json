@@ -11,10 +11,10 @@
         "jaxon-php/jaxon-dialogs": "^5.0",
         "jaxon-php/jaxon-laravel": "^5.0",
         "jaxon-php/jaxon-upload": "^2.0",
-        "lagdo/dbadmin-driver-mysql": "^0.13",
-        "lagdo/dbadmin-driver-pgsql": "^0.13",
-        "lagdo/dbadmin-driver-sqlite": "^0.13",
-        "lagdo/jaxon-dbadmin": "^0.17",
+        "lagdo/dbadmin-driver-mysql": "^0.14",
+        "lagdo/dbadmin-driver-pgsql": "^0.14",
+        "lagdo/dbadmin-driver-sqlite": "^0.14",
+        "lagdo/jaxon-dbadmin": "^0.18",
         "lagdo/laravel-facades": "^1.0",
         "lagdo/ui-builder": "^0.2",
         "lagdo/ui-builder-bootstrap5": "^0.1",
@@ -84,5 +84,5 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": false
+    "prefer-stable": true
 }
