@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\DbAdminLogging;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -37,6 +38,11 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
         //
+        $middleware->group('dbadmin.logging', [
+            'can:logging',
+            DbAdminLogging::class,
+            'jaxon.config',
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         // When the session expires, redirect any Jaxon request to the login page.

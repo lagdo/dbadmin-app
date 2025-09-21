@@ -21,5 +21,8 @@ return [
             // 'password' => "env(LOGGING_DB_PASSWORD)",
             // 'name' => 'logging',
         ],
+        'allowed' => [
+            // The emails of users that are allowed to access the logging page.
+        ],
     ],
 ];
