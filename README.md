@@ -29,9 +29,9 @@ The following features are currently available:
 - Query a view.
 - Execute queries in the query editor.
 - Use a better editor for SQL queries.
+- Save and show the query history.
 
 The following features are either disabled or not yet implemented:
-- Save and show the query history.
 - Save user favorite queries.
 - Navigate through related tables.
 - Create, alter or drop a database, table or view.
