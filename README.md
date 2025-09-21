@@ -2,7 +2,7 @@
 
 **Jaxon DbAdmin is a database admin dashboard with multiple DBMS support, and a custom and extensible authentication system.**
 
-[Features](#features-and-current-status) • [Installation](#installation) • [Docker](#running-with-docker) • [Authentication](#user-management-and-authentication) • [Configuration](#database-access-configuration)
+[Features](#features-and-current-status) • [Installation](#installation) • [Docker](#running-with-docker) • [Authentication](#user-management-and-authentication) • [Configuration](#database-access-configuration) • [Query logs](#the-query-logs)
 
 ![screenshot](screenshots/jaxon-dbadmin-sqlite-chinook.png)
 
@@ -274,6 +274,85 @@ The `server` option defines if the user has access to server specific pages. If 
 The corresponding menu entries will not be displayed in the sidebar menu.
 
 The `databases` and `schemas` options restrict the user access to the listed databases and schemas.
+
+## The query logs
+
+All the queries executed by the users can be saved in a database and viewed in a dedicated page.
+
+### Creating the query logs database
+
+SQL scripts are provided in the [https://github.com/lagdo/jaxon-dbadmin/tree/main/migrations](https://github.com/lagdo/jaxon-dbadmin/tree/main/migrations) repo to create the query logs database on `PostgreSQL`, `MySQL` (or `MariaDB`), or `SQLite`.
+For each DBMS, the script is in the `01-create-command-tables.up.sql` file in the corresponding subdir.
+
+### Writing in the query logs
+
+The query logging options are located in the `logging` section of the `Lagdo\DbAdmin\DbAdminPackage` options in the `config/jaxon.php` config file.
+
+```php
+        'packages' => [
+            Lagdo\DbAdmin\DbAdminPackage::class => [
+                // Other options
+                // ...
+                'logging' => [
+                    'options' => [
+                        'enduser' => [
+                            'enabled' => true,
+                        ],
+                        'history' => [
+                            'enabled' => true,
+                            'distinct' => true,
+                            'limit' => 10,
+                        ],
+                    ],
+                    'database' => [
+                        // Same as the "servers" items, but "name" is the database name.
+                        'driver' => 'pgsql',
+                        'host' => "env(LOGGING_DB_HOST)",
+                        'port' => "env(LOGGING_DB_PORT)",
+                        'username' => "env(LOGGING_DB_USERNAME)",
+                        'password' => "env(LOGGING_DB_PASSWORD)",
+                        'name' => 'logging',
+                    ],
+                ],
+            ],
+        ],
+```
+
+The `logging.database` section contains the logging database connection options.
+The options are the same as in the above [database servers](#the-servers-option) options, excepted that the `name` option is the database name.
+
+The `logging.options.enduser.enabled` option enables the logging, for queries executed in the query builder and the query editor.
+
+The `logging.options.history.enabled` option enables the logging for queries executed in the editor, and the display of the query history in the query editor page.
+The `logging.options.history.distinct` option enables the removal of duplicates in the query history, while the `logging.options.history.limit` option sets the number of queries to show.
+
+### Viewing in the query logs
+
+The `/logging` page in this app displays the logged queries.
+
+![screenshot](screenshots/jaxon-dbadmin-logging.png)
+
+The access to that page is limited to the user accounts with the email listed in the `logging.allowed` option in the `config/dbadmin.php` file.
+
+The same database connection options as above must be set in the `logging.database` option in the `config/dbadmin.php` file.
+
+```php
+    'logging' => [
+        'database' => [
+            // Same as the "servers" items, but "name" is the database name.
+            'driver' => 'pgsql',
+            'host' => "env(LOGGING_DB_HOST)",
+            'port' => "env(LOGGING_DB_PORT)",
+            'username' => "env(LOGGING_DB_USERNAME)",
+            'password' => "env(LOGGING_DB_PASSWORD)",
+            'name' => 'chinook',
+        ],
+        'allowed' => [
+            // The emails of users that are allowed to access the logging page.
+            'admin@company.com',
+        ],
+    ],
+```
 
 ## Contributing
 
