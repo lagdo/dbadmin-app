@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 use function config;
 
-class DbAdminLogging
+class DbAdminLogReader
 {
     /**
      * Handle an incoming request.
@@ -21,7 +21,10 @@ class DbAdminLogging
         // Copy the DbAdmin logging options into the Jaxon packages options.
         config([
             'jaxon.app.packages' => [
-                LoggingPackage::class => config('dbadmin.logging'),
+                LoggingPackage::class => [
+                    'options' => config('dbadmin.logging.reader'),
+                    'database' => config('dbadmin.logging.database')
+                ],
             ],
             'jaxon.lib.core.request.uri' => '/logging/jaxon',
             'jaxon.lib.js.app.file' => 'log-1.0.0',

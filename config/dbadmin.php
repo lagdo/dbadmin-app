@@ -12,6 +12,19 @@ return [
     'users' => [
     ],
     'logging' => [
+        'options' => [
+            'library' => [
+                'enabled' => false,
+            ],
+            'enduser' => [
+                'enabled' => false,
+            ],
+            'history' => [
+                'enabled' => false,
+                'distinct' => true,
+                'limit' => 15,
+            ],
+        ],
         'database' => [
             // Same as the "servers" items, but "name" is the database name.
             // 'driver' => 'pgsql',

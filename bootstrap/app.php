@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Middleware\DbAdminLogging;
+use App\Http\Middleware\DbAdminLogReader;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -37,10 +37,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
-        $middleware->group('dbadmin.logging', [
+        $middleware->group('dbadmin.log.reader', [
             'can:logging',
-            DbAdminLogging::class,
+            DbAdminLogReader::class,
             'jaxon.config',
         ]);
     })
