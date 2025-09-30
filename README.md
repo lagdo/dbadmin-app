@@ -355,6 +355,8 @@ The queries saved in the logs from the query editor are displayed in the user qu
 
 Additionally, the user can also save his preferred queries in the logging database, using the `Save` button in the query edition page.
 
+![screenshot](screenshots/jaxon-dbadmin-favorites-history.png)
+
 Both the history and favorites queries are displayed in the query page. From those two tables, the user can copy or insert the query code in the editor.
 
 The queries in the favorites can also be modified or deleted.
