@@ -16,6 +16,7 @@ Lagdo.DbAdmin.Ajax = {};
 Lagdo.DbAdmin.Ajax.App = {};
 Lagdo.DbAdmin.Ajax.App.Db = {};
 Lagdo.DbAdmin.Ajax.App.Db.Command = {};
+Lagdo.DbAdmin.Ajax.App.Db.Command.Query = {};
 Lagdo.DbAdmin.Ajax.App.Db.Database = {};
 Lagdo.DbAdmin.Ajax.App.Db.Server = {};
 Lagdo.DbAdmin.Ajax.App.Db.Table = {};
@@ -229,15 +230,6 @@ Lagdo.DbAdmin.Ajax.App.Page.DbConnection.clear = function() {
 };
 Lagdo.DbAdmin.Ajax.App.Page.DbConnection.visible = function() {
     return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Page.DbConnection', method: 'visible' }, { parameters: arguments });
-};
-if(Lagdo.DbAdmin.Ajax.App.Db.Command.Storage === undefined) {
-    Lagdo.DbAdmin.Ajax.App.Db.Command.Storage = {};
-}
-Lagdo.DbAdmin.Ajax.App.Db.Command.Storage.showCommandList = function() {
-    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.Storage', method: 'showCommandList' }, { parameters: arguments, bags: ["dbadmin"] });
-};
-Lagdo.DbAdmin.Ajax.App.Db.Command.Storage.loadCommand = function() {
-    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.Storage', method: 'loadCommand' }, { parameters: arguments, bags: ["dbadmin"] });
 };
 if(Lagdo.DbAdmin.Ajax.App.Db.Database.Events === undefined) {
     Lagdo.DbAdmin.Ajax.App.Db.Database.Events = {};
@@ -662,17 +654,29 @@ Lagdo.DbAdmin.Ajax.App.Menu.Server.Databases.clear = function() {
 Lagdo.DbAdmin.Ajax.App.Menu.Server.Databases.visible = function() {
     return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Menu.Server.Databases', method: 'visible' }, { parameters: arguments });
 };
-if(Lagdo.DbAdmin.Ajax.App.Db.Command.QueryHistory === undefined) {
-    Lagdo.DbAdmin.Ajax.App.Db.Command.QueryHistory = {};
+if(Lagdo.DbAdmin.Ajax.App.Db.Command.Query.Queries === undefined) {
+    Lagdo.DbAdmin.Ajax.App.Db.Command.Query.Queries = {};
 }
-Lagdo.DbAdmin.Ajax.App.Db.Command.QueryHistory.render = function() {
-    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.QueryHistory', method: 'render' }, { parameters: arguments, bags: ["dbadmin"] });
+Lagdo.DbAdmin.Ajax.App.Db.Command.Query.Queries.render = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.Query.Queries', method: 'render' }, { parameters: arguments, bags: ["dbadmin"] });
 };
-Lagdo.DbAdmin.Ajax.App.Db.Command.QueryHistory.clear = function() {
-    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.QueryHistory', method: 'clear' }, { parameters: arguments, bags: ["dbadmin"] });
+Lagdo.DbAdmin.Ajax.App.Db.Command.Query.Queries.clear = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.Query.Queries', method: 'clear' }, { parameters: arguments, bags: ["dbadmin"] });
 };
-Lagdo.DbAdmin.Ajax.App.Db.Command.QueryHistory.visible = function() {
-    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.QueryHistory', method: 'visible' }, { parameters: arguments, bags: ["dbadmin"] });
+Lagdo.DbAdmin.Ajax.App.Db.Command.Query.Queries.visible = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.Query.Queries', method: 'visible' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+if(Lagdo.DbAdmin.Ajax.App.Db.Command.Query.Favorite === undefined) {
+    Lagdo.DbAdmin.Ajax.App.Db.Command.Query.Favorite = {};
+}
+Lagdo.DbAdmin.Ajax.App.Db.Command.Query.Favorite.render = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.Query.Favorite', method: 'render' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.Command.Query.Favorite.clear = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.Query.Favorite', method: 'clear' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.Command.Query.Favorite.visible = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.Query.Favorite', method: 'visible' }, { parameters: arguments, bags: ["dbadmin"] });
 };
 if(Lagdo.DbAdmin.Ajax.App.Db.Table.Dql.Options.Fields === undefined) {
     Lagdo.DbAdmin.Ajax.App.Db.Table.Dql.Options.Fields = {};
@@ -703,6 +707,39 @@ Lagdo.DbAdmin.Ajax.App.Db.Table.Dql.Options.Values.clear = function() {
 };
 Lagdo.DbAdmin.Ajax.App.Db.Table.Dql.Options.Values.visible = function() {
     return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Table.Dql.Options.Values', method: 'visible' }, { parameters: arguments, bags: ["dbadmin","dbadmin.select"] });
+};
+if(Lagdo.DbAdmin.Ajax.App.Db.Command.Query.FavoriteFunc === undefined) {
+    Lagdo.DbAdmin.Ajax.App.Db.Command.Query.FavoriteFunc = {};
+}
+Lagdo.DbAdmin.Ajax.App.Db.Command.Query.FavoriteFunc.add = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.Query.FavoriteFunc', method: 'add' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.Command.Query.FavoriteFunc.create = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.Query.FavoriteFunc', method: 'create' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.Command.Query.FavoriteFunc.edit = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.Query.FavoriteFunc', method: 'edit' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.Command.Query.FavoriteFunc.update = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.Query.FavoriteFunc', method: 'update' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.Command.Query.FavoriteFunc.delete = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.Query.FavoriteFunc', method: 'delete' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+if(Lagdo.DbAdmin.Ajax.App.Db.Command.Query.FavoritePage === undefined) {
+    Lagdo.DbAdmin.Ajax.App.Db.Command.Query.FavoritePage = {};
+}
+Lagdo.DbAdmin.Ajax.App.Db.Command.Query.FavoritePage.page = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.Query.FavoritePage', method: 'page' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.Command.Query.FavoritePage.render = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.Query.FavoritePage', method: 'render' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.Command.Query.FavoritePage.clear = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.Query.FavoritePage', method: 'clear' }, { parameters: arguments, bags: ["dbadmin"] });
+};
+Lagdo.DbAdmin.Ajax.App.Db.Command.Query.FavoritePage.visible = function() {
+    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.App.Db.Command.Query.FavoritePage', method: 'visible' }, { parameters: arguments, bags: ["dbadmin"] });
 };
 if(Lagdo.DbAdmin.Ajax.App.Db.Table.Dql.Options.Fields.Columns === undefined) {
     Lagdo.DbAdmin.Ajax.App.Db.Table.Dql.Options.Fields.Columns = {};
@@ -879,12 +916,29 @@ jaxon.dbadmin = (function() {
     // Set the SQL query value and reset the undo history.
     const setSqlQuery = (query) => editor.ace.session.setValue(query);
 
-    const getCommandQuery = (commandId) => $(`#dbadmin-history-command-${commandId}`).text();
-
-    const history = {
-        editSqlQuery: (commandId) => setSqlQuery(getCommandQuery(commandId)),
-        insertSqlQuery: (commandId) => editor.ace.insert(getCommandQuery(commandId)),
+    /**
+     * Read the data-query-id attribute in the parent with the given tag name
+     *
+     * @param {Element} node 
+     * @param {string} tag
+     *
+     * @returns {string}
+     */
+    const getQueryId = (node, tag) => {
+        while ((parent = node?.parent())) {
+            if (parent.prop('tagName')?.toLowerCase() === tag) {
+                return parent.attr('data-query-id') ?? '';
+            }
+            node = parent;
+        }
+        return '';
     };
+
+    const getHistoryQuery = (node) =>
+        $('#dbadmin-history-query-' + getQueryId(node, 'td')).text();
+
+    const getFavoriteQuery = (node) =>
+        $('#dbadmin-favorite-query-' + getQueryId(node, 'td')).text();
 
     return {
         countTableCheckboxes,
@@ -895,6 +949,14 @@ jaxon.dbadmin = (function() {
         createSqlSelectEditor,
         getSqlQuery,
         setSqlQuery,
-        history,
+        history: {
+            copySqlQuery: (node) => setSqlQuery(getHistoryQuery(node)),
+            insertSqlQuery: (node) => editor.ace.insert(getHistoryQuery(node)),
+        },
+        favorite: {
+            getQueryId: (node) => getQueryId(node, 'td'),
+            copySqlQuery: (node) => setSqlQuery(getFavoriteQuery(node)),
+            insertSqlQuery: (node) => editor.ace.insert(getFavoriteQuery(node)),
+        },
     };
 })();

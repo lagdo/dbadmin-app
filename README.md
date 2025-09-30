@@ -349,6 +349,16 @@ The same database connection options as above are used.
     ],
 ```
 
+## The query history and favorites
+
+The queries saved in the logs from the query editor are displayed in the user query history, when the corresponding option is enabled.
+
+Additionally, the user can also save his preferred queries in the logging database, using the `Save` button in the query edition page.
+
+Both the history and favorites queries are displayed in the query page. From those two tables, the user can copy or insert the query code in the editor.
+
+The queries in the favorites can also be modified or deleted.
+
 ## Contributing
 
 If you're interested in helping improve this project, contributions are very welcome:
