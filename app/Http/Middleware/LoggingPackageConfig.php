@@ -4,12 +4,12 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Lagdo\DbAdmin\DbAdminPackage;
+use Lagdo\DbAdmin\LoggingPackage;
 use Symfony\Component\HttpFoundation\Response;
 
 use function config;
 
-class DbAdminLogWriter
+class LoggingPackageConfig
 {
     /**
      * Handle an incoming request.
@@ -18,16 +18,16 @@ class DbAdminLogWriter
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // Copy the DbAdmin logging options into the Jaxon packages options.
-        $options = config('jaxon.app.packages')[DbAdminPackage::class];
-        $options['logging'] = [
-            'options' => config('dbadmin.logging.options'),
-            'database' => config('dbadmin.logging.database'),
-        ];
+        // Copy the logging options into the LoggingPackage package options.
         config([
             'jaxon.app.packages' => [
-                DbAdminPackage::class => $options,
+                LoggingPackage::class => [
+                    'options' => config('dbadmin.logging.reader'),
+                    'database' => config('dbadmin.logging.database')
+                ],
             ],
+            'jaxon.lib.core.request.uri' => '/logging/jaxon',
+            'jaxon.lib.js.app.file' => 'log-1.0.0',
         ]);
 
         return $next($request);

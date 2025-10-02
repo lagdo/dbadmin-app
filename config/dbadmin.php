@@ -22,7 +22,11 @@ return [
             'history' => [
                 'enabled' => false,
                 'distinct' => true,
-                'limit' => 15,
+                'limit' => 10,
+            ],
+            'favorite' => [
+                'enabled' => false,
+                'limit' => 10,
             ],
         ],
         'database' => [

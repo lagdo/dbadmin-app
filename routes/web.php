@@ -1,18 +1,17 @@
 <?php
 
-use App\Http\Middleware\DbAdminLogWriter;
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
 
 Route::get('/', fn() => view('dbadmin'))
-    ->middleware(['auth', DbAdminLogWriter::class, 'jaxon.config']);
+    ->middleware(['auth', 'jaxon.dbadmin.config', 'jaxon.config']);
 
 Route::get('/logging', fn() => view('logging'))
-    ->middleware(['auth', 'dbadmin.log.reader'])
+    ->middleware(['auth', 'jaxon.logging.config'])
     ->name('logging');
 
 Route::post('/logging/jaxon', fn() => response()->json([]))
-    ->middleware(['web', 'dbadmin.log.reader', 'jaxon.ajax']);
+    ->middleware(['web', 'jaxon.logging.config', 'jaxon.ajax']);
 
 // Logout
 Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])
