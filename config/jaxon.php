@@ -65,7 +65,7 @@ return [
                 'dir' => public_path('/jaxon/'),
                 'export' => true,
                 'minify' => true,
-                'file' => 'app-0.2.1',
+                'file' => 'app-0.2.2',
             ],
         ],
     ],

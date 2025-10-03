@@ -36,9 +36,9 @@
     </div>
   </div>
 
-  @include('html.footer')
-
   @yield('js')
+
+  @include('html.footer')
 </body>
 
 </html>

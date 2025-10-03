@@ -1900,16 +1900,16 @@
         },
         {
             "name": "lagdo/jaxon-dbadmin",
-            "version": "v0.19.1",
+            "version": "v0.19.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lagdo/jaxon-dbadmin.git",
-                "reference": "80f8c6157942d91ab9b0d760f8a58eb6025fa696"
+                "reference": "753a1c581bcd7c77042b56ddad47204d81a9441e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lagdo/jaxon-dbadmin/zipball/80f8c6157942d91ab9b0d760f8a58eb6025fa696",
-                "reference": "80f8c6157942d91ab9b0d760f8a58eb6025fa696",
+                "url": "https://api.github.com/repos/lagdo/jaxon-dbadmin/zipball/753a1c581bcd7c77042b56ddad47204d81a9441e",
+                "reference": "753a1c581bcd7c77042b56ddad47204d81a9441e",
                 "shasum": ""
             },
             "require": {
@@ -1966,7 +1966,7 @@
                 "issues": "https://github.com/lagdo/jaxon-dbadmin/issues",
                 "source": "https://github.com/lagdo/jaxon-dbadmin"
             },
-            "time": "2025-10-01T03:13:52+00:00"
+            "time": "2025-10-03T00:17:43+00:00"
         },
         {
             "name": "lagdo/jaxon-ui-builder",
@@ -10105,12 +10105,12 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.2"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
