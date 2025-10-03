@@ -1,4 +1,4 @@
-ARG DBADMIN_VERSION=0.1.5
+ARG DBADMIN_VERSION=0.2.3
 
 # Composer installer
 FROM jitesoft/composer AS composer-builder
