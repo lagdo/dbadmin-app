@@ -10,27 +10,20 @@ jaxon.config.responseType = "JSON";
 
 jaxon.setCsrf('csrf-token');
 
-Lagdo = {};
-Lagdo.DbAdmin = {};
-Lagdo.DbAdmin.Ajax = {};
-Lagdo.DbAdmin.Ajax.Log = {};
-if(Lagdo.DbAdmin.Ajax.Log.Commands === undefined) {
-    Lagdo.DbAdmin.Ajax.Log.Commands = {};
-}
-Lagdo.DbAdmin.Ajax.Log.Commands.page = function() {
-    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.Log.Commands', method: 'page' }, { parameters: arguments, bags: ["dbadmin.logging"], callback: [jaxon.dbadmin.callback.spinner] });
-};
-Lagdo.DbAdmin.Ajax.Log.Commands.show = function() {
-    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.Log.Commands', method: 'show' }, { parameters: arguments, bags: ["dbadmin.logging"], callback: [jaxon.dbadmin.callback.spinner] });
-};
-Lagdo.DbAdmin.Ajax.Log.Commands.render = function() {
-    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.Log.Commands', method: 'render' }, { parameters: arguments, bags: ["dbadmin.logging"], callback: [jaxon.dbadmin.callback.spinner] });
-};
-Lagdo.DbAdmin.Ajax.Log.Commands.clear = function() {
-    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.Log.Commands', method: 'clear' }, { parameters: arguments, bags: ["dbadmin.logging"], callback: [jaxon.dbadmin.callback.spinner] });
-};
-Lagdo.DbAdmin.Ajax.Log.Commands.visible = function() {
-    return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.Log.Commands', method: 'visible' }, { parameters: arguments, bags: ["dbadmin.logging"], callback: [jaxon.dbadmin.callback.spinner] });
+Lagdo = {
+  DbAdmin: {
+    Ajax: {
+      Log: {
+        Commands: {
+          page: function() { return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.Log.Commands', method: 'page' }, { parameters: arguments, bags: ["dbadmin.logging"], callback: [jaxon.dbadmin.callback.spinner] }); },
+          show: function() { return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.Log.Commands', method: 'show' }, { parameters: arguments, bags: ["dbadmin.logging"], callback: [jaxon.dbadmin.callback.spinner] }); },
+          render: function() { return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.Log.Commands', method: 'render' }, { parameters: arguments, bags: ["dbadmin.logging"], callback: [jaxon.dbadmin.callback.spinner] }); },
+          clear: function() { return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.Log.Commands', method: 'clear' }, { parameters: arguments, bags: ["dbadmin.logging"], callback: [jaxon.dbadmin.callback.spinner] }); },
+          visible: function() { return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.Log.Commands', method: 'visible' }, { parameters: arguments, bags: ["dbadmin.logging"], callback: [jaxon.dbadmin.callback.spinner] }); },
+        },
+      },
+    },
+  },
 };
 
 jaxon.dom.ready(() => jaxon.processCustomAttrs());
@@ -83,6 +76,8 @@ jaxon.dbadmin = (function() {
             selectionStyle: "text",
             dragEnabled: false,
             useWorker: false,
+            enableBasicAutocompletion: true,
+            enableSnippets: false,
             enableLiveAutocompletion: true,
             showPrintMargin: false,
         });

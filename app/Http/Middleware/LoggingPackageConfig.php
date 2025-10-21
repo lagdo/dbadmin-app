@@ -27,7 +27,7 @@ class LoggingPackageConfig
                 ],
             ],
             'jaxon.lib.core.request.uri' => '/logging/jaxon',
-            'jaxon.lib.js.app.file' => 'log-1.0.1',
+            'jaxon.lib.js.app.file' => 'log-1.0.2',
         ]);
 
         return $next($request);

@@ -5,6 +5,12 @@ use Lagdo\DbAdmin\Config\UserFileReader;
 
 return [
     'app' => [
+        'metadata' => [
+            'cache' => [
+                'enabled' => true,
+                'dir' => storage_path('jaxon/attributes'),
+            ],
+        ],
         'request' => [
             'route' => 'jaxon.ajax', // The route name
             'middlewares' => [
@@ -65,7 +71,6 @@ return [
                 'dir' => public_path('/jaxon/'),
                 'export' => true,
                 'minify' => true,
-                'file' => 'app-0.2.2',
             ],
         ],
     ],

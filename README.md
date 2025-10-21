@@ -30,9 +30,9 @@ The following features are currently available:
 - Execute queries in the query editor.
 - Use a better editor for SQL queries.
 - Save and show the query history.
+- Save user favorite queries.
 
 The following features are either disabled or not yet implemented:
-- Save user favorite queries.
 - Navigate through related tables.
 - Create, alter or drop a database, table or view.
 - Insert, modify or delete data in a table.
