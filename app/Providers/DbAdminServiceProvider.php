@@ -46,7 +46,7 @@ class DbAdminServiceProvider extends ServiceProvider
                     return auth()->user()?->role?->name ?? '';
                 }
             });
-        $this->app->singleton('dbadmin_config_file_path',
+        jaxon()->di()->set('dbadmin_config_file_path',
             fn() => $this->getDbAdminConfigFile());
     }
 

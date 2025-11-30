@@ -23,8 +23,9 @@ return [
         'packages' => [
             Lagdo\DbAdmin\DbAdminPackage::class => [
                 'provider' => function(array $options) {
-                    $reader = jaxon()->di()->g(UserFileReader::class);
-                    $cfgFilePath = app()->make('dbadmin_config_file_path');
+                    $di = jaxon()->di();
+                    $reader = $di->g(UserFileReader::class);
+                    $cfgFilePath = $di->g('dbadmin_config_file_path');
                     return $reader->getOptions($cfgFilePath, $options);
                 },
                 'access' => [

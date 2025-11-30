@@ -1,25 +1,29 @@
-jaxon.config.requestURI = "/logging/jaxon";
+jaxon.config.requestURI = '/logging/jaxon';
 jaxon.config.statusMessages = false;
 jaxon.config.waitCursor = true;
-jaxon.config.version = "Jaxon 5.x";
-jaxon.config.defaultMode = "asynchronous";
-jaxon.config.defaultMethod = "POST";
-jaxon.config.responseType = "JSON";
+jaxon.config.version = 'Jaxon 5.x';
+jaxon.config.defaultMode = 'asynchronous';
+jaxon.config.defaultMethod = 'POST';
+jaxon.config.responseType = 'JSON';
+
 
 
 
 jaxon.setCsrf('csrf-token');
+
+const jx = {
+  rc: (name, method, parameters, options = {}) => jaxon.request({ type: 'class', name, method }, { parameters, ...options}),
+  rf: (name, parameters, options = {}) => jaxon.request({ type: 'func', name }, { parameters, ...options}),
+  c0: 'Lagdo.DbAdmin.Ajax.Log.Commands',
+};
 
 Lagdo = {
   DbAdmin: {
     Ajax: {
       Log: {
         Commands: {
-          page: function() { return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.Log.Commands', method: 'page' }, { parameters: arguments, bags: ["dbadmin.logging"], callback: [jaxon.dbadmin.callback.spinner] }); },
-          show: function() { return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.Log.Commands', method: 'show' }, { parameters: arguments, bags: ["dbadmin.logging"], callback: [jaxon.dbadmin.callback.spinner] }); },
-          render: function() { return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.Log.Commands', method: 'render' }, { parameters: arguments, bags: ["dbadmin.logging"], callback: [jaxon.dbadmin.callback.spinner] }); },
-          clear: function() { return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.Log.Commands', method: 'clear' }, { parameters: arguments, bags: ["dbadmin.logging"], callback: [jaxon.dbadmin.callback.spinner] }); },
-          visible: function() { return jaxon.request({ type: 'class', name: 'Lagdo.DbAdmin.Ajax.Log.Commands', method: 'visible' }, { parameters: arguments, bags: ["dbadmin.logging"], callback: [jaxon.dbadmin.callback.spinner] }); },
+          page: (...args) => jx.rc(jx.c0, 'page', args, { bags: ["dbadmin.logging"] }),
+          show: (...args) => jx.rc(jx.c0, 'show', args, { bags: ["dbadmin.logging"] }),
         },
       },
     },
@@ -42,13 +46,23 @@ jaxon.dbadmin = (function() {
         });
     };
 
-    const selectAllCheckboxes = (checkboxId) => $('#' + checkboxId + '-all').change(function() {
-        $('.' + checkboxId, '#jaxon-dbadmin').prop('checked', this.checked);
-    });
+    const setExportEventHandlers = (checkboxId) => {
+        // Select all
+        $('#' + checkboxId + '-all').change(function() {
+            $('.' + checkboxId, '#jaxon-dbadmin').prop('checked', this.checked);
+        });
+        // Select database or table
+        const prefixLength = checkboxId.length - 5;
+        if (checkboxId.substring(prefixLength, checkboxId.length) === '-name') {
+            $('.' + checkboxId, '#jaxon-dbadmin').change(function() {
+                const dataCheckboxId = checkboxId.substring(0, prefixLength) +
+                    '-data-' + $(this).attr('data-pos');
+                $('#' + dataCheckboxId, '#jaxon-dbadmin').prop('checked', this.checked);
+            });
+        }
+    };
 
-    const setFileUpload = (container, buttonId, fileInputId) => {
-        // Trigger a click on the hidden file select component when the user clicks on the button.
-        $(buttonId).click(() => $(fileInputId).trigger("click"));
+    const setFileUpload = (container) => {
         $(container).on('change', ':file', function() {
             const fileInput = $(this);
             const numFiles = fileInput.get(0).files ? fileInput.get(0).files.length : 1;
@@ -57,6 +71,15 @@ jaxon.dbadmin = (function() {
             const text = numFiles > 1 ? numFiles + ' files selected' : label;
             textInput.length > 0 && textInput.val(text);
         });
+    };
+
+    const downloadFile = (url, filename) => {
+        const downloadLink = document.createElement("a");
+        downloadLink.href = url;
+        downloadLink.download = filename;
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
     };
 
     const editor = {
@@ -139,8 +162,9 @@ jaxon.dbadmin = (function() {
     return {
         countTableCheckboxes,
         selectTableCheckboxes,
-        selectAllCheckboxes,
+        setExportEventHandlers,
         setFileUpload,
+        downloadFile,
         createSqlQueryEditor,
         createSqlSelectEditor,
         getSqlQuery,
@@ -161,31 +185,32 @@ jaxon.dom.ready(() => {
     const spin = {
         spinner: new Spin.Spinner({ position: 'fixed' }),
         count: 0, // To make sure that the spinner is started once.
+        cursor: jaxon.config.cursor.update,
     };
 
-    const spinnerCallback = {
+    // Replace the default Jaxon defined cursor with our custom spinner.
+    jaxon.config.cursor.update = {
         onRequest: function() {
             if(spin.count++ === 0)
             {
                 spin.spinner.spin(document.body);
+                spin.cursor.onRequest();
             }
         },
         onComplete: function() {
             if(--spin.count === 0)
             {
                 spin.spinner.stop();
+                spin.cursor.onComplete();
             }
         },
         onFailure: function() {
             if(--spin.count === 0)
             {
                 spin.spinner.stop();
+                spin.cursor.onFailure && spin.cursor.onFailure();
             }
         },
-    };
-
-    jaxon.dbadmin.callback = {
-        spinner: spinnerCallback,
     };
 });
 
@@ -368,4 +393,4 @@ jaxon.dom.ready(() => {
     }
 
     exports.Spinner = Spinner;
-}));
+}));

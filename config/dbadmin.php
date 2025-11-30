@@ -17,30 +17,23 @@ return [
                 'enabled' => false,
             ],
             'enduser' => [
-                'enabled' => true,
+                'enabled' => false,
             ],
             'history' => [
-                'enabled' => true,
+                'enabled' => false,
                 'distinct' => true,
-                'limit' => 10,
+                'limit' => 15,
             ],
             'favorite' => [
-                'enabled' => true,
+                'enabled' => false,
                 'limit' => 10,
             ],
         ],
         'database' => [
             // Same as the "servers" items, but "name" is the database name.
-            'driver' => 'pgsql',
-            'host' => "env(LOGGING_DB_HOST)",
-            'port' => "env(LOGGING_DB_PORT)",
-            'username' => "env(LOGGING_DB_USERNAME)",
-            'password' => "env(LOGGING_DB_PASSWORD)",
-            'name' => 'chinook',
         ],
         'allowed' => [
             // The emails of users that are allowed to access the logging page.
-            'admin@company.com'
         ],
     ],
 ];

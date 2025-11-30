@@ -6,7 +6,7 @@
 **.DS_Store
 
 **/vendor
-!**/public/vendor
+**/public/vendor
 
 **/coverage*
 **/*node_modules

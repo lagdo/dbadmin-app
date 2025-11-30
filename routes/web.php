@@ -1,9 +1,13 @@
 <?php
 
+use App\Http\Controllers\ExportController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
 
 Route::get('/', fn() => view('dbadmin'))
+    ->middleware(['auth', 'jaxon.dbadmin.config', 'jaxon.config']);
+
+Route::get('/export/{filename}', ExportController::class)
     ->middleware(['auth', 'jaxon.dbadmin.config', 'jaxon.config']);
 
 Route::get('/logging', fn() => view('logging'))
