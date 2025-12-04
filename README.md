@@ -30,14 +30,15 @@ The following features are currently available:
 - Execute queries in the query editor.
 - Use a better editor for SQL queries.
 - Save and show the query history.
-- Save user favorite queries.
+- Save queries in user favorites.
+- Import or export data.
 
-The following features are either disabled or not yet implemented:
+The following features are either disabled or not yet implemented, and planned for future releases:
 - Navigate through related tables.
 - Create, alter or drop a database, table or view.
 - Insert, modify or delete data in a table.
-- Import or export data.
 - Code completion for table and field names in the SQL editor.
+- An advanced GUI-based query builder.
 
 ## Installation
 
@@ -360,6 +361,108 @@ Additionally, the user can also save his preferred queries in the logging databa
 Both the history and favorites queries are displayed in the query page. From those two tables, the user can copy or insert the query code in the editor.
 
 The queries in the favorites can also be modified or deleted.
+
+### Data export
+
+Databases can be exported to various types of files: SQL, CSV, and more.
+
+The export feature is configured with two callbacks.
+
+The `writer` callback saves the export data content in a file. It takes the content and the file name as parameters, and returns the URI to the exported file.
+It must return an empty string in case of error, and the web app must be configured to return the file content on a request to the URI.
+
+The `reader` callback takes an export file name as parameter, then reads and returns its content.
+
+Both callbacks can use the [Jaxon Storage](https://github.com/jaxon-php/jaxon-storage), as in the example below, to read and write the exported files, which can then be saved on different types of filesystems, thanks to the [Flysystem](https://flysystem.thephpleague.com) library.
+
+The callbacks can also save the files in different locations, depending for example on the application user.
+In this example, each user files will be store in the `/path/to/exports<user-email-slug>/` dir.
+A user will not be able to get access to another user files from his account.
+
+```php
+use Illuminate\Support\Str;
+use Jaxon\Storage\StorageManager;
+use League\Flysystem\FilesystemException;
+use League\Flysystem\UnableToReadFile;
+use League\Flysystem\UnableToWriteFile;
+
+use function Jaxon\jaxon;
+
+function getExportPath(string $filename): string
+{
+    return Str::slug(auth()->user()->email) . "/$filename";
+}
+
+return [
+    'app' => [
+        'storage' => [
+            'exports' => [
+                'adapter' => 'local',
+                'dir' => "/path/to/exports",
+            ],
+        ],
+        'packages' => [
+            Lagdo\DbAdmin\DbAdminPackage::class => [
+                'servers' => [
+                    // The database servers
+                ],
+                'export' => [
+                    'writer' => function(string $content, string $filename): string {
+                        try {
+                            // Make a Filesystem object with the storage.exports options.
+                            $storage = jaxon()->di()->g(StorageManager::class)->get('exports');
+                            $storage->write(getExportPath($filename), "$content\n");
+                        } catch (FilesystemException|UnableToWriteFile) {
+                            return '';
+                        }
+                        // Return the link to the exported file.
+                        return "/export.php?file=$filename";
+                    },
+                    'reader' => function(string $filename): string {
+                        try {
+                            // Make a Filesystem object with the storage.exports options.
+                            $storage = jaxon()->di()->g(StorageManager::class)->get('exports');
+                            $filepath = getExportPath($filename);
+                            return !$storage->fileExists($filepath) ?
+                                "No file $filename found." : $storage->read($filepath);
+                        } catch (FilesystemException|UnableToReadFile) {
+                            return "No file $filename found.";
+                        }
+                    },
+                ],
+            ],
+        ],
+    ],
+    ...
+];
+```
+
+### Data import (with file upload)
+
+SQL files can be uploaded and executed on a server. This feature is implemented using the [Jaxon ajax upload](https://github.com/jaxon-php/jaxon-upload) and [Jaxon Storage](https://github.com/jaxon-php/jaxon-storage) packages, which then needs to be configured in the `Jaxon` config file.
+
+```php
+    'app' => [
+        'storage' => [
+            'uploads' => [
+                'adapter' => 'local',
+                'dir' => '/path/to/the/upload/dir',
+            ],
+        ],
+        'upload' => [
+            'enabled' => true,
+            'files' => [
+                'sql_files' => [
+                    'storage' => 'uploads',
+                ],
+            ],
+        ],
+    ],
+```
+
+In this example, `sql_files` is the `name` attribute of the file upload field, and of course `/path/to/the/upload/dir` needs to be writable.
+Other parameters can also be defined to limit the size of the uploaded files or retrict their extensions or mime types.
+the [Jaxon ajax upload documentation](https://www.jaxon-php.org/docs/v5x/features/upload.html)
 
 ## Contributing
 
