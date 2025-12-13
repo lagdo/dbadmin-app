@@ -2,7 +2,7 @@
 
 **Jaxon DbAdmin is a database admin dashboard with multiple DBMS support, and a custom and extensible authentication system.**
 
-[Features](#features-and-current-status) • [Installation](#installation) • [Docker](#running-with-docker) • [Authentication](#user-management-and-authentication) • [Configuration](#database-access-configuration) • [Query logs](#the-query-logs)
+[Features](#features-and-current-status) • [Installation](#installation) • [Docker](#running-with-docker) • [Authentication](#user-management-and-authentication) • [Configuration](#database-access-configuration) • [Query logs](#the-query-logs) • [Data export](#data-export) • [Data import](#data-import-with-file-upload)
 
 ![screenshot](screenshots/jaxon-dbadmin-sqlite-chinook.png)
 
@@ -60,7 +60,7 @@ composer run post-root-package-install
 composer run post-create-project-cmd
 ```
 
-By default, Jaxon DbAdmin stores the user credentials in a database. An SQLite database located at `database/database.sqlite` will be created and migrated during the installation.
+By default, Jaxon DbAdmin stores the user credentials in a database. A SQLite database located at `database/database.sqlite` will be created and migrated during the installation.
 A different database can be used. In this case, the `.env` and `config/database.php` file must be updated accordingly. See the Laravel [database documention](https://laravel.com/docs/12.x/database) for more information.
 
 The last step is to configure a web server to give access to the application directory, with the `public` subdir as index.
