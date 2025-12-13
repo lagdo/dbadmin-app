@@ -5,6 +5,7 @@ namespace App\Providers;
 use Dotenv\Dotenv;
 use Illuminate\Support\ServiceProvider;
 use Lagdo\DbAdmin\Config\AuthInterface;
+use Lagdo\DbAdmin\DbAdminPackage;
 
 use function auth;
 use function dirname;
@@ -21,6 +22,7 @@ class DbAdminServiceProvider extends ServiceProvider
      */
     private function getDbAdminConfigFile(): string
     {
+        // Get the path of first available config file.
         foreach (['json', 'yaml', 'yml', 'php'] as $ext) {
             $path = config_path("dbadmin.$ext");
             if (is_file($path)) {
@@ -35,6 +37,7 @@ class DbAdminServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
+        // The authentication and config file need to be set in the Jaxon DI.
         jaxon()->di()->set(AuthInterface::class,
             fn() => new class implements AuthInterface {
                 public function user(): string
@@ -48,6 +51,9 @@ class DbAdminServiceProvider extends ServiceProvider
             });
         jaxon()->di()->set('dbadmin_config_file_path',
             fn() => $this->getDbAdminConfigFile());
+        
+        $this->app->singleton(DbAdminPackage::class,
+            fn() => jaxon()->package(DbAdminPackage::class));
     }
 
     /**
