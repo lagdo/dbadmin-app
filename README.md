@@ -2,7 +2,7 @@
 
 **Jaxon DbAdmin is a database admin dashboard with multiple DBMS support, and a custom and extensible authentication system.**
 
-[Features](#features-and-current-status) • [Installation](#installation) • [Docker](#running-with-docker) • [Authentication](#user-management-and-authentication) • [Configuration](#database-access-configuration) • [Query logs](#the-query-logs) • [Data export](#data-export) • [Data import](#data-import-with-file-upload)
+[Features](#features-and-current-status) • [Installation](#installation) • [Docker](#running-with-docker) • [Authentication](#user-management-and-authentication) • [Configuration](#database-access-configuration) • [Query audit](#the-query-audit) • [Data export](#data-export) • [Data import](#data-import-with-file-upload)
 
 ![screenshot](screenshots/jaxon-dbadmin-sqlite-chinook.png)
 
@@ -276,21 +276,21 @@ The corresponding menu entries will not be displayed in the sidebar menu.
 
 The `databases` and `schemas` options restrict the user access to the listed databases and schemas.
 
-## The query logs
+## Query audit
 
 All the queries executed by the users can be saved in a database and viewed in a dedicated page.
 
-### Creating the query logs database
+### Creating the query audit database
 
-SQL scripts are provided in the [https://github.com/lagdo/jaxon-dbadmin/tree/main/migrations](https://github.com/lagdo/jaxon-dbadmin/tree/main/migrations) repo to create the query logs database on `PostgreSQL`, `MySQL` (or `MariaDB`), or `SQLite`.
+SQL scripts are provided in the [https://github.com/lagdo/jaxon-dbadmin/tree/main/migrations](https://github.com/lagdo/jaxon-dbadmin/tree/main/migrations) repo to create the query audit database on `PostgreSQL`, `MySQL` (or `MariaDB`), or `SQLite`.
 For each DBMS, the script is in the `01-create-command-tables.up.sql` file in the corresponding subdir.
 
-### Writing in the query logs
+### Writing in the query audit
 
-The query logs writer options are located in the `logging` section in the `config/dbadmin.php` config file.
+The query audit writer options are located in the `audit` section in the `config/dbadmin.php` config file.
 
 ```php
-    'logging' => [
+    'audit' => [
         'options' => [
             'enduser' => [
                 'enabled' => true,
@@ -308,32 +308,32 @@ The query logs writer options are located in the `logging` section in the `confi
             'port' => "env(LOGGING_DB_PORT)",
             'username' => "env(LOGGING_DB_USERNAME)",
             'password' => "env(LOGGING_DB_PASSWORD)",
-            'name' => 'logging',
+            'name' => 'auditdb',
         ],
     ],
 ```
 
-The `logging.database` section contains the logging database connection options.
+The `audit.database` section contains the audit database connection options.
 The options are the same as in the above [database servers](#the-servers-option) options, excepted that the `name` option is the database name.
 
-The `logging.options.enduser.enabled` option enables the logging, for queries executed in the query builder and the query editor.
+The `audit.options.enduser.enabled` option enables the audit, for queries executed in the query builder and the query editor.
 
-The `logging.options.history.enabled` option enables the logging for queries executed in the editor, and the display of the query history in the query editor page.
-When the query history is enabled, the `logging.options.history.distinct` option enables the removal of duplicates in the listed queries, while the `logging.options.history.limit` option sets the max number of queries for pagination.
+The `audit.options.history.enabled` option enables the audit for queries executed in the editor, and the display of the query history in the query editor page.
+When the query history is enabled, the `audit.options.history.distinct` option enables the removal of duplicates in the listed queries, while the `audit.options.history.limit` option sets the max number of queries for pagination.
 
-### Viewing in the query logs
+### Viewing the query audit
 
-The `/logging` page in this app displays the logged queries.
+The `/audit` page in this app displays the logged queries.
 The form in the sidebar allows to filter the queries based on various criteria.
 
-![screenshot](screenshots/jaxon-dbadmin-logging.png)
+![screenshot](screenshots/jaxon-dbadmin-audit.png)
 
-The access to that page is limited to the user accounts with the email listed in the `logging.allowed` option in the `config/dbadmin.php` file.
+The access to that page is limited to the user accounts with the email listed in the `audit.allowed` option in the `config/dbadmin.php` file.
 
 The same database connection options as above are used.
 
 ```php
-    'logging' => [
+    'audit' => [
         'database' => [
             // Same as the "servers" items, but "name" is the database name.
             'driver' => 'pgsql',
@@ -341,10 +341,10 @@ The same database connection options as above are used.
             'port' => "env(LOGGING_DB_PORT)",
             'username' => "env(LOGGING_DB_USERNAME)",
             'password' => "env(LOGGING_DB_PASSWORD)",
-            'name' => 'logging',
+            'name' => 'auditdb',
         ],
         'allowed' => [
-            // The emails of users that are allowed to access the logging page.
+            // The emails of users that are allowed to access the audit page.
             'admin@company.com',
         ],
     ],
@@ -354,7 +354,7 @@ The same database connection options as above are used.
 
 The queries saved in the logs from the query editor are displayed in the user query history, when the corresponding option is enabled.
 
-Additionally, the user can also save his preferred queries in the logging database, using the `Save` button in the query edition page.
+Additionally, the user can also save his preferred queries in the audit database, using the `Save` button in the query edition page.
 
 ![screenshot](screenshots/jaxon-dbadmin-favorites-history.png)
 

@@ -4,12 +4,12 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Lagdo\DbAdmin\LoggingPackage;
+use Lagdo\DbAdmin\Db\DbAuditPackage;
 use Symfony\Component\HttpFoundation\Response;
 
 use function config;
 
-class LoggingPackageConfig
+class DbAuditPackageConfig
 {
     /**
      * Handle an incoming request.
@@ -18,16 +18,16 @@ class LoggingPackageConfig
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // Copy the logging options into the LoggingPackage package options.
+        // Copy the audit options into the DbAuditPackage package options.
         config([
             'jaxon.app.packages' => [
-                LoggingPackage::class => [
-                    'options' => config('dbadmin.logging.reader'),
-                    'database' => config('dbadmin.logging.database')
+                DbAuditPackage::class => [
+                    'options' => config('dbadmin.audit.options'),
+                    'database' => config('dbadmin.audit.database')
                 ],
             ],
-            'jaxon.lib.core.request.uri' => '/logging/jaxon',
-            'jaxon.lib.js.app.file' => 'log-1.0.3',
+            'jaxon.lib.core.request.uri' => '/audit/jaxon',
+            'jaxon.lib.js.app.file' => 'log-1.0.4',
         ]);
 
         return $next($request);

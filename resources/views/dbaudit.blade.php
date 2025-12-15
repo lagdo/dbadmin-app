@@ -13,13 +13,13 @@
   @jxnScript
 
   <script type='text/javascript'>
-    @jxnPackage(Lagdo\DbAdmin\LoggingPackage::class, 'ready');
+    @jxnPackage(Lagdo\DbAdmin\Db\DbAuditPackage::class, 'ready');
   </script>
 @endsection
 
 @php
-$rqSidebar = rq(Lagdo\DbAdmin\Ajax\Log\Sidebar::class);
-$rqWrapper = rq(Lagdo\DbAdmin\Ajax\Log\Wrapper::class);
+$rqSidebar = rq(Lagdo\DbAdmin\Ajax\Audit\Sidebar::class);
+$rqWrapper = rq(Lagdo\DbAdmin\Ajax\Audit\Wrapper::class);
 @endphp
 
 @section('sidebar')

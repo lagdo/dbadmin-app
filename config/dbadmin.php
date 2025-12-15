@@ -11,7 +11,7 @@ return [
     ],
     'users' => [
     ],
-    'logging' => [
+    'audit' => [
         'options' => [
             'library' => [
                 'enabled' => false,
@@ -33,7 +33,7 @@ return [
             // Same as the "servers" items, but "name" is the database name.
         ],
         'allowed' => [
-            // The emails of users that are allowed to access the logging page.
+            // The emails of users that are allowed to access the audit page.
         ],
     ],
 ];

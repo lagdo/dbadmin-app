@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Middleware\DbAdminPackageConfig;
-use App\Http\Middleware\LoggingPackageConfig;
+use App\Http\Middleware\DbAuditPackageConfig;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -42,9 +42,9 @@ return Application::configure(basePath: dirname(__DIR__))
             DbAdminPackageConfig::class,
             'jaxon.config',
         ]);
-        $middleware->group('jaxon.logging.config', [
-            'can:logging',
-            LoggingPackageConfig::class,
+        $middleware->group('jaxon.dbaudit.config', [
+            'can:dbaudit',
+            DbAuditPackageConfig::class,
             'jaxon.config',
         ]);
     })

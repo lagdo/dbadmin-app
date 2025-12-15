@@ -10,12 +10,12 @@ Route::get('/', fn() => view('dbadmin'))
 Route::get('/export/{filename}', ExportController::class)
     ->middleware(['auth', 'jaxon.dbadmin.config', 'jaxon.config']);
 
-Route::get('/logging', fn() => view('logging'))
-    ->middleware(['auth', 'jaxon.logging.config'])
-    ->name('logging');
+Route::get('/audit', fn() => view('dbaudit'))
+    ->middleware(['auth', 'jaxon.dbaudit.config'])
+    ->name('audit');
 
-Route::post('/logging/jaxon', fn() => response()->json([]))
-    ->middleware(['web', 'jaxon.logging.config', 'jaxon.ajax']);
+Route::post('/audit/jaxon', fn() => response()->json([]))
+    ->middleware(['web', 'jaxon.dbaudit.config', 'jaxon.ajax']);
 
 // Logout
 Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])

@@ -24,8 +24,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // Auth gate for the DbAdmin logging page
-        Gate::define('logging', fn (User $user) =>
-            in_array($user->email, config('dbadmin.logging.allowed', [])));
+        // Auth gate for the DbAdmin audit page
+        Gate::define('dbaudit', fn (User $user) =>
+            in_array($user->email, config('dbadmin.audit.allowed', [])));
     }
 }

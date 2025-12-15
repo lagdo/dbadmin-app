@@ -18,18 +18,18 @@ class DbAdminPackageConfig
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // Copy the logging options into the DbAdminPackage package options.
+        // Copy the audit options into the DbAdminPackage package options.
         $options = config('jaxon.app.packages')[DbAdminPackage::class];
-        $options['logging'] = [
-            'options' => config('dbadmin.logging.options'),
-            'database' => config('dbadmin.logging.database'),
+        $options['audit'] = [
+            'options' => config('dbadmin.audit.options'),
+            'database' => config('dbadmin.audit.database'),
         ];
         config([
             'jaxon.app.packages' => [
                 DbAdminPackage::class => $options,
             ],
             'jaxon.lib.core.request.uri' => '/jaxon',
-            'jaxon.lib.js.app.file' => 'app-0.2.4',
+            'jaxon.lib.js.app.file' => 'app-0.2.5',
         ]);
 
         return $next($request);
