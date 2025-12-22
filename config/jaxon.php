@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Middleware\DbAdminPackageConfig;
-use Lagdo\DbAdmin\Config\UserFileReader;
+use Lagdo\DbAdmin\Db\Config\UserFileReader;
 
 return [
     'app' => [
@@ -21,7 +21,7 @@ return [
         ],
         'directories' => [],
         'packages' => [
-            Lagdo\DbAdmin\DbAdminPackage::class => [
+            Lagdo\DbAdmin\Db\DbAdminPackage::class => [
                 'provider' => function(array $options) {
                     $di = jaxon()->di();
                     $reader = $di->g(UserFileReader::class);
@@ -66,6 +66,7 @@ return [
         ],
         'js' => [
             'lib' => [
+                'uri' => 'https://cdn.jsdelivr.net/gh/jaxon-php/jaxon-js@5.1.0/dist',
             ],
             'app' => [
                 'uri' => '/jaxon/',

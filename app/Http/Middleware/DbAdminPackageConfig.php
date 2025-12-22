@@ -2,10 +2,10 @@
 
 namespace App\Http\Middleware;
 
-use Closure;
 use Illuminate\Http\Request;
-use Lagdo\DbAdmin\DbAdminPackage;
+use Lagdo\DbAdmin\Db\DbAdminPackage;
 use Symfony\Component\HttpFoundation\Response;
+use Closure;
 
 use function config;
 
@@ -29,7 +29,7 @@ class DbAdminPackageConfig
                 DbAdminPackage::class => $options,
             ],
             'jaxon.lib.core.request.uri' => '/jaxon',
-            'jaxon.lib.js.app.file' => 'app-0.2.5',
+            'jaxon.lib.js.app.file' => 'admin-0.3.0',
         ]);
 
         return $next($request);

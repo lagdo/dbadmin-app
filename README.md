@@ -32,11 +32,11 @@ The following features are currently available:
 - Save and show the query history.
 - Save queries in user favorites.
 - Import or export data.
+- Insert, modify or delete data in a table.
 
 The following features are either disabled or not yet implemented, and planned for future releases:
 - Navigate through related tables.
 - Create, alter or drop a database, table or view.
-- Insert, modify or delete data in a table.
 - Code completion for table and field names in the SQL editor.
 - An advanced GUI-based query builder.
 
@@ -402,7 +402,7 @@ return [
             ],
         ],
         'packages' => [
-            Lagdo\DbAdmin\DbAdminPackage::class => [
+            Lagdo\DbAdmin\Db\DbAdminPackage::class => [
                 'servers' => [
                     // The database servers
                 ],

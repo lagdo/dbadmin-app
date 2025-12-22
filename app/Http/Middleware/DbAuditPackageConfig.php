@@ -27,7 +27,7 @@ class DbAuditPackageConfig
                 ],
             ],
             'jaxon.lib.core.request.uri' => '/audit/jaxon',
-            'jaxon.lib.js.app.file' => 'log-1.0.4',
+            'jaxon.lib.js.app.file' => 'audit-0.3.0',
         ]);
 
         return $next($request);

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Response;
-use Lagdo\DbAdmin\DbAdminPackage;
+use Lagdo\DbAdmin\Db\DbAdminPackage;
 
 use function is_callable;
 use function response;

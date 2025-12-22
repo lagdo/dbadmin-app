@@ -14,53 +14,53 @@ jaxon.setCsrf('csrf-token');
 const jx = {
   rc: (name, method, parameters, options = {}) => jaxon.request({ type: 'class', name, method }, { parameters, ...options}),
   rf: (name, parameters, options = {}) => jaxon.request({ type: 'func', name }, { parameters, ...options}),
-  c0: 'Lagdo.DbAdmin.Ajax.App.Admin',
-  c1: 'Lagdo.DbAdmin.Ajax.App.Db.Command.Query.FavoriteFunc',
-  c2: 'Lagdo.DbAdmin.Ajax.App.Db.Command.Query.FavoritePage',
-  c3: 'Lagdo.DbAdmin.Ajax.App.Db.Database.Database',
-  c4: 'Lagdo.DbAdmin.Ajax.App.Db.Database.Events',
-  c5: 'Lagdo.DbAdmin.Ajax.App.Db.Database.Export',
-  c6: 'Lagdo.DbAdmin.Ajax.App.Db.Database.Import',
-  c7: 'Lagdo.DbAdmin.Ajax.App.Db.Database.Query',
-  c8: 'Lagdo.DbAdmin.Ajax.App.Db.Database.Routines',
-  c9: 'Lagdo.DbAdmin.Ajax.App.Db.Database.Sequences',
-  c10: 'Lagdo.DbAdmin.Ajax.App.Db.Database.Tables',
-  c11: 'Lagdo.DbAdmin.Ajax.App.Db.Database.UserTypes',
-  c12: 'Lagdo.DbAdmin.Ajax.App.Db.Database.Views',
-  c13: 'Lagdo.DbAdmin.Ajax.App.Db.Server.Databases',
-  c14: 'Lagdo.DbAdmin.Ajax.App.Db.Server.Export',
-  c15: 'Lagdo.DbAdmin.Ajax.App.Db.Server.Import',
-  c16: 'Lagdo.DbAdmin.Ajax.App.Db.Server.Privilege',
-  c17: 'Lagdo.DbAdmin.Ajax.App.Db.Server.Privileges',
-  c18: 'Lagdo.DbAdmin.Ajax.App.Db.Server.Processes',
-  c19: 'Lagdo.DbAdmin.Ajax.App.Db.Server.Query',
-  c20: 'Lagdo.DbAdmin.Ajax.App.Db.Server.Status',
-  c21: 'Lagdo.DbAdmin.Ajax.App.Db.Server.Variables',
-  c22: 'Lagdo.DbAdmin.Ajax.App.Db.Table.Ddl.Alter',
-  c23: 'Lagdo.DbAdmin.Ajax.App.Db.Table.Ddl.Columns',
-  c24: 'Lagdo.DbAdmin.Ajax.App.Db.Table.Ddl.Create',
-  c25: 'Lagdo.DbAdmin.Ajax.App.Db.Table.Ddl.Table',
-  c26: 'Lagdo.DbAdmin.Ajax.App.Db.Table.Dml.Delete',
-  c27: 'Lagdo.DbAdmin.Ajax.App.Db.Table.Dml.Insert',
-  c28: 'Lagdo.DbAdmin.Ajax.App.Db.Table.Dml.Update',
-  c29: 'Lagdo.DbAdmin.Ajax.App.Db.Table.Dql.Options.Fields.Columns',
-  c30: 'Lagdo.DbAdmin.Ajax.App.Db.Table.Dql.Options.Fields.Filters',
-  c31: 'Lagdo.DbAdmin.Ajax.App.Db.Table.Dql.Options.Fields.Form.Columns',
-  c32: 'Lagdo.DbAdmin.Ajax.App.Db.Table.Dql.Options.Fields.Form.Filters',
-  c33: 'Lagdo.DbAdmin.Ajax.App.Db.Table.Dql.Options.Fields.Form.Sorting',
-  c34: 'Lagdo.DbAdmin.Ajax.App.Db.Table.Dql.Options.Fields.Sorting',
-  c35: 'Lagdo.DbAdmin.Ajax.App.Db.Table.Dql.Options.Values',
-  c36: 'Lagdo.DbAdmin.Ajax.App.Db.Table.Dql.Results',
-  c37: 'Lagdo.DbAdmin.Ajax.App.Db.Table.Dql.Select',
-  c38: 'Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.Form',
-  c39: 'Lagdo.DbAdmin.Ajax.App.Db.View.Ddl.View',
-  c40: 'Lagdo.DbAdmin.Ajax.App.Db.View.Dql.Select',
+  c0: 'Lagdo.DbAdmin.Ajax.Admin.Admin',
+  c1: 'Lagdo.DbAdmin.Ajax.Admin.Db.Command.Query.FavoriteFunc',
+  c2: 'Lagdo.DbAdmin.Ajax.Admin.Db.Command.Query.FavoritePage',
+  c3: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Database',
+  c4: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Events',
+  c5: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Export',
+  c6: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Import',
+  c7: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Query',
+  c8: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Routines',
+  c9: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Sequences',
+  c10: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Tables',
+  c11: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.UserTypes',
+  c12: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Views',
+  c13: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Databases',
+  c14: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Export',
+  c15: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Import',
+  c16: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Privilege',
+  c17: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Privileges',
+  c18: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Processes',
+  c19: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Query',
+  c20: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Status',
+  c21: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Variables',
+  c22: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Ddl.Alter',
+  c23: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Ddl.Columns',
+  c24: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Ddl.Create',
+  c25: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Ddl.Table',
+  c26: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dml.Delete',
+  c27: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dml.Insert',
+  c28: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dml.Update',
+  c29: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.Options.Fields.Columns',
+  c30: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.Options.Fields.Filters',
+  c31: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.Options.Fields.Form.Columns',
+  c32: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.Options.Fields.Form.Filters',
+  c33: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.Options.Fields.Form.Sorting',
+  c34: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.Options.Fields.Sorting',
+  c35: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.Options.Values',
+  c36: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.ResultSet',
+  c37: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.Select',
+  c38: 'Lagdo.DbAdmin.Ajax.Admin.Db.View.Ddl.Form',
+  c39: 'Lagdo.DbAdmin.Ajax.Admin.Db.View.Ddl.View',
+  c40: 'Lagdo.DbAdmin.Ajax.Admin.Db.View.Dql.Select',
 };
 
 Lagdo = {
   DbAdmin: {
     Ajax: {
-      App: {
+      Admin: {
         Admin: {
           server: (...args) => jx.rc(jx.c0, 'server', args, { bags: ["dbadmin"] }),
         },
@@ -179,13 +179,12 @@ Lagdo = {
                 exec: (...args) => jx.rc(jx.c26, 'exec', args, { bags: ["dbadmin","dbadmin.select"] }),
               },
               Insert: {
-                show: (...args) => jx.rc(jx.c27, 'show', args, { bags: ["dbadmin"] }),
-                exec: (...args) => jx.rc(jx.c27, 'exec', args, { bags: ["dbadmin"] }),
+                show: (...args) => jx.rc(jx.c27, 'show', args, { bags: ["dbadmin","dbadmin.select","dbadmin.row.edit"] }),
+                save: (...args) => jx.rc(jx.c27, 'save', args, { bags: ["dbadmin","dbadmin.select","dbadmin.row.edit"] }),
               },
               Update: {
-                show: (...args) => jx.rc(jx.c28, 'show', args, { bags: ["dbadmin"] }),
-                back: (...args) => jx.rc(jx.c28, 'back', args, { bags: ["dbadmin","dbadmin.select"] }),
-                exec: (...args) => jx.rc(jx.c28, 'exec', args, { bags: ["dbadmin","dbadmin.select"] }),
+                edit: (...args) => jx.rc(jx.c28, 'edit', args, { bags: ["dbadmin","dbadmin.select"] }),
+                save: (...args) => jx.rc(jx.c28, 'save', args, { bags: ["dbadmin","dbadmin.select"] }),
               },
             },
             Dql: {
@@ -226,7 +225,7 @@ Lagdo = {
                   saveTextLength: (...args) => jx.rc(jx.c35, 'saveTextLength', args, { bags: ["dbadmin","dbadmin.select"] }),
                 },
               },
-              Results: {
+              ResultSet: {
                 page: (...args) => jx.rc(jx.c36, 'page', args, { bags: ["dbadmin","dbadmin.select"] }),
               },
               Select: {
@@ -263,189 +262,8 @@ Lagdo = {
 
 jaxon.dom.ready(() => jaxon.processCustomAttrs());
 
-jaxon.dbadmin = (function() {
-    const countTableCheckboxes = (checkboxId) => $('#dbadmin-table-' + checkboxId + '-count')
-        .html($('.dbadmin-table-' + checkboxId + ':checked').length);
-
-    const selectTableCheckboxes = (checkboxId) => {
-        $('#dbadmin-table-' + checkboxId + '-all').change(function() {
-            $('.dbadmin-table-' + checkboxId, '#jaxon-dbadmin').prop('checked', this.checked);
-            countTableCheckboxes(checkboxId);
-        });
-        $('.dbadmin-table-' + checkboxId).change(function() {
-            countTableCheckboxes(checkboxId);
-        });
-    };
-
-    const setExportEventHandlers = (checkboxId) => {
-        // Select all
-        $('#' + checkboxId + '-all').change(function() {
-            $('.' + checkboxId, '#jaxon-dbadmin').prop('checked', this.checked);
-        });
-        // Select database or table
-        const prefixLength = checkboxId.length - 5;
-        if (checkboxId.substring(prefixLength, checkboxId.length) === '-name') {
-            $('.' + checkboxId, '#jaxon-dbadmin').change(function() {
-                const dataCheckboxId = checkboxId.substring(0, prefixLength) +
-                    '-data-' + $(this).attr('data-pos');
-                $('#' + dataCheckboxId, '#jaxon-dbadmin').prop('checked', this.checked);
-            });
-        }
-    };
-
-    const setFileUpload = (container) => {
-        $(container).on('change', ':file', function() {
-            const fileInput = $(this);
-            const numFiles = fileInput.get(0).files ? fileInput.get(0).files.length : 1;
-            const label = fileInput.val().replace(/\\/g, '/').replace(/.*\//, '');
-            const textInput = $(container).find(':text');
-            const text = numFiles > 1 ? numFiles + ' files selected' : label;
-            textInput.length > 0 && textInput.val(text);
-        });
-    };
-
-    const downloadFile = (url, filename) => {
-        const downloadLink = document.createElement("a");
-        downloadLink.href = url;
-        downloadLink.download = filename;
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        document.body.removeChild(downloadLink);
-    };
-
-    const editor = {
-        ace: null,
-        page: '',
-        fontSize: '13px',
-        modes: {
-            sql: 'ace/mode/sql',
-            mysql: 'ace/mode/mysql',
-            pgsql: 'ace/mode/pgsql',
-        },
-    };
-
-    const createSqlQueryEditor = function(containerId, driver) {
-        editor.ace = ace.edit(containerId, {
-            mode: editor.modes[driver] ?? editor.modes.sql,
-            selectionStyle: "text",
-            dragEnabled: false,
-            useWorker: false,
-            enableBasicAutocompletion: true,
-            enableSnippets: false,
-            enableLiveAutocompletion: true,
-            showPrintMargin: false,
-        });
-        editor.ace.setTheme("ace/theme/textmate");
-        editor.ace.session.setUseWrapMode(true);
-        document.getElementById(containerId).style.fontSize = editor.fontSize;
-    };
-
-    const createSqlSelectEditor = (containerId, driver) => {
-        editor.ace = ace.edit(containerId, {
-            mode: editor.modes[driver] ?? editor.modes.sql,
-            selectionStyle: "text",
-            dragEnabled: false,
-            useWorker: false,
-            showPrintMargin: false,
-            showLineNumbers: false,
-            showGutter: false, // Also hide the line number "column".
-            readOnly: true,
-        });
-        editor.ace.setTheme("ace/theme/textmate");
-        editor.ace.session.setUseWrapMode(true);
-        editor.ace.resize();
-        document.getElementById(containerId).style.fontSize = editor.fontSize;
-    };
-
-    const getSqlQuery = () => {
-        // Try to get the selected text first.
-        const selectedText = editor.ace.getSelectedText();
-        return selectedText ? selectedText : editor.ace.getValue();
-    };
-
-    // Set the SQL query value and reset the undo history.
-    const setSqlQuery = (query) => editor.ace.session.setValue(query);
-
-    /**
-     * Read the data-query-id attribute in the parent with the given tag name
-     *
-     * @param {Element} node 
-     * @param {string} tag
-     *
-     * @returns {string}
-     */
-    const getQueryId = (node, tag) => {
-        while ((parent = node?.parent())) {
-            if (parent.prop('tagName')?.toLowerCase() === tag) {
-                return parent.attr('data-query-id') ?? '';
-            }
-            node = parent;
-        }
-        return '';
-    };
-
-    const getHistoryQuery = (node) =>
-        $('#dbadmin-history-query-' + getQueryId(node, 'td')).text();
-
-    const getFavoriteQuery = (node) =>
-        $('#dbadmin-favorite-query-' + getQueryId(node, 'td')).text();
-
-    return {
-        countTableCheckboxes,
-        selectTableCheckboxes,
-        setExportEventHandlers,
-        setFileUpload,
-        downloadFile,
-        createSqlQueryEditor,
-        createSqlSelectEditor,
-        getSqlQuery,
-        setSqlQuery,
-        history: {
-            copySqlQuery: (node) => setSqlQuery(getHistoryQuery(node)),
-            insertSqlQuery: (node) => editor.ace.insert(getHistoryQuery(node)),
-        },
-        favorite: {
-            getQueryId: (node) => getQueryId(node, 'td'),
-            copySqlQuery: (node) => setSqlQuery(getFavoriteQuery(node)),
-            insertSqlQuery: (node) => editor.ace.insert(getFavoriteQuery(node)),
-        },
-    };
-})();
-
-jaxon.dom.ready(() => {
-    const spin = {
-        spinner: new Spin.Spinner({ position: 'fixed' }),
-        count: 0, // To make sure that the spinner is started once.
-        cursor: jaxon.config.cursor.update,
-    };
-
-    // Replace the default Jaxon defined cursor with our custom spinner.
-    jaxon.config.cursor.update = {
-        onRequest: function() {
-            if(spin.count++ === 0)
-            {
-                spin.spinner.spin(document.body);
-                spin.cursor.onRequest();
-            }
-        },
-        onComplete: function() {
-            if(--spin.count === 0)
-            {
-                spin.spinner.stop();
-                spin.cursor.onComplete();
-            }
-        },
-        onFailure: function() {
-            if(--spin.count === 0)
-            {
-                spin.spinner.stop();
-                spin.cursor.onFailure && spin.cursor.onFailure();
-            }
-        },
-    };
-});
-
 // Spinner javascript code.
+
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
     typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -625,3 +443,263 @@ jaxon.dom.ready(() => {
 
     exports.Spinner = Spinner;
 }));
+
+jaxon.dbadmin = {};
+
+(function(self) {
+    /**
+     * @param {string} checkboxId
+     *
+     * @returns {void}
+     */
+    const countTableCheckboxes = (checkboxId) => $('#dbadmin-table-' + checkboxId + '-count')
+        .html($('.dbadmin-table-' + checkboxId + ':checked').length);
+
+    /**
+     * @param {string} checkboxId
+     *
+     * @returns {void}
+     */
+    self.selectTableCheckboxes = (checkboxId) => {
+        $('#dbadmin-table-' + checkboxId + '-all').change(function() {
+            $('.dbadmin-table-' + checkboxId, '#jaxon-dbadmin').prop('checked', this.checked);
+            countTableCheckboxes(checkboxId);
+        });
+        $('.dbadmin-table-' + checkboxId).change(function() {
+            countTableCheckboxes(checkboxId);
+        });
+    };
+
+    /**
+     * @param {string} checkboxId
+     *
+     * @returns {void}
+     */
+    self.setExportEventHandlers = (checkboxId) => {
+        // Select all
+        $('#' + checkboxId + '-all').change(function() {
+            $('.' + checkboxId, '#jaxon-dbadmin').prop('checked', this.checked);
+        });
+        // Select database or table
+        const prefixLength = checkboxId.length - 5;
+        if (checkboxId.substring(prefixLength, checkboxId.length) === '-name') {
+            $('.' + checkboxId, '#jaxon-dbadmin').change(function() {
+                const dataCheckboxId = checkboxId.substring(0, prefixLength) +
+                    '-data-' + $(this).attr('data-pos');
+                $('#' + dataCheckboxId, '#jaxon-dbadmin').prop('checked', this.checked);
+            });
+        }
+    };
+
+    /**
+     * @param {string} container
+     *
+     * @returns {void}
+     */
+    self.setFileUpload = (container) => {
+        $(container).on('change', ':file', function() {
+            const fileInput = $(this);
+            const numFiles = fileInput.get(0).files ? fileInput.get(0).files.length : 1;
+            const label = fileInput.val().replace(/\\/g, '/').replace(/.*\//, '');
+            const textInput = $(container).find(':text');
+            const text = numFiles > 1 ? numFiles + ' files selected' : label;
+            textInput.length > 0 && textInput.val(text);
+        });
+    };
+
+    /**
+     * @param {string} url
+     * @param {string} filename
+     *
+     * @returns {void}
+     */
+    self.downloadFile = (url, filename) => {
+        const downloadLink = document.createElement("a");
+        downloadLink.href = url;
+        downloadLink.download = filename;
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+    };
+})(jaxon.dbadmin);
+
+jaxon.dom.ready(() => {
+    const spin = {
+        spinner: new Spin.Spinner({ position: 'fixed' }),
+        count: 0, // To make sure that the spinner is started once.
+        cursor: jaxon.config.cursor.update,
+    };
+
+    // Replace the default Jaxon defined cursor with our custom spinner.
+    jaxon.config.cursor.update = {
+        onRequest: function() {
+            if(spin.count++ === 0)
+            {
+                spin.spinner.spin(document.body);
+                spin.cursor.onRequest();
+            }
+        },
+        onComplete: function() {
+            if(--spin.count === 0)
+            {
+                spin.spinner.stop();
+                spin.cursor.onComplete();
+            }
+        },
+        onFailure: function() {
+            if(--spin.count === 0)
+            {
+                spin.spinner.stop();
+                spin.cursor.onFailure && spin.cursor.onFailure();
+            }
+        },
+    };
+});
+
+(function(self) {
+    const editor = {
+        ace: null,
+        page: '',
+        fontSize: '13px',
+        modes: {
+            sql: 'ace/mode/sql',
+            mysql: 'ace/mode/mysql',
+            pgsql: 'ace/mode/pgsql',
+        },
+        theme: 'ace/theme/textmate',
+    };
+
+    /**
+     * @param {string} containerId
+     * @param {string} driver
+     *
+     * @returns {void}
+     */
+    self.createSqlQueryEditor = function(containerId, driver) {
+        editor.ace = ace.edit(containerId, {
+            mode: editor.modes[driver] ?? editor.modes.sql,
+            selectionStyle: "text",
+            dragEnabled: false,
+            useWorker: false,
+            enableBasicAutocompletion: true,
+            enableSnippets: false,
+            enableLiveAutocompletion: true,
+            showPrintMargin: false,
+        });
+        editor.ace.setTheme(editor.theme);
+        editor.ace.session.setUseWrapMode(true);
+        document.getElementById(containerId).style.fontSize = editor.fontSize;
+    };
+
+    /**
+     * @param {string} containerId
+     * @param {string} driver
+     *
+     * @returns {void}
+     */
+    self.createSqlSelectEditor = (containerId, driver) => {
+        editor.ace = ace.edit(containerId, {
+            mode: editor.modes[driver] ?? editor.modes.sql,
+            selectionStyle: "text",
+            dragEnabled: false,
+            useWorker: false,
+            showPrintMargin: false,
+            showLineNumbers: false,
+            showGutter: false, // Also hide the line number "column".
+            readOnly: true,
+        });
+        editor.ace.setTheme(editor.theme);
+        editor.ace.session.setUseWrapMode(true);
+        editor.ace.resize();
+        document.getElementById(containerId).style.fontSize = editor.fontSize;
+    };
+
+    /**
+     * @returns {string}
+     */
+    self.getSqlQuery = () => {
+        // Try to get the selected text first.
+        const selectedText = editor.ace.getSelectedText();
+        return selectedText ? selectedText : editor.ace.getValue();
+    };
+
+    /**
+     * Set the SQL query value and reset the undo history.
+     *
+     * @param {string} query
+     *
+     * @returns {void}
+     */
+    self.setSqlQuery = (query) => editor.ace.session.setValue(query);
+
+    /**
+     * Read the data-query-id attribute in the parent with the given tag name
+     *
+     * @param {Element} node 
+     * @param {string} tag
+     *
+     * @returns {string}
+     */
+    const getQueryId = (node, tag) => {
+        while ((parent = node?.parent())) {
+            if (parent.prop('tagName')?.toLowerCase() === tag) {
+                return parent.attr('data-query-id') ?? '';
+            }
+            node = parent;
+        }
+        return '';
+    };
+
+    /**
+     * @param {Element} node 
+     *
+     * @returns {string}
+     */
+    const getHistoryQuery = (node) => $('#dbadmin-history-query-' + getQueryId(node, 'td')).text();
+
+    /**
+     * @param {Element} node 
+     *
+     * @returns {string}
+     */
+    const getFavoriteQuery = (node) => $('#dbadmin-favorite-query-' + getQueryId(node, 'td')).text();
+
+    self.history =  {
+        /**
+         * @param {Element} node 
+         *
+         * @returns {void}
+         */
+        copySqlQuery: (node) => self.setSqlQuery(getHistoryQuery(node)),
+
+        /**
+         * @param {Element} node 
+         *
+         * @returns {void}
+         */
+        insertSqlQuery: (node) => editor.ace.insert(getHistoryQuery(node)),
+    };
+
+    self.favorite = {
+        /**
+         * @param {Element} node 
+         *
+         * @returns {string}
+         */
+        getQueryId: (node) => getQueryId(node, 'td'),
+
+        /**
+         * @param {Element} node 
+         *
+         * @returns {void}
+         */
+        copySqlQuery: (node) => self.setSqlQuery(getFavoriteQuery(node)),
+
+        /**
+         * @param {Element} node 
+         *
+         * @returns {void}
+         */
+        insertSqlQuery: (node) => editor.ace.insert(getFavoriteQuery(node)),
+    };
+})(jaxon.dbadmin);

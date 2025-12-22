@@ -4,8 +4,8 @@ namespace App\Providers;
 
 use Dotenv\Dotenv;
 use Illuminate\Support\ServiceProvider;
-use Lagdo\DbAdmin\Config\AuthInterface;
-use Lagdo\DbAdmin\DbAdminPackage;
+use Lagdo\DbAdmin\Db\Config\AuthInterface;
+use Lagdo\DbAdmin\Db\DbAdminPackage;
 
 use function auth;
 use function dirname;
