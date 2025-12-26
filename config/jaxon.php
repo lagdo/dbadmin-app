@@ -37,6 +37,12 @@ return [
         'ui' => [
             'template' => 'bootstrap5',
         ],
+        'assets' => [
+            'export' => true,
+            'minify' => true,
+            'uri' => '/jaxon/',
+            'dir' => public_path('/jaxon/'),
+        ],
         'dialogs' => [
             'default' => [
                 'modal' => 'bootbox',
@@ -67,12 +73,6 @@ return [
         'js' => [
             'lib' => [
                 'uri' => 'https://cdn.jsdelivr.net/gh/jaxon-php/jaxon-js@5.1.0/dist',
-            ],
-            'app' => [
-                'uri' => '/jaxon/',
-                'dir' => public_path('/jaxon/'),
-                'export' => true,
-                'minify' => true,
             ],
         ],
     ],

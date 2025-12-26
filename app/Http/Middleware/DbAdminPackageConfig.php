@@ -29,7 +29,7 @@ class DbAdminPackageConfig
                 DbAdminPackage::class => $options,
             ],
             'jaxon.lib.core.request.uri' => '/jaxon',
-            'jaxon.lib.js.app.file' => 'admin-0.3.0',
+            'jaxon.app.assets.file' => 'admin-0.3.0',
         ]);
 
         return $next($request);
