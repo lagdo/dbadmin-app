@@ -276,7 +276,7 @@ The corresponding menu entries will not be displayed in the sidebar menu.
 
 The `databases` and `schemas` options restrict the user access to the listed databases and schemas.
 
-## Query audit
+## The query audit
 
 All the queries executed by the users can be saved in a database and viewed in a dedicated page.
 
@@ -323,14 +323,13 @@ When the query history is enabled, the `audit.options.history.distinct` option e
 
 ### Viewing the query audit
 
-The `/audit` page in this app displays the logged queries.
-The form in the sidebar allows to filter the queries based on various criteria.
+The `Audit logs` entry in the top right menu (and the `/audit` link) gives access to a page which displays the logged queries.
 
-![screenshot](screenshots/jaxon-dbadmin-audit.png)
+![screenshot](screenshots/jaxon-dbadmin-audit-logs.png)
 
-The access to that page is limited to the user accounts with the email listed in the `audit.allowed` option in the `config/dbadmin.php` file.
+The form in the sidebar provides fields to filter the queries based on various criteria.
 
-The same database connection options as above are used.
+The database connection options are the same that are used to write the audit logs, as described in the [above section](#writing-in-the-query-audit).
 
 ```php
     'audit' => [
@@ -349,6 +348,8 @@ The same database connection options as above are used.
         ],
     ],
 ```
+
+The access to that page is limited to the user accounts with the email listed in the `audit.allowed` option in the `config/dbadmin.php` file.
 
 ## The query history and favorites
 
