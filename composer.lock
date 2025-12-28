@@ -4,57 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4038998ecbc9df81defcb0d6c879e9a6",
+    "content-hash": "2cbfc7620733713758aa2bda2152ec36",
     "packages": [
-        {
-            "name": "avplab/php-html-builder",
-            "version": "v2.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/avplab/php-html-builder.git",
-                "reference": "65f9d0c096ed1f7acfb109a1a99505f9f015e4c7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/avplab/php-html-builder/zipball/65f9d0c096ed1f7acfb109a1a99505f9f015e4c7",
-                "reference": "65f9d0c096ed1f7acfb109a1a99505f9f015e4c7",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.2"
-            },
-            "type": "package",
-            "autoload": {
-                "psr-4": {
-                    "AvpLab\\": "./src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andrew Polupanov",
-                    "email": "andrewfortalking@gmail.com"
-                }
-            ],
-            "description": "PHP Html builder simplifies creation of an html code in php scripts. Allows to build (or generate) the html in simple natural way, similarly as create a html page.",
-            "homepage": "http://github.com/avplab/php-html-builder",
-            "keywords": [
-                "builder",
-                "html",
-                "php"
-            ],
-            "support": {
-                "issues": "https://github.com/avplab/php-html-builder/issues",
-                "source": "https://github.com/avplab/php-html-builder/tree/v2.0.3"
-            },
-            "time": "2024-06-27T03:13:11+00:00"
-        },
         {
             "name": "bacon/bacon-qr-code",
             "version": "v3.0.3",
@@ -735,24 +686,24 @@
         },
         {
             "name": "graham-campbell/result-type",
-            "version": "v1.1.3",
+            "version": "v1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Result-Type.git",
-                "reference": "3ba905c11371512af9d9bdd27d99b782216b6945"
+                "reference": "e01f4a821471308ba86aa202fed6698b6b695e3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Result-Type/zipball/3ba905c11371512af9d9bdd27d99b782216b6945",
-                "reference": "3ba905c11371512af9d9bdd27d99b782216b6945",
+                "url": "https://api.github.com/repos/GrahamCampbell/Result-Type/zipball/e01f4a821471308ba86aa202fed6698b6b695e3b",
+                "reference": "e01f4a821471308ba86aa202fed6698b6b695e3b",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2.5 || ^8.0",
-                "phpoption/phpoption": "^1.9.3"
+                "phpoption/phpoption": "^1.9.5"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8.5.39 || ^9.6.20 || ^10.5.28"
+                "phpunit/phpunit": "^8.5.41 || ^9.6.22 || ^10.5.45 || ^11.5.7"
             },
             "type": "library",
             "autoload": {
@@ -781,7 +732,7 @@
             ],
             "support": {
                 "issues": "https://github.com/GrahamCampbell/Result-Type/issues",
-                "source": "https://github.com/GrahamCampbell/Result-Type/tree/v1.1.3"
+                "source": "https://github.com/GrahamCampbell/Result-Type/tree/v1.1.4"
             },
             "funding": [
                 {
@@ -793,7 +744,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-07-20T21:45:45+00:00"
+            "time": "2025-12-27T19:43:20+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1963,16 +1914,16 @@
         },
         {
             "name": "lagdo/jaxon-dbadmin",
-            "version": "v0.25.0",
+            "version": "v0.25.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lagdo/jaxon-dbadmin.git",
-                "reference": "64444487ac98457e323bbacbbeb98673dd204b44"
+                "reference": "7e19f58aacd584a9ce52bc9e2088d45dee54ff92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lagdo/jaxon-dbadmin/zipball/64444487ac98457e323bbacbbeb98673dd204b44",
-                "reference": "64444487ac98457e323bbacbbeb98673dd204b44",
+                "url": "https://api.github.com/repos/lagdo/jaxon-dbadmin/zipball/7e19f58aacd584a9ce52bc9e2088d45dee54ff92",
+                "reference": "7e19f58aacd584a9ce52bc9e2088d45dee54ff92",
                 "shasum": ""
             },
             "require": {
@@ -1984,9 +1935,9 @@
                 "jaxon-php/jaxon-storage": "^1.1",
                 "jaxon-php/jaxon-upload": "^2.1",
                 "lagdo/dbadmin-driver": "0.20.*",
-                "lagdo/facades": "^1.0",
-                "lagdo/jaxon-ui-builder": "^0.1",
-                "lagdo/ui-builder": "^0.2",
+                "lagdo/facades": "^1.1",
+                "lagdo/jaxon-ui-builder": "0.2.*",
+                "lagdo/ui-builder": "0.3.*",
                 "php": ">=8.0.0"
             },
             "require-dev": {
@@ -2031,25 +1982,25 @@
                 "issues": "https://github.com/lagdo/jaxon-dbadmin/issues",
                 "source": "https://github.com/lagdo/jaxon-dbadmin"
             },
-            "time": "2025-12-27T04:44:12+00:00"
+            "time": "2025-12-28T15:08:14+00:00"
         },
         {
             "name": "lagdo/jaxon-ui-builder",
-            "version": "v0.1.1",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lagdo/jaxon-ui-builder.git",
-                "reference": "2c25c1f1685b22209557cc045d8e57b6d3e983ac"
+                "reference": "927347f0fe3409ef6b8f20ffed7285e7dbebcc76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lagdo/jaxon-ui-builder/zipball/2c25c1f1685b22209557cc045d8e57b6d3e983ac",
-                "reference": "2c25c1f1685b22209557cc045d8e57b6d3e983ac",
+                "url": "https://api.github.com/repos/lagdo/jaxon-ui-builder/zipball/927347f0fe3409ef6b8f20ffed7285e7dbebcc76",
+                "reference": "927347f0fe3409ef6b8f20ffed7285e7dbebcc76",
                 "shasum": ""
             },
             "require": {
                 "jaxon-php/jaxon-core": "^5.0",
-                "lagdo/ui-builder": "^0.2",
+                "lagdo/ui-builder": "^0.3",
                 "php": ">=8.0"
             },
             "type": "library",
@@ -2083,7 +2034,7 @@
                 "issues": "https://github.com/lagdo/jaxon-ui-builder/issues",
                 "source": "https://github.com/lagdo/jaxon-ui-builder"
             },
-            "time": "2025-09-30T05:10:40+00:00"
+            "time": "2025-12-28T00:25:27+00:00"
         },
         {
             "name": "lagdo/laravel-facades",
@@ -2147,20 +2098,20 @@
         },
         {
             "name": "lagdo/ui-builder",
-            "version": "v0.2.1",
+            "version": "v0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lagdo/ui-builder.git",
-                "reference": "b28d95c452442f033d3d9c87574e84b02ed52beb"
+                "reference": "47a406f61db34e54dd79df1246ea1f5b23811765"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lagdo/ui-builder/zipball/b28d95c452442f033d3d9c87574e84b02ed52beb",
-                "reference": "b28d95c452442f033d3d9c87574e84b02ed52beb",
+                "url": "https://api.github.com/repos/lagdo/ui-builder/zipball/47a406f61db34e54dd79df1246ea1f5b23811765",
+                "reference": "47a406f61db34e54dd79df1246ea1f5b23811765",
                 "shasum": ""
             },
             "require": {
-                "avplab/php-html-builder": "^2.0"
+                "php": ">=8.0"
             },
             "type": "library",
             "autoload": {
@@ -2189,24 +2140,25 @@
                 "issues": "https://github.com/lagdo/ui-builder/issues",
                 "source": "https://github.com/lagdo/ui-builder"
             },
-            "time": "2025-09-30T05:10:40+00:00"
+            "time": "2025-12-28T15:07:05+00:00"
         },
         {
             "name": "lagdo/ui-builder-bootstrap5",
-            "version": "v0.1.0",
+            "version": "v0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lagdo/ui-builder-bootstrap5.git",
-                "reference": "bb4708913dfff6fdba98f782c40100bca62e06db"
+                "reference": "1400e28c1bf1c50c8bbb0f71e17ec3fb20221198"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lagdo/ui-builder-bootstrap5/zipball/bb4708913dfff6fdba98f782c40100bca62e06db",
-                "reference": "bb4708913dfff6fdba98f782c40100bca62e06db",
+                "url": "https://api.github.com/repos/lagdo/ui-builder-bootstrap5/zipball/1400e28c1bf1c50c8bbb0f71e17ec3fb20221198",
+                "reference": "1400e28c1bf1c50c8bbb0f71e17ec3fb20221198",
                 "shasum": ""
             },
             "require": {
-                "lagdo/ui-builder": "^0.2"
+                "lagdo/ui-builder": "^0.3",
+                "php": ">=8.0"
             },
             "type": "library",
             "autoload": {
@@ -2235,7 +2187,7 @@
                 "issues": "https://github.com/lagdo/ui-builder-bootstrap/issues",
                 "source": "https://github.com/lagdo/ui-builder-bootstrap"
             },
-            "time": "2025-08-18T19:06:35+00:00"
+            "time": "2025-12-28T15:07:05+00:00"
         },
         {
             "name": "laravel/fortify",
@@ -4112,16 +4064,16 @@
         },
         {
             "name": "phpoption/phpoption",
-            "version": "1.9.4",
+            "version": "1.9.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/php-option.git",
-                "reference": "638a154f8d4ee6a5cfa96d6a34dfbe0cffa9566d"
+                "reference": "75365b91986c2405cf5e1e012c5595cd487a98be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/638a154f8d4ee6a5cfa96d6a34dfbe0cffa9566d",
-                "reference": "638a154f8d4ee6a5cfa96d6a34dfbe0cffa9566d",
+                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/75365b91986c2405cf5e1e012c5595cd487a98be",
+                "reference": "75365b91986c2405cf5e1e012c5595cd487a98be",
                 "shasum": ""
             },
             "require": {
@@ -4171,7 +4123,7 @@
             ],
             "support": {
                 "issues": "https://github.com/schmittjoh/php-option/issues",
-                "source": "https://github.com/schmittjoh/php-option/tree/1.9.4"
+                "source": "https://github.com/schmittjoh/php-option/tree/1.9.5"
             },
             "funding": [
                 {
@@ -4183,7 +4135,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-08-21T11:53:16+00:00"
+            "time": "2025-12-27T19:41:33+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -7701,26 +7653,26 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v5.6.2",
+            "version": "v5.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "24ac4c74f91ee2c193fa1aaa5c249cb0822809af"
+                "reference": "955e7815d677a3eaa7075231212f2110983adecc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/24ac4c74f91ee2c193fa1aaa5c249cb0822809af",
-                "reference": "24ac4c74f91ee2c193fa1aaa5c249cb0822809af",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/955e7815d677a3eaa7075231212f2110983adecc",
+                "reference": "955e7815d677a3eaa7075231212f2110983adecc",
                 "shasum": ""
             },
             "require": {
                 "ext-pcre": "*",
-                "graham-campbell/result-type": "^1.1.3",
+                "graham-campbell/result-type": "^1.1.4",
                 "php": "^7.2.5 || ^8.0",
-                "phpoption/phpoption": "^1.9.3",
-                "symfony/polyfill-ctype": "^1.24",
-                "symfony/polyfill-mbstring": "^1.24",
-                "symfony/polyfill-php80": "^1.24"
+                "phpoption/phpoption": "^1.9.5",
+                "symfony/polyfill-ctype": "^1.26",
+                "symfony/polyfill-mbstring": "^1.26",
+                "symfony/polyfill-php80": "^1.26"
             },
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.8.2",
@@ -7769,7 +7721,7 @@
             ],
             "support": {
                 "issues": "https://github.com/vlucas/phpdotenv/issues",
-                "source": "https://github.com/vlucas/phpdotenv/tree/v5.6.2"
+                "source": "https://github.com/vlucas/phpdotenv/tree/v5.6.3"
             },
             "funding": [
                 {
@@ -7781,7 +7733,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-04-30T23:37:27+00:00"
+            "time": "2025-12-27T19:49:13+00:00"
         },
         {
             "name": "voku/portable-ascii",
