@@ -18,6 +18,8 @@ Unlike other database management tools, Jaxon DbAdmin uses the Laravel authentic
 
 The database access code (and thus the provided features) originates from [Adminer](https://github.com/vrana/adminer). The original code was refactored to take advantage of the latest PHP features (namespaces, interfaces, DI, and so on), and separated into multiple Composer packages.
 
+Here's the monorepo where the packages are developed: [https://github.com/lagdo/dbadmin-mono](https://github.com/lagdo/dbadmin-mono).
+
 ## Features and current status
 
 This application and the related packages are still being actively developed, and the provided features are still basic and need improvements.
