@@ -16,7 +16,7 @@ It currently supports 3 database servers: PostgreSQL, MySQL (and MariaDB), and S
 
 Unlike other database management tools, Jaxon DbAdmin uses the Laravel authentication system instead of the database servers credentials to authenticate the application users.
 
-The database access code (and thus the provided features) originates from [Adminer](https://github.com/vrana/adminer).
+The database access code (and thus the provided features) originates from [Adminer](https://github.com/vrana/adminer). The original code was refactored to take advantage of the latest PHP features (namespaces, interfaces, DI, and so on), and separated into multiple Composer packages.
 
 ## Features and current status
 
