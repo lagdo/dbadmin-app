@@ -46,8 +46,8 @@ return [
         'dialogs' => [
             'default' => [
                 'modal' => 'bootbox',
-                'alert' => 'toastr',
-                'confirm' => 'noty',
+                'alert' => 'sweetalert',
+                'confirm' => 'sweetalert',
             ],
         ],
     ],
