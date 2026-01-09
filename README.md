@@ -35,10 +35,11 @@ The following features are currently available:
 - Save queries in user favorites.
 - Import or export data.
 - Insert, modify or delete data in a table.
+- Create or alter a table or view.
 
 The following features are either disabled or not yet implemented, and planned for future releases:
+- Drop a table or view.
 - Navigate through related tables.
-- Create, alter or drop a database, table or view.
 - Code completion for table and field names in the SQL editor.
 - An advanced GUI-based query builder.
 
@@ -399,9 +400,11 @@ function getExportPath(string $filename): string
 return [
     'app' => [
         'storage' => [
-            'exports' => [
-                'adapter' => 'local',
-                'dir' => "/path/to/exports",
+            'stores' => [
+                'exports' => [
+                    'adapter' => 'local',
+                    'dir' => "/path/to/exports",
+                ],
             ],
         ],
         'packages' => [
@@ -447,9 +450,11 @@ SQL files can be uploaded and executed on a server. This feature is implemented 
 ```php
     'app' => [
         'storage' => [
-            'uploads' => [
-                'adapter' => 'local',
-                'dir' => '/path/to/the/upload/dir',
+            'stores' => [
+                'uploads' => [
+                    'adapter' => 'local',
+                    'dir' => '/path/to/the/upload/dir',
+                ],
             ],
         ],
         'upload' => [
