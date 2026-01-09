@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2cbfc7620733713758aa2bda2152ec36",
+    "content-hash": "fbb11eed9bebbd2836904016de88595e",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1266,16 +1266,16 @@
         },
         {
             "name": "jaxon-php/jaxon-core",
-            "version": "v5.3.2",
+            "version": "v5.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jaxon-php/jaxon-core.git",
-                "reference": "afd6cfa2e18eed07d6a6d81bea842a4e8dc81a24"
+                "reference": "df1cdda355a2aa2e64cdaa750dfc850b2bef37c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jaxon-php/jaxon-core/zipball/afd6cfa2e18eed07d6a6d81bea842a4e8dc81a24",
-                "reference": "afd6cfa2e18eed07d6a6d81bea842a4e8dc81a24",
+                "url": "https://api.github.com/repos/jaxon-php/jaxon-core/zipball/df1cdda355a2aa2e64cdaa750dfc850b2bef37c1",
+                "reference": "df1cdda355a2aa2e64cdaa750dfc850b2bef37c1",
                 "shasum": ""
             },
             "require": {
@@ -1295,8 +1295,9 @@
                 "psr/log": "^1.0|^2.0|^3.0"
             },
             "require-dev": {
-                "jaxon-php/jaxon-dialogs": "^5.1",
-                "jaxon-php/jaxon-upload": "^2.0",
+                "jaxon-php/jaxon-dialogs": "dev-test",
+                "jaxon-php/jaxon-upload": "dev-test",
+                "league/flysystem-memory": "^3.0|^2.2",
                 "php-coveralls/php-coveralls": "^2.5",
                 "phpunit/phpcov": "^8.2",
                 "phpunit/phpunit": "^9.5"
@@ -1345,20 +1346,20 @@
                 "issues": "https://github.com/jaxon-php/jaxon-core/issues",
                 "source": "https://github.com/jaxon-php/jaxon-core"
             },
-            "time": "2025-12-26T15:24:08+00:00"
+            "time": "2026-01-09T04:38:20+00:00"
         },
         {
             "name": "jaxon-php/jaxon-dialogs",
-            "version": "v5.1.1",
+            "version": "v5.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jaxon-php/jaxon-dialogs.git",
-                "reference": "4f010f7dd40f50b84d38ba3125fb69dd53e1a13b"
+                "reference": "96241cdea6a9713983b50339ee3b8877e25811ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jaxon-php/jaxon-dialogs/zipball/4f010f7dd40f50b84d38ba3125fb69dd53e1a13b",
-                "reference": "4f010f7dd40f50b84d38ba3125fb69dd53e1a13b",
+                "url": "https://api.github.com/repos/jaxon-php/jaxon-dialogs/zipball/96241cdea6a9713983b50339ee3b8877e25811ac",
+                "reference": "96241cdea6a9713983b50339ee3b8877e25811ac",
                 "shasum": ""
             },
             "require": {
@@ -1405,7 +1406,7 @@
                 "issues": "https://github.com/jaxon-php/jaxon-dialogs/issues",
                 "source": "https://github.com/jaxon-php/jaxon-dialogs"
             },
-            "time": "2025-12-26T03:58:25+00:00"
+            "time": "2026-01-09T01:09:08+00:00"
         },
         {
             "name": "jaxon-php/jaxon-laravel",
@@ -1469,16 +1470,16 @@
         },
         {
             "name": "jaxon-php/jaxon-storage",
-            "version": "v1.2.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jaxon-php/jaxon-storage.git",
-                "reference": "5d77de9db96aabac55a403a2db2ea90199918e14"
+                "reference": "2219e42f69419d5460f1c1774fff6a328df6580c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jaxon-php/jaxon-storage/zipball/5d77de9db96aabac55a403a2db2ea90199918e14",
-                "reference": "5d77de9db96aabac55a403a2db2ea90199918e14",
+                "url": "https://api.github.com/repos/jaxon-php/jaxon-storage/zipball/2219e42f69419d5460f1c1774fff6a328df6580c",
+                "reference": "2219e42f69419d5460f1c1774fff6a328df6580c",
                 "shasum": ""
             },
             "require": {
@@ -1489,7 +1490,6 @@
                 "php": ">=8.0"
             },
             "require-dev": {
-                "jaxon-php/jaxon-core": "^5.2",
                 "league/flysystem-memory": "^3.0|^2.2",
                 "php-coveralls/php-coveralls": "^2.5",
                 "phpunit/phpcov": "^8.2",
@@ -1498,7 +1498,7 @@
             "type": "library",
             "autoload": {
                 "files": [
-                    "src/register.php"
+                    "src/helpers.php"
                 ],
                 "psr-4": {
                     "Jaxon\\Storage\\": "src/"
@@ -1525,7 +1525,7 @@
                 "issues": "https://github.com/jaxon-php/jaxon-storage/issues",
                 "source": "https://github.com/jaxon-php/jaxon-storage"
             },
-            "time": "2025-12-24T19:47:48+00:00"
+            "time": "2026-01-09T02:35:55+00:00"
         },
         {
             "name": "jaxon-php/jaxon-upload",
@@ -1641,17 +1641,20 @@
         },
         {
             "name": "lagdo/dbadmin-driver",
-            "version": "v0.20.0",
+            "version": "v0.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lagdo/dbadmin-driver.git",
-                "reference": "607729051d922bcac087913694a98e6e44034e39"
+                "reference": "e8ae67fad80a9558726e17a49449c02d3b09489a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lagdo/dbadmin-driver/zipball/607729051d922bcac087913694a98e6e44034e39",
-                "reference": "607729051d922bcac087913694a98e6e44034e39",
+                "url": "https://api.github.com/repos/lagdo/dbadmin-driver/zipball/e8ae67fad80a9558726e17a49449c02d3b09489a",
+                "reference": "e8ae67fad80a9558726e17a49449c02d3b09489a",
                 "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1.0"
             },
             "type": "library",
             "autoload": {
@@ -1682,24 +1685,25 @@
                 "issues": "https://github.com/lagdo/dbadmin-driver/issues",
                 "source": "https://github.com/lagdo/dbadmin-driver"
             },
-            "time": "2025-12-26T19:00:58+00:00"
+            "time": "2026-01-09T05:08:44+00:00"
         },
         {
             "name": "lagdo/dbadmin-driver-mysql",
-            "version": "v0.20.0",
+            "version": "v0.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lagdo/dbadmin-driver-mysql.git",
-                "reference": "62b048cc4c9cfe1bfacb00082539dfb940136361"
+                "reference": "4991edbebe8c5f634e47ae8cc2c542caca3ca793"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lagdo/dbadmin-driver-mysql/zipball/62b048cc4c9cfe1bfacb00082539dfb940136361",
-                "reference": "62b048cc4c9cfe1bfacb00082539dfb940136361",
+                "url": "https://api.github.com/repos/lagdo/dbadmin-driver-mysql/zipball/4991edbebe8c5f634e47ae8cc2c542caca3ca793",
+                "reference": "4991edbebe8c5f634e47ae8cc2c542caca3ca793",
                 "shasum": ""
             },
             "require": {
-                "lagdo/dbadmin-driver": "0.20.*"
+                "lagdo/dbadmin-driver": "0.21.*",
+                "php": ">=8.1.0"
             },
             "require-dev": {
                 "behat/behat": "^3.10",
@@ -1741,24 +1745,25 @@
                 "issues": "https://github.com/lagdo/dbadmin-driver-mysql/issues",
                 "source": "https://github.com/lagdo/dbadmin-driver-mysql"
             },
-            "time": "2025-12-27T04:44:12+00:00"
+            "time": "2026-01-09T05:32:26+00:00"
         },
         {
             "name": "lagdo/dbadmin-driver-pgsql",
-            "version": "v0.20.0",
+            "version": "v0.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lagdo/dbadmin-driver-pgsql.git",
-                "reference": "621d1a786b6d48d4e54cb5f7378d55ede4891eab"
+                "reference": "a0d47df8f78b55e6ba33cfa09c7aa5d1b5ccd40b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lagdo/dbadmin-driver-pgsql/zipball/621d1a786b6d48d4e54cb5f7378d55ede4891eab",
-                "reference": "621d1a786b6d48d4e54cb5f7378d55ede4891eab",
+                "url": "https://api.github.com/repos/lagdo/dbadmin-driver-pgsql/zipball/a0d47df8f78b55e6ba33cfa09c7aa5d1b5ccd40b",
+                "reference": "a0d47df8f78b55e6ba33cfa09c7aa5d1b5ccd40b",
                 "shasum": ""
             },
             "require": {
-                "lagdo/dbadmin-driver": "0.20.*"
+                "lagdo/dbadmin-driver": "0.21.*",
+                "php": ">=8.1.0"
             },
             "require-dev": {
                 "behat/behat": "^3.10",
@@ -1800,24 +1805,25 @@
                 "issues": "https://github.com/lagdo/dbadmin-driver-pgsql/issues",
                 "source": "https://github.com/lagdo/dbadmin-driver-pgsql"
             },
-            "time": "2025-12-27T04:44:12+00:00"
+            "time": "2026-01-09T05:32:26+00:00"
         },
         {
             "name": "lagdo/dbadmin-driver-sqlite",
-            "version": "v0.20.0",
+            "version": "v0.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lagdo/dbadmin-driver-sqlite.git",
-                "reference": "b5a324e8a3eca127926d49ee6422f4458e8dba9d"
+                "reference": "2cdb8364fa32ba48a6779813ded38b75f92b74ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lagdo/dbadmin-driver-sqlite/zipball/b5a324e8a3eca127926d49ee6422f4458e8dba9d",
-                "reference": "b5a324e8a3eca127926d49ee6422f4458e8dba9d",
+                "url": "https://api.github.com/repos/lagdo/dbadmin-driver-sqlite/zipball/2cdb8364fa32ba48a6779813ded38b75f92b74ab",
+                "reference": "2cdb8364fa32ba48a6779813ded38b75f92b74ab",
                 "shasum": ""
             },
             "require": {
-                "lagdo/dbadmin-driver": "0.20.*"
+                "lagdo/dbadmin-driver": "0.21.*",
+                "php": ">=8.1.0"
             },
             "require-dev": {
                 "behat/behat": "^3.10",
@@ -1859,7 +1865,7 @@
                 "issues": "https://github.com/lagdo/dbadmin-driver-sqlite/issues",
                 "source": "https://github.com/lagdo/dbadmin-driver-sqlite"
             },
-            "time": "2025-12-27T04:44:12+00:00"
+            "time": "2026-01-09T05:32:26+00:00"
         },
         {
             "name": "lagdo/facades",
@@ -1914,16 +1920,16 @@
         },
         {
             "name": "lagdo/jaxon-dbadmin",
-            "version": "v0.25.2",
+            "version": "v0.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lagdo/jaxon-dbadmin.git",
-                "reference": "7e19f58aacd584a9ce52bc9e2088d45dee54ff92"
+                "reference": "805b7bae5c1532a786d935da4e3a3a6c7cf8ca93"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lagdo/jaxon-dbadmin/zipball/7e19f58aacd584a9ce52bc9e2088d45dee54ff92",
-                "reference": "7e19f58aacd584a9ce52bc9e2088d45dee54ff92",
+                "url": "https://api.github.com/repos/lagdo/jaxon-dbadmin/zipball/805b7bae5c1532a786d935da4e3a3a6c7cf8ca93",
+                "reference": "805b7bae5c1532a786d935da4e3a3a6c7cf8ca93",
                 "shasum": ""
             },
             "require": {
@@ -1934,11 +1940,11 @@
                 "jaxon-php/jaxon-dialogs": "^5.1",
                 "jaxon-php/jaxon-storage": "^1.1",
                 "jaxon-php/jaxon-upload": "^2.1",
-                "lagdo/dbadmin-driver": "0.20.*",
+                "lagdo/dbadmin-driver": "0.21.*",
                 "lagdo/facades": "^1.1",
-                "lagdo/jaxon-ui-builder": "0.2.*",
-                "lagdo/ui-builder": "0.3.*",
-                "php": ">=8.0.0"
+                "lagdo/jaxon-ui-builder": "0.5.*",
+                "lagdo/ui-builder": "0.6.*",
+                "php": ">=8.1.0"
             },
             "require-dev": {
                 "behat/behat": "^3.10",
@@ -1982,25 +1988,25 @@
                 "issues": "https://github.com/lagdo/jaxon-dbadmin/issues",
                 "source": "https://github.com/lagdo/jaxon-dbadmin"
             },
-            "time": "2025-12-28T15:08:14+00:00"
+            "time": "2026-01-09T05:32:26+00:00"
         },
         {
             "name": "lagdo/jaxon-ui-builder",
-            "version": "v0.2.0",
+            "version": "v0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lagdo/jaxon-ui-builder.git",
-                "reference": "927347f0fe3409ef6b8f20ffed7285e7dbebcc76"
+                "reference": "0ffbf19a3c952ec2c7da4301a43f690e57044cd4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lagdo/jaxon-ui-builder/zipball/927347f0fe3409ef6b8f20ffed7285e7dbebcc76",
-                "reference": "927347f0fe3409ef6b8f20ffed7285e7dbebcc76",
+                "url": "https://api.github.com/repos/lagdo/jaxon-ui-builder/zipball/0ffbf19a3c952ec2c7da4301a43f690e57044cd4",
+                "reference": "0ffbf19a3c952ec2c7da4301a43f690e57044cd4",
                 "shasum": ""
             },
             "require": {
                 "jaxon-php/jaxon-core": "^5.0",
-                "lagdo/ui-builder": "^0.3",
+                "lagdo/ui-builder": "0.6.*",
                 "php": ">=8.0"
             },
             "type": "library",
@@ -2034,7 +2040,7 @@
                 "issues": "https://github.com/lagdo/jaxon-ui-builder/issues",
                 "source": "https://github.com/lagdo/jaxon-ui-builder"
             },
-            "time": "2025-12-28T00:25:27+00:00"
+            "time": "2026-01-05T12:08:07+00:00"
         },
         {
             "name": "lagdo/laravel-facades",
@@ -2098,16 +2104,16 @@
         },
         {
             "name": "lagdo/ui-builder",
-            "version": "v0.3.1",
+            "version": "v0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lagdo/ui-builder.git",
-                "reference": "47a406f61db34e54dd79df1246ea1f5b23811765"
+                "reference": "414ddbc99fdc0184155b5aac93909d302304399f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lagdo/ui-builder/zipball/47a406f61db34e54dd79df1246ea1f5b23811765",
-                "reference": "47a406f61db34e54dd79df1246ea1f5b23811765",
+                "url": "https://api.github.com/repos/lagdo/ui-builder/zipball/414ddbc99fdc0184155b5aac93909d302304399f",
+                "reference": "414ddbc99fdc0184155b5aac93909d302304399f",
                 "shasum": ""
             },
             "require": {
@@ -2140,24 +2146,24 @@
                 "issues": "https://github.com/lagdo/ui-builder/issues",
                 "source": "https://github.com/lagdo/ui-builder"
             },
-            "time": "2025-12-28T15:07:05+00:00"
+            "time": "2026-01-05T12:04:25+00:00"
         },
         {
             "name": "lagdo/ui-builder-bootstrap5",
-            "version": "v0.2.1",
+            "version": "v0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lagdo/ui-builder-bootstrap5.git",
-                "reference": "1400e28c1bf1c50c8bbb0f71e17ec3fb20221198"
+                "reference": "23a726d6cfa5d19ec641c86c1033d952eb881b52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lagdo/ui-builder-bootstrap5/zipball/1400e28c1bf1c50c8bbb0f71e17ec3fb20221198",
-                "reference": "1400e28c1bf1c50c8bbb0f71e17ec3fb20221198",
+                "url": "https://api.github.com/repos/lagdo/ui-builder-bootstrap5/zipball/23a726d6cfa5d19ec641c86c1033d952eb881b52",
+                "reference": "23a726d6cfa5d19ec641c86c1033d952eb881b52",
                 "shasum": ""
             },
             "require": {
-                "lagdo/ui-builder": "^0.3",
+                "lagdo/ui-builder": "0.6.*",
                 "php": ">=8.0"
             },
             "type": "library",
@@ -2187,7 +2193,7 @@
                 "issues": "https://github.com/lagdo/ui-builder-bootstrap/issues",
                 "source": "https://github.com/lagdo/ui-builder-bootstrap"
             },
-            "time": "2025-12-28T15:07:05+00:00"
+            "time": "2026-01-05T12:08:07+00:00"
         },
         {
             "name": "laravel/fortify",
@@ -2254,16 +2260,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v12.44.0",
+            "version": "v12.46.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "592bbf1c036042958332eb98e3e8131b29102f33"
+                "reference": "9dcff48d25a632c1fadb713024c952fec489c4ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/592bbf1c036042958332eb98e3e8131b29102f33",
-                "reference": "592bbf1c036042958332eb98e3e8131b29102f33",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/9dcff48d25a632c1fadb713024c952fec489c4ae",
+                "reference": "9dcff48d25a632c1fadb713024c952fec489c4ae",
                 "shasum": ""
             },
             "require": {
@@ -2472,7 +2478,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-12-23T15:29:43+00:00"
+            "time": "2026-01-07T23:26:53+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -3344,16 +3350,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "3.9.0",
+            "version": "3.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "10d85740180ecba7896c87e06a166e0c95a0e3b6"
+                "reference": "b321dd6749f0bf7189444158a3ce785cc16d69b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/10d85740180ecba7896c87e06a166e0c95a0e3b6",
-                "reference": "10d85740180ecba7896c87e06a166e0c95a0e3b6",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/b321dd6749f0bf7189444158a3ce785cc16d69b0",
+                "reference": "b321dd6749f0bf7189444158a3ce785cc16d69b0",
                 "shasum": ""
             },
             "require": {
@@ -3371,7 +3377,7 @@
                 "graylog2/gelf-php": "^1.4.2 || ^2.0",
                 "guzzlehttp/guzzle": "^7.4.5",
                 "guzzlehttp/psr7": "^2.2",
-                "mongodb/mongodb": "^1.8",
+                "mongodb/mongodb": "^1.8 || ^2.0",
                 "php-amqplib/php-amqplib": "~2.4 || ^3",
                 "php-console/php-console": "^3.1.8",
                 "phpstan/phpstan": "^2",
@@ -3431,7 +3437,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/3.9.0"
+                "source": "https://github.com/Seldaek/monolog/tree/3.10.0"
             },
             "funding": [
                 {
@@ -3443,7 +3449,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-03-24T10:02:05+00:00"
+            "time": "2026-01-02T08:56:05+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -4139,16 +4145,16 @@
         },
         {
             "name": "pimple/pimple",
-            "version": "v3.6.0",
+            "version": "v3.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silexphp/Pimple.git",
-                "reference": "a70f552d338f9266eec6606c1f0b324da5514c96"
+                "reference": "020029849cc55ad360066844df8ed880fb20c5bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/a70f552d338f9266eec6606c1f0b324da5514c96",
-                "reference": "a70f552d338f9266eec6606c1f0b324da5514c96",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/020029849cc55ad360066844df8ed880fb20c5bb",
+                "reference": "020029849cc55ad360066844df8ed880fb20c5bb",
                 "shasum": ""
             },
             "require": {
@@ -4186,9 +4192,9 @@
                 "dependency injection"
             ],
             "support": {
-                "source": "https://github.com/silexphp/Pimple/tree/v3.6.0"
+                "source": "https://github.com/silexphp/Pimple/tree/v3.6.1"
             },
-            "time": "2025-11-12T12:31:38+00:00"
+            "time": "2025-12-31T08:24:29+00:00"
         },
         {
             "name": "pragmarx/google2fa",
@@ -5123,16 +5129,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v7.4.1",
+            "version": "v7.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "6d9f0fbf2ec2e9785880096e3abd0ca0c88b506e"
+                "reference": "732a9ca6cd9dfd940c639062d5edbde2f6727fb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/6d9f0fbf2ec2e9785880096e3abd0ca0c88b506e",
-                "reference": "6d9f0fbf2ec2e9785880096e3abd0ca0c88b506e",
+                "url": "https://api.github.com/repos/symfony/console/zipball/732a9ca6cd9dfd940c639062d5edbde2f6727fb6",
+                "reference": "732a9ca6cd9dfd940c639062d5edbde2f6727fb6",
                 "shasum": ""
             },
             "require": {
@@ -5197,7 +5203,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v7.4.1"
+                "source": "https://github.com/symfony/console/tree/v7.4.3"
             },
             "funding": [
                 {
@@ -5217,7 +5223,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-12-05T15:23:39+00:00"
+            "time": "2025-12-23T14:50:43+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -5600,16 +5606,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v7.4.0",
+            "version": "v7.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "340b9ed7320570f319028a2cbec46d40535e94bd"
+                "reference": "fffe05569336549b20a1be64250b40516d6e8d06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/340b9ed7320570f319028a2cbec46d40535e94bd",
-                "reference": "340b9ed7320570f319028a2cbec46d40535e94bd",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/fffe05569336549b20a1be64250b40516d6e8d06",
+                "reference": "fffe05569336549b20a1be64250b40516d6e8d06",
                 "shasum": ""
             },
             "require": {
@@ -5644,7 +5650,7 @@
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/finder/tree/v7.4.0"
+                "source": "https://github.com/symfony/finder/tree/v7.4.3"
             },
             "funding": [
                 {
@@ -5664,20 +5670,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-11-05T05:42:40+00:00"
+            "time": "2025-12-23T14:50:43+00:00"
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v7.4.1",
+            "version": "v7.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "bd1af1e425811d6f077db240c3a588bdb405cd27"
+                "reference": "a70c745d4cea48dbd609f4075e5f5cbce453bd52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/bd1af1e425811d6f077db240c3a588bdb405cd27",
-                "reference": "bd1af1e425811d6f077db240c3a588bdb405cd27",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/a70c745d4cea48dbd609f4075e5f5cbce453bd52",
+                "reference": "a70c745d4cea48dbd609f4075e5f5cbce453bd52",
                 "shasum": ""
             },
             "require": {
@@ -5726,7 +5732,7 @@
             "description": "Defines an object-oriented layer for the HTTP specification",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/http-foundation/tree/v7.4.1"
+                "source": "https://github.com/symfony/http-foundation/tree/v7.4.3"
             },
             "funding": [
                 {
@@ -5746,20 +5752,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-12-07T11:13:10+00:00"
+            "time": "2025-12-23T14:23:49+00:00"
         },
         {
             "name": "symfony/http-kernel",
-            "version": "v7.4.2",
+            "version": "v7.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "f6e6f0a5fa8763f75a504b930163785fb6dd055f"
+                "reference": "885211d4bed3f857b8c964011923528a55702aa5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/f6e6f0a5fa8763f75a504b930163785fb6dd055f",
-                "reference": "f6e6f0a5fa8763f75a504b930163785fb6dd055f",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/885211d4bed3f857b8c964011923528a55702aa5",
+                "reference": "885211d4bed3f857b8c964011923528a55702aa5",
                 "shasum": ""
             },
             "require": {
@@ -5845,7 +5851,7 @@
             "description": "Provides a structured process for converting a Request into a Response",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/http-kernel/tree/v7.4.2"
+                "source": "https://github.com/symfony/http-kernel/tree/v7.4.3"
             },
             "funding": [
                 {
@@ -5865,20 +5871,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-12-08T07:43:37+00:00"
+            "time": "2025-12-31T08:43:57+00:00"
         },
         {
             "name": "symfony/mailer",
-            "version": "v7.4.0",
+            "version": "v7.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mailer.git",
-                "reference": "a3d9eea8cfa467ece41f0f54ba28185d74bd53fd"
+                "reference": "e472d35e230108231ccb7f51eb6b2100cac02ee4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/mailer/zipball/a3d9eea8cfa467ece41f0f54ba28185d74bd53fd",
-                "reference": "a3d9eea8cfa467ece41f0f54ba28185d74bd53fd",
+                "url": "https://api.github.com/repos/symfony/mailer/zipball/e472d35e230108231ccb7f51eb6b2100cac02ee4",
+                "reference": "e472d35e230108231ccb7f51eb6b2100cac02ee4",
                 "shasum": ""
             },
             "require": {
@@ -5929,7 +5935,7 @@
             "description": "Helps sending emails",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/mailer/tree/v7.4.0"
+                "source": "https://github.com/symfony/mailer/tree/v7.4.3"
             },
             "funding": [
                 {
@@ -5949,7 +5955,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-11-21T15:26:00+00:00"
+            "time": "2025-12-16T08:02:06+00:00"
         },
         {
             "name": "symfony/mime",
@@ -6871,16 +6877,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v7.4.0",
+            "version": "v7.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "7ca8dc2d0dcf4882658313aba8be5d9fd01026c8"
+                "reference": "2f8e1a6cdf590ca63715da4d3a7a3327404a523f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/7ca8dc2d0dcf4882658313aba8be5d9fd01026c8",
-                "reference": "7ca8dc2d0dcf4882658313aba8be5d9fd01026c8",
+                "url": "https://api.github.com/repos/symfony/process/zipball/2f8e1a6cdf590ca63715da4d3a7a3327404a523f",
+                "reference": "2f8e1a6cdf590ca63715da4d3a7a3327404a523f",
                 "shasum": ""
             },
             "require": {
@@ -6912,7 +6918,7 @@
             "description": "Executes commands in sub-processes",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/process/tree/v7.4.0"
+                "source": "https://github.com/symfony/process/tree/v7.4.3"
             },
             "funding": [
                 {
@@ -6932,20 +6938,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-10-16T11:21:06+00:00"
+            "time": "2025-12-19T10:00:43+00:00"
         },
         {
             "name": "symfony/routing",
-            "version": "v7.4.0",
+            "version": "v7.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/routing.git",
-                "reference": "4720254cb2644a0b876233d258a32bf017330db7"
+                "reference": "5d3fd7adf8896c2fdb54e2f0f35b1bcbd9e45090"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/routing/zipball/4720254cb2644a0b876233d258a32bf017330db7",
-                "reference": "4720254cb2644a0b876233d258a32bf017330db7",
+                "url": "https://api.github.com/repos/symfony/routing/zipball/5d3fd7adf8896c2fdb54e2f0f35b1bcbd9e45090",
+                "reference": "5d3fd7adf8896c2fdb54e2f0f35b1bcbd9e45090",
                 "shasum": ""
             },
             "require": {
@@ -6997,7 +7003,7 @@
                 "url"
             ],
             "support": {
-                "source": "https://github.com/symfony/routing/tree/v7.4.0"
+                "source": "https://github.com/symfony/routing/tree/v7.4.3"
             },
             "funding": [
                 {
@@ -7017,7 +7023,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-11-27T13:27:24+00:00"
+            "time": "2025-12-19T10:00:43+00:00"
         },
         {
             "name": "symfony/service-contracts",
@@ -7198,16 +7204,16 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v8.0.1",
+            "version": "v8.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "770e3b8b0ba8360958abedcabacd4203467333ca"
+                "reference": "60a8f11f0e15c48f2cc47c4da53873bb5b62135d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/770e3b8b0ba8360958abedcabacd4203467333ca",
-                "reference": "770e3b8b0ba8360958abedcabacd4203467333ca",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/60a8f11f0e15c48f2cc47c4da53873bb5b62135d",
+                "reference": "60a8f11f0e15c48f2cc47c4da53873bb5b62135d",
                 "shasum": ""
             },
             "require": {
@@ -7267,7 +7273,7 @@
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/translation/tree/v8.0.1"
+                "source": "https://github.com/symfony/translation/tree/v8.0.3"
             },
             "funding": [
                 {
@@ -7287,7 +7293,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-12-01T09:13:36+00:00"
+            "time": "2025-12-21T10:59:45+00:00"
         },
         {
             "name": "symfony/translation-contracts",
@@ -7451,16 +7457,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v7.4.0",
+            "version": "v7.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "41fd6c4ae28c38b294b42af6db61446594a0dece"
+                "reference": "7e99bebcb3f90d8721890f2963463280848cba92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/41fd6c4ae28c38b294b42af6db61446594a0dece",
-                "reference": "41fd6c4ae28c38b294b42af6db61446594a0dece",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/7e99bebcb3f90d8721890f2963463280848cba92",
+                "reference": "7e99bebcb3f90d8721890f2963463280848cba92",
                 "shasum": ""
             },
             "require": {
@@ -7514,7 +7520,7 @@
                 "dump"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-dumper/tree/v7.4.0"
+                "source": "https://github.com/symfony/var-dumper/tree/v7.4.3"
             },
             "funding": [
                 {
@@ -7534,7 +7540,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-10-27T20:36:44+00:00"
+            "time": "2025-12-18T07:04:31+00:00"
         },
         {
             "name": "tedivm/jshrink",

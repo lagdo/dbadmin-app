@@ -84,6 +84,14 @@
     -webkit-appearance: none;
     margin: 0;
 }
+#jaxon-dbadmin .dbadmin-table-edit-field {
+    margin-bottom: 10px;
+    padding: 5px 15px 5px 5px;
+    border-radius: 5px;
+}
+#jaxon-dbadmin .dbadmin-table-edit-field > .row {
+    margin-bottom: 0;
+}
 #jaxon-dbadmin .dbadmin-edit-table-name {
     padding-right: 1px;
 }
@@ -133,12 +141,6 @@
     margin-top: 2px !important;
     margin-bottom: 0 !important;
 }
-#jaxon-dbadmin .dbadmin-table-edit-field {
-    margin-left: -5px;
-    margin-bottom: 5px;
-    padding: 5px 15px 0 5px;
-    border-radius: 8px;
-}
 #jaxon-dbadmin pre {
     overflow-x: auto;
     white-space: pre-wrap;
@@ -166,9 +168,4 @@
 #dbadmin-table-select-query { 
     height: 20px;
     resize: none;
-}
-
-/* Custom CSS for the Noty dialog library */
-.noty_buttons button {
-    margin-right: 10px;
 }
