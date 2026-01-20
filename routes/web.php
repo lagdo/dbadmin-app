@@ -8,7 +8,8 @@ Route::get('/', fn() => view('dbadmin'))
     ->middleware(['auth', 'jaxon.dbadmin.config', 'jaxon.config']);
 
 Route::get('/export/{filename}', ExportController::class)
-    ->middleware(['auth', 'jaxon.dbadmin.config', 'jaxon.config']);
+    ->middleware(['auth', 'jaxon.dbadmin.config', 'jaxon.config'])
+    ->name('export');;
 
 Route::get('/audit', fn() => view('dbaudit'))
     ->middleware(['auth', 'jaxon.dbaudit.config'])
