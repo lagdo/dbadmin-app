@@ -17,19 +17,8 @@
   </script>
 @endsection
 
-@php
-$rqSidebar = rq(Lagdo\DbAdmin\Ajax\Admin\Sidebar::class);
-$rqWrapper = rq(Lagdo\DbAdmin\Ajax\Admin\Wrapper::class);
-@endphp
-
-@section('sidebar')
-        <div class="sb-sidenav-menu" @jxnBind($rqSidebar)>
-          @jxnHtml($rqSidebar)
-        </div>
-@endsection
-
 @section('content')
-        <div class="container-fluid" id="jaxon-dbadmin" @jxnBind($rqWrapper)>
-          @jxnHtml($rqWrapper)
-        </div>
+          <div class="container-fluid px-3 py-3">
+            {!! jaxon()->package(Lagdo\DbAdmin\Db\DbAdminPackage::class)->layout() !!}
+          </div>
 @endsection

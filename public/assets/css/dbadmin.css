@@ -1,6 +1,9 @@
 html {
   font-size: 14px;
 }
+body {
+  padding: 0;
+}
 .row {
   margin-bottom: 10px;
 }
@@ -14,10 +17,23 @@ html {
 /*
   * This fixes the <footer> at the bottom of the page. 
   */
-#layoutSidenav_content {
-  height: 100vh;
+#layoutSidenav {
+  height: calc(100vh - 50px);
 }
-#layoutSidenav_content > main {
-  overflow-y: auto;
+#layoutSidenav #layoutSidenav_content {
+  overflow-y: scroll;
+  justify-content: flex-start;
   margin-bottom: 3px;
+}
+
+#layout_footer {
+  display: flex;
+  height: 50px;
+}
+#layout_footer .sb-sidenav-footer {
+  width: 295px;
+  background-color: #e9ecef;
+}
+#layout_footer footer {
+  flex: 1;
 }

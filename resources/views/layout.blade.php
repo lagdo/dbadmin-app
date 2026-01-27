@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  @include('html.header')
+  <head>
+    @include('html.header')
 
-  @yield('css')
-</head>
+    @yield('css')
+  </head>
 
-<body class="sb-nav-fixed">
-  <nav class="sb-topnav navbar navbar-expand navbar-dark bg-primary">
-    @include('page.header')
-  </nav>
+  <body>
+    <div id="layoutSidenav">
+      <div id="layoutSidenav_content">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-primary">
+          @include('page.header')
+        </nav>
 
-  <div id="layoutSidenav">
-    <div id="layoutSidenav_nav">
-      <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
-        @yield('sidebar')
-
-        <div class="sb-sidenav-footer py-3">
-          @include('page.user')
-        </div>
-      </nav>
+        <main>
+          @yield('content')
+        </main>
+      </div>
     </div>
 
-    <div id="layoutSidenav_content">
-      <main>
-        @yield('content')
-      </main>
+    <div id="layout_footer">
+      <div class="sb-sidenav-footer py-3">
+        <div class="container-fluid px-4">
+          <span class="small">Logged in as:</span> {{ auth()->user()?->name ?? '' }}
+        </div>
+      </div>
 
       <footer class="bg-light py-3 mt-auto">
         <div class="container-fluid px-4">
@@ -34,11 +33,10 @@
         </div>
       </footer>
     </div>
-  </div>
 
-  @yield('js')
+    @yield('js')
 
-  @include('html.footer')
-</body>
+    @include('html.footer')
+  </body>
 
 </html>

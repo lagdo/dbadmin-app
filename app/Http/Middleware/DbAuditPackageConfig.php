@@ -2,10 +2,10 @@
 
 namespace App\Http\Middleware;
 
-use Closure;
 use Illuminate\Http\Request;
 use Lagdo\DbAdmin\Db\DbAuditPackage;
 use Symfony\Component\HttpFoundation\Response;
+use Closure;
 
 use function config;
 
@@ -14,7 +14,7 @@ class DbAuditPackageConfig
     /**
      * Handle an incoming request.
      *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+     * @param  Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
     public function handle(Request $request, Closure $next): Response
     {
@@ -27,7 +27,7 @@ class DbAuditPackageConfig
                 ],
             ],
             'jaxon.lib.core.request.uri' => '/audit/jaxon',
-            'jaxon.app.assets.file' => 'audit-0.5.0',
+            'jaxon.app.assets.file' => 'audit-0.6.0',
         ]);
 
         return $next($request);

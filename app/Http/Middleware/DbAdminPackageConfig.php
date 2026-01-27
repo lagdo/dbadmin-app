@@ -14,7 +14,7 @@ class DbAdminPackageConfig
     /**
      * Handle an incoming request.
      *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+     * @param  Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
     public function handle(Request $request, Closure $next): Response
     {
@@ -29,7 +29,7 @@ class DbAdminPackageConfig
                 DbAdminPackage::class => $options,
             ],
             'jaxon.lib.core.request.uri' => '/jaxon',
-            'jaxon.app.assets.file' => 'admin-0.5.0',
+            'jaxon.app.assets.file' => 'admin-0.6.0',
         ]);
 
         return $next($request);
