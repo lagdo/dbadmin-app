@@ -4,7 +4,7 @@
 
 [Features](#features-and-current-status) • [Installation](#installation) • [Docker](#running-with-docker) • [Authentication](#user-management-and-authentication) • [Configuration](#database-access-configuration) • [Query audit](#the-query-audit) • [Data export](#data-export) • [Data import](#data-import-with-file-upload)
 
-![screenshot](screenshots/jaxon-dbadmin-sqlite-chinook.png)
+![screenshot](screenshots/jaxon-dbadmin-database-window.png)
 
 ---
 
@@ -40,6 +40,7 @@ The following features are currently available:
 - Create or drop a database.
 - Create or alter a table or view.
 - Drop a table or view.
+- Browse servers and databases in multiple tabs.
 
 The following features are not yet implemented, and planned for future releases:
 - Save the current tabs in user preferences.
