@@ -10,6 +10,8 @@
 
 ## About Jaxon DbAdmin
 
+Jaxon DbAdmin is a complete rewrite of [Adminer](https://github.com/vrana/adminer), the popular database admin dashboard.
+
 Jaxon DbAdmin is built with [Jaxon](https://www.jaxon-php.org), [Laravel](https://laravel.com) and [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction).
 
 It currently supports 3 database servers: PostgreSQL, MySQL (and MariaDB), and SQLite.
@@ -35,13 +37,16 @@ The following features are currently available:
 - Save queries in user favorites.
 - Import or export data.
 - Insert, modify or delete data in a table.
+- Create or drop a database.
 - Create or alter a table or view.
-
-The following features are either disabled or not yet implemented, and planned for future releases:
 - Drop a table or view.
+
+The following features are not yet implemented, and planned for future releases:
+- Save the current tabs in user preferences.
 - Navigate through related tables.
 - Code completion for table and field names in the SQL editor.
 - An advanced GUI-based query builder.
+- Automated tests.
 
 ## Installation
 
