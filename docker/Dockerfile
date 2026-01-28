@@ -1,4 +1,4 @@
-ARG DBADMIN_VERSION=0.6.0
+ARG DBADMIN_VERSION=0.6.1
 
 # Root builder
 FROM lagdo/alpine-php-nginx-unit
@@ -21,14 +21,20 @@ COPY . /var/www
 
 RUN addgroup -g ${PHP_GID} --system ${PHP_USER} && \
   adduser -G ${PHP_USER} --system -D -s /bin/sh -u ${PHP_UID} ${PHP_USER} && \
+  touch /var/run/unit.pid && \
+  touch /var/log/unit.log && \
+  mkdir -p /usr/local/var && \
   mkdir -p /var/cache/jaxon && \
-  chown -R ${PHP_USER}:${PHP_USER} /var/www /var/run /run /var/cache/jaxon
+  chown -R ${PHP_USER}:${PHP_USER} /var/log/unit.log /usr/local/var /var/www \
+    /var/run /run /var/cache/jaxon
+
+USER ${PHP_USER}
 
 # Install Composer packages
 RUN cd /var/www && \
-  su ${PHP_USER} -c 'composer install --no-dev' && \
-  su ${PHP_USER} -c 'cp .env.docker .env' && \
-  su ${PHP_USER} -c 'composer run post-create-project-cmd'
+  composer install --no-dev && \
+  cp .env.docker .env && \
+  composer run post-create-project-cmd
 
 WORKDIR /var/www
 EXPOSE 8080
