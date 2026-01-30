@@ -20,13 +20,16 @@ class DbAdminPackageConfig
     {
         // Copy the audit options into the DbAdminPackage package options.
         $options = config('jaxon.app.packages')[DbAdminPackage::class];
-        $options['audit'] = [
+        $auditOptions = [
             'options' => config('dbadmin.audit.options'),
             'database' => config('dbadmin.audit.database'),
         ];
         config([
             'jaxon.app.packages' => [
-                DbAdminPackage::class => $options,
+                DbAdminPackage::class => [
+                    ...$options,
+                    'audit' => $auditOptions,
+                ],
             ],
             'jaxon.lib.core.request.uri' => '/jaxon',
             'jaxon.app.assets.file' => 'admin-0.6.0',

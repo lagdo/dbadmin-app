@@ -49,9 +49,9 @@ class DbAdminServiceProvider extends ServiceProvider
                     return auth()->user()?->role?->name ?? '';
                 }
             });
-        jaxon()->di()->set('dbadmin_config_file_path',
-            fn() => $this->getDbAdminConfigFile());
-        
+        jaxon()->di()->set('dbadmin_config_file_path', $this->getDbAdminConfigFile(...));
+
+        // Make the DbADmin package available in the Laravel container.
         $this->app->singleton(DbAdminPackage::class,
             fn() => jaxon()->package(DbAdminPackage::class));
     }

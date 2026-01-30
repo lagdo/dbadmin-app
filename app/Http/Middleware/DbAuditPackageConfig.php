@@ -19,11 +19,16 @@ class DbAuditPackageConfig
     public function handle(Request $request, Closure $next): Response
     {
         // Copy the audit options into the DbAuditPackage package options.
+        $options = config('jaxon.app.packages')[DbAuditPackage::class] ?? [];
+        $auditOptions = [
+            'options' => config('dbadmin.audit.options'),
+            'database' => config('dbadmin.audit.database'),
+        ];
         config([
             'jaxon.app.packages' => [
                 DbAuditPackage::class => [
-                    'options' => config('dbadmin.audit.options'),
-                    'database' => config('dbadmin.audit.database')
+                    ...$options,
+                    ...$auditOptions,
                 ],
             ],
             'jaxon.lib.core.request.uri' => '/audit/jaxon',
