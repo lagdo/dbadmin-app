@@ -22,9 +22,14 @@ Lagdo = {
     Ajax: {
       Audit: {
         Commands: {
+          html: (...args) => jx.rc(jx.c0, 'html', args, { bags: ["dbadmin.audit"] }),
           page: (...args) => jx.rc(jx.c0, 'page', args, { bags: ["dbadmin.audit"] }),
           show: (...args) => jx.rc(jx.c0, 'show', args, { bags: ["dbadmin.audit"] }),
           paginationAttributes: (...args) => jx.rc(jx.c0, 'paginationAttributes', args, { bags: ["dbadmin.audit"] }),
+          clear: (...args) => jx.rc(jx.c0, 'clear', args, { bags: ["dbadmin.audit"] }),
+          visible: (...args) => jx.rc(jx.c0, 'visible', args, { bags: ["dbadmin.audit"] }),
+          render: (...args) => jx.rc(jx.c0, 'render', args, { bags: ["dbadmin.audit"] }),
+          item: (...args) => jx.rc(jx.c0, 'item', args, { bags: ["dbadmin.audit"] }),
         },
       },
     },

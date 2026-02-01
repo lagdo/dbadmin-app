@@ -32,7 +32,7 @@ class DbAuditPackageConfig
                 ],
             ],
             'jaxon.lib.core.request.uri' => '/audit/jaxon',
-            'jaxon.app.assets.file' => 'audit-0.6.0',
+            'jaxon.app.assets.file' => 'audit-0.6.1',
         ]);
 
         return $next($request);

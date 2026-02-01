@@ -82,8 +82,13 @@ Lagdo = {
                 delete: (...args) => jx.rc(jx.c1, 'delete', args, { bags: ["dbadmin","dbadmin.tab"] }),
               },
               FavoritePage: {
+                html: (...args) => jx.rc(jx.c2, 'html', args, { bags: ["dbadmin","dbadmin.tab"] }),
                 page: (...args) => jx.rc(jx.c2, 'page', args, { bags: ["dbadmin","dbadmin.tab"] }),
                 paginationAttributes: (...args) => jx.rc(jx.c2, 'paginationAttributes', args, { bags: ["dbadmin","dbadmin.tab"] }),
+                clear: (...args) => jx.rc(jx.c2, 'clear', args, { bags: ["dbadmin","dbadmin.tab"] }),
+                visible: (...args) => jx.rc(jx.c2, 'visible', args, { bags: ["dbadmin","dbadmin.tab"] }),
+                render: (...args) => jx.rc(jx.c2, 'render', args, { bags: ["dbadmin","dbadmin.tab"] }),
+                item: (...args) => jx.rc(jx.c2, 'item', args, { bags: ["dbadmin","dbadmin.tab"] }),
               },
             },
           },
@@ -261,8 +266,13 @@ Lagdo = {
                 },
               },
               ResultSet: {
+                html: (...args) => jx.rc(jx.c41, 'html', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
                 page: (...args) => jx.rc(jx.c41, 'page', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
                 paginationAttributes: (...args) => jx.rc(jx.c41, 'paginationAttributes', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
+                clear: (...args) => jx.rc(jx.c41, 'clear', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
+                visible: (...args) => jx.rc(jx.c41, 'visible', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
+                render: (...args) => jx.rc(jx.c41, 'render', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
+                item: (...args) => jx.rc(jx.c41, 'item', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
               },
               Select: {
                 show: (...args) => jx.rc(jx.c42, 'show', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
@@ -814,6 +824,14 @@ jaxon.dom.ready(() => {
          * @returns {string}
          */
         getQueryId: (node) => getQueryId(node, 'td'),
+
+        /**
+         * @param {Element} node
+         * @param {string} prefix
+         *
+         * @returns {string}
+         */
+        getSqlQuery: (node, prefix) => getFavoriteQuery(node, prefix),
 
         /**
          * @param {Element} node
