@@ -69,6 +69,7 @@ Lagdo = {
     Ajax: {
       Admin: {
         Admin: {
+          connect: (...args) => jx.rc(jx.c0, 'connect', args, { bags: ["dbadmin","dbadmin.tab"] }),
           server: (...args) => jx.rc(jx.c0, 'server', args, { bags: ["dbadmin","dbadmin.tab"] }),
         },
         Db: {
@@ -114,6 +115,8 @@ Lagdo = {
             Query: {
               database: (...args) => jx.rc(jx.c7, 'database', args, { bags: ["dbadmin","dbadmin.tab"] }),
               exec: (...args) => jx.rc(jx.c7, 'exec', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              addTab: (...args) => jx.rc(jx.c7, 'addTab', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              delTab: (...args) => jx.rc(jx.c7, 'delTab', args, { bags: ["dbadmin","dbadmin.tab"] }),
             },
             Routines: {
               show: (...args) => jx.rc(jx.c8, 'show', args, { bags: ["dbadmin","dbadmin.tab"] }),
@@ -159,6 +162,8 @@ Lagdo = {
             Query: {
               server: (...args) => jx.rc(jx.c19, 'server', args, { bags: ["dbadmin","dbadmin.tab"] }),
               exec: (...args) => jx.rc(jx.c19, 'exec', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              addTab: (...args) => jx.rc(jx.c19, 'addTab', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              delTab: (...args) => jx.rc(jx.c19, 'delTab', args, { bags: ["dbadmin","dbadmin.tab"] }),
             },
             Status: {
               show: (...args) => jx.rc(jx.c20, 'show', args, { bags: ["dbadmin","dbadmin.tab"] }),
@@ -600,51 +605,47 @@ jaxon.dbadmin = {};
     };
 
     /**
-     * @param {string} tabId
+     * @param {string} tabNavId 
      *
      * @returns {void}
      */
-    self.setCurrentTab = (tabId) => {
-        // Todo: merge this value into the "dbadmin" databag?
-        jaxon.ajax.parameters.setBag('dbadmin.tab', { current: tabId });
-    };
+    self.activateTab = (tabNavId) => document.getElementById(tabNavId)?.click(new Event('click'));
 
     /**
-     * @param {string} titleId 
-     *
-     * @returns {void}
-     */
-    const activateTab = (titleId) => document.getElementById(titleId)?.click(new Event('click'));
-
-    /**
+     * @param {string} tabNavWrapper
      * @param {string} tabNavHtml
+     * @param {string} tabContentWrapper
      * @param {string} tabContentHtml
-     * @param {string} titleId 
-     *
-     * @returns {void}
-     */
-    self.addTab = (tabNavHtml, tabContentHtml, titleId) => {
-        const tabNav = document.getElementById('dbadmin-server-tab-nav');
-        tabNav.appendChild(makeHtmlNode(tabNavHtml));
-        const tabContent = document.getElementById('dbadmin-server-tab-content');
-        tabContent.appendChild(makeHtmlNode(tabContentHtml));
-        // Activate the new tab.
-        activateTab(titleId);
-    };
-
-    /**
-     * @param {string} titleId 
-     * @param {string} wrapperId 
      * @param {string} activeTab 
      *
      * @returns {void}
      */
-    self.deleteTab = (titleId, wrapperId, activeTab) => {
+    self.addTab = (tabNavWrapper, tabNavHtml, tabContentWrapper, tabContentHtml, activeTab) => {
+        const tabNav = document.getElementById(tabNavWrapper);
+        tabNav.appendChild(makeHtmlNode(tabNavHtml));
+        const tabContent = document.getElementById(tabContentWrapper);
+        tabContent.appendChild(makeHtmlNode(tabContentHtml));
+        // Activate the new tab.
+        if (activeTab !== undefined) {
+            self.activateTab(activeTab);
+        }
+    };
+
+    /**
+     * @param {string} tabNavId 
+     * @param {string} tabContentId 
+     * @param {string} activeTab 
+     *
+     * @returns {void}
+     */
+    self.delTab = (tabNavId, tabContentId, activeTab) => {
         // The title is the child of a parent element.
-        document.getElementById(titleId)?.parentElement?.remove();
-        document.getElementById(wrapperId)?.remove();
+        document.getElementById(tabNavId)?.parentElement?.remove();
+        document.getElementById(tabContentId)?.remove();
         // Activate another tab, so the screen is not left blank.
-        activateTab(activeTab);
+        if (activeTab !== undefined) {
+            self.activateTab(activeTab);
+        }
     };
 })(jaxon.dbadmin);
 
@@ -683,7 +684,9 @@ jaxon.dom.ready(() => {
 
 (function(self) {
     const editor = {
-        ace: null,
+        select: null,
+        query: null,
+        tabs: {},
         page: '',
         fontSize: '13px',
         modes: {
@@ -695,57 +698,12 @@ jaxon.dom.ready(() => {
     };
 
     /**
-     * @param {string} containerId
-     * @param {string} driver
-     *
-     * @returns {void}
-     */
-    self.createSqlQueryEditor = function(containerId, driver) {
-        editor.ace = ace.edit(containerId, {
-            mode: editor.modes[driver] ?? editor.modes.sql,
-            selectionStyle: "text",
-            dragEnabled: false,
-            useWorker: false,
-            enableBasicAutocompletion: true,
-            enableSnippets: false,
-            enableLiveAutocompletion: true,
-            showPrintMargin: false,
-        });
-        editor.ace.setTheme(editor.theme);
-        editor.ace.session.setUseWrapMode(true);
-        document.getElementById(containerId).style.fontSize = editor.fontSize;
-    };
-
-    /**
-     * @param {string} containerId
-     * @param {string} driver
-     *
-     * @returns {void}
-     */
-    self.createSqlSelectEditor = (containerId, driver) => {
-        editor.ace = ace.edit(containerId, {
-            mode: editor.modes[driver] ?? editor.modes.sql,
-            selectionStyle: "text",
-            dragEnabled: false,
-            useWorker: false,
-            showPrintMargin: false,
-            showLineNumbers: false,
-            showGutter: false, // Also hide the line number "column".
-            readOnly: true,
-        });
-        editor.ace.setTheme(editor.theme);
-        editor.ace.session.setUseWrapMode(true);
-        editor.ace.resize();
-        document.getElementById(containerId).style.fontSize = editor.fontSize;
-    };
-
-    /**
      * @returns {string}
      */
-    self.getSqlQuery = () => {
+    self.getQueryText = () => {
         // Try to get the selected text first.
-        const selectedText = editor.ace.getSelectedText();
-        return selectedText ? selectedText : editor.ace.getValue();
+        const selectedText = editor.query?.getSelectedText();
+        return selectedText ? selectedText : editor.query?.getValue() ?? '';
     };
 
     /**
@@ -755,15 +713,172 @@ jaxon.dom.ready(() => {
      *
      * @returns {void}
      */
-    self.setSqlQuery = (query) => editor.ace.session.setValue(query);
+    self.setSqlQuery = (query) => editor.query?.session.setValue(query);
 
     /**
-     * When the editor content is changed when it is in a hidden tab, the visible content
-     * is not updated when the tab becomes visible. We need to force the refresh.
+     * @param {string} appTabId
      *
      * @returns {void}
      */
-    self.refreshContent = () => editor.ace.session.setValue(self.getSqlQuery());
+    self.onAppTabClick = (appTabId) => jaxon.bag.setEntry('dbadmin', 'tab.app', appTabId);
+
+    /**
+     * @param {string} appTabId
+     * @param {string} editorTabId
+     * @param {object} newEditor
+     *
+     * @returns {bool}
+     */
+    const addTabEditor = (appTabId, editorTabId, newEditor) => {
+        const appEditors = editor.tabs[appTabId] ?? {};
+        editor.tabs[appTabId] = {
+            ...appEditors,
+            [editorTabId]: newEditor,
+        };
+    };
+
+    /**
+     * @param {string} appTabId
+     * @param {string} editorTabId
+     *
+     * @returns {bool}
+     */
+    const hasTabEditor = (appTabId, editorTabId) => !editor.tabs[appTabId] ?
+        false : editor.tabs[appTabId][editorTabId] !== undefined;
+
+    /**
+     * @param {string} appTabId
+     * @param {string} editorTabId
+     *
+     * @returns {object|null}
+     */
+    const getTabEditor = (appTabId, editorTabId) => !editor.tabs[appTabId] ?
+        null : editor.tabs[appTabId][editorTabId] ?? null;
+
+    /**
+     * @param {string} appTabId
+     * @param {string} editorTabId
+     *
+     * @returns {mixed}
+     */
+    const delTabEditor = (appTabId, editorTabId) => {
+        delete editor.tabs[appTabId][editorTabId];
+        editor.tabs[appTabId][editorTabId] = undefined;
+    };
+
+    /**
+     * @param {string} appTabId
+     *
+     * @returns {mixed}
+     */
+    self.delAppEditors = (appTabId) => {
+        const appEditors = editor.tabs[appTabId] ?? null;
+        if (appEditors !== null) {
+            Object.keys(appEditors).forEach(editorTabId => delTabEditor(appTabId, editorTabId));
+            delete editor.tabs[appTabId];
+            editor.tabs[appTabId] = undefined;
+        }
+    };
+
+    /**
+     * @param {string} appTabId
+     * @param {string} editorTabId
+     *
+     * @returns {void}
+     */
+    self.onEditorTabClick = (appTabId, editorTabId) => {
+        editor.query = getTabEditor(appTabId, editorTabId);
+        // When the editor content is changed when it is in a hidden tab, the visible content
+        // is not updated when the tab becomes visible. We need to force the refresh.
+        editor.query?.session.setValue(self.getQueryText());
+        // Save the current editor tab name.
+        jaxon.bag.setEntry('dbadmin', 'tab.editor', editorTabId);
+    };
+
+    /**
+     * @param {string} containerId
+     * @param {string} driver
+     *
+     * @returns {void}
+     */
+    const createQueryEditor = function(containerId, driver) {
+        editor.query = ace.edit(containerId, {
+            mode: editor.modes[driver] ?? editor.modes.sql,
+            selectionStyle: "text",
+            dragEnabled: false,
+            useWorker: false,
+            enableBasicAutocompletion: true,
+            enableSnippets: false,
+            enableLiveAutocompletion: true,
+            showPrintMargin: false,
+        });
+        editor.query.setTheme(editor.theme);
+        editor.query.session.setUseWrapMode(true);
+        document.getElementById(containerId).style.fontSize = editor.fontSize;
+    };
+
+    /**
+     * @param {string} containerId
+     * @param {string} driver
+     * @param {string} appTabId
+     * @param {string} editorTabId
+     *
+     * @returns {void}
+     */
+    self.createQueryEditor = function(containerId, driver, appTabId, editorTabId) {
+        createQueryEditor(containerId, driver);
+        if (!editorTabId || !appTabId) {
+            return;
+        }
+
+        const prevEditor = getTabEditor(appTabId, editorTabId);
+        if (prevEditor !== null) {
+            // Copy the query text of the previous editor instance in the tab.
+            editor.query.session.setValue(prevEditor.getValue());
+            delTabEditor(appTabId, editorTabId);
+        }
+
+        // Save the current editor tab name.
+        jaxon.bag.setEntry('dbadmin', 'tab.editor', editorTabId);
+        // Save the tab editor.
+        addTabEditor(appTabId, editorTabId, editor.query);
+    };
+
+    /**
+     * @param {string} appTabId
+     * @param {string} editorTabId
+     *
+     * @returns {void}
+     */
+    self.deleteQueryEditor = (appTabId, editorTabId) => {
+        // Delete the deleted tab editor instance
+        if (hasTabEditor(appTabId, editorTabId)) {
+            delTabEditor(appTabId, editorTabId);
+        }
+    };
+
+    /**
+     * @param {string} containerId
+     * @param {string} driver
+     *
+     * @returns {void}
+     */
+    self.createSelectEditor = (containerId, driver) => {
+        editor.select = ace.edit(containerId, {
+            mode: editor.modes[driver] ?? editor.modes.sql,
+            selectionStyle: "text",
+            dragEnabled: false,
+            useWorker: false,
+            showPrintMargin: false,
+            showLineNumbers: false,
+            showGutter: false, // Also hide the line number "column".
+            readOnly: true,
+        });
+        editor.select.setTheme(editor.theme);
+        editor.select.session.setUseWrapMode(true);
+        editor.select.resize();
+        document.getElementById(containerId).style.fontSize = editor.fontSize;
+    };
 
     /**
      * Read the data-query-id attribute in the parent with the given tag name
@@ -806,7 +921,7 @@ jaxon.dom.ready(() => {
          *
          * @returns {void}
          */
-        copySqlQuery: (node, prefix) => self.setSqlQuery(getHistoryQuery(node, prefix)),
+        copyQueryText: (node, prefix) => self.setSqlQuery(getHistoryQuery(node, prefix)),
 
         /**
          * @param {Element} node
@@ -814,7 +929,7 @@ jaxon.dom.ready(() => {
          *
          * @returns {void}
          */
-        insertSqlQuery: (node, prefix) => editor.ace.insert(getHistoryQuery(node, prefix)),
+        insertQuerytext: (node, prefix) => editor.query.insert(getHistoryQuery(node, prefix)),
     };
 
     self.favorite = {
@@ -831,7 +946,7 @@ jaxon.dom.ready(() => {
          *
          * @returns {string}
          */
-        getSqlQuery: (node, prefix) => getFavoriteQuery(node, prefix),
+        getQueryText: (node, prefix) => getFavoriteQuery(node, prefix),
 
         /**
          * @param {Element} node
@@ -839,7 +954,7 @@ jaxon.dom.ready(() => {
          *
          * @returns {void}
          */
-        copySqlQuery: (node, prefix) => self.setSqlQuery(getFavoriteQuery(node, prefix)),
+        copyQueryText: (node, prefix) => self.setSqlQuery(getFavoriteQuery(node, prefix)),
 
         /**
          * @param {Element} node
@@ -847,7 +962,7 @@ jaxon.dom.ready(() => {
          *
          * @returns {void}
          */
-        insertSqlQuery: (node, prefix) => editor.ace.insert(getFavoriteQuery(node, prefix)),
+        insertQuerytext: (node, prefix) => editor.query.insert(getFavoriteQuery(node, prefix)),
     };
 })(jaxon.dbadmin);
 

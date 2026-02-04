@@ -32,7 +32,7 @@ class DbAdminPackageConfig
                 ],
             ],
             'jaxon.lib.core.request.uri' => '/jaxon',
-            'jaxon.app.assets.file' => 'admin-0.6.1',
+            'jaxon.app.assets.file' => 'admin-0.7.0',
         ]);
 
         return $next($request);

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3656985c865b4f4c17817da95b9f8f6c",
+    "content-hash": "5b6c61e5728037bde159c7c7d85969aa",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1266,16 +1266,16 @@
         },
         {
             "name": "jaxon-php/jaxon-core",
-            "version": "v5.6.0",
+            "version": "v5.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jaxon-php/jaxon-core.git",
-                "reference": "0abab2285142dd71e8912404bf191df87705d0e0"
+                "reference": "1060a129b103e40b1f054ebeb110ad80cf0d9a84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jaxon-php/jaxon-core/zipball/0abab2285142dd71e8912404bf191df87705d0e0",
-                "reference": "0abab2285142dd71e8912404bf191df87705d0e0",
+                "url": "https://api.github.com/repos/jaxon-php/jaxon-core/zipball/1060a129b103e40b1f054ebeb110ad80cf0d9a84",
+                "reference": "1060a129b103e40b1f054ebeb110ad80cf0d9a84",
                 "shasum": ""
             },
             "require": {
@@ -1346,7 +1346,7 @@
                 "issues": "https://github.com/jaxon-php/jaxon-core/issues",
                 "source": "https://github.com/jaxon-php/jaxon-core"
             },
-            "time": "2026-02-01T01:11:51+00:00"
+            "time": "2026-02-03T00:20:18+00:00"
         },
         {
             "name": "jaxon-php/jaxon-dialogs",
@@ -1920,16 +1920,16 @@
         },
         {
             "name": "lagdo/jaxon-dbadmin",
-            "version": "v0.27.7",
+            "version": "v0.28.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lagdo/jaxon-dbadmin.git",
-                "reference": "1ffe541372cc329b796155449565cbb6ee6fc153"
+                "reference": "3dadd6783b1d997f77ddc475e9bff7e899c1ebc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lagdo/jaxon-dbadmin/zipball/1ffe541372cc329b796155449565cbb6ee6fc153",
-                "reference": "1ffe541372cc329b796155449565cbb6ee6fc153",
+                "url": "https://api.github.com/repos/lagdo/jaxon-dbadmin/zipball/3dadd6783b1d997f77ddc475e9bff7e899c1ebc1",
+                "reference": "3dadd6783b1d997f77ddc475e9bff7e899c1ebc1",
                 "shasum": ""
             },
             "require": {
@@ -1988,7 +1988,7 @@
                 "issues": "https://github.com/lagdo/jaxon-dbadmin/issues",
                 "source": "https://github.com/lagdo/jaxon-dbadmin"
             },
-            "time": "2026-02-01T12:24:17+00:00"
+            "time": "2026-02-04T16:04:26+00:00"
         },
         {
             "name": "lagdo/jaxon-ui-builder",
