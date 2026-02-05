@@ -18,50 +18,52 @@ const jx = {
   c1: 'Lagdo.DbAdmin.Ajax.Admin.Db.Command.Query.FavoriteFunc',
   c2: 'Lagdo.DbAdmin.Ajax.Admin.Db.Command.Query.FavoritePage',
   c3: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Database',
-  c4: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Events',
-  c5: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Export',
-  c6: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Import',
-  c7: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Query',
-  c8: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Routines',
-  c9: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Sequences',
-  c10: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Tables',
-  c11: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.UserTypes',
-  c12: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Views',
-  c13: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Databases',
-  c14: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Export',
-  c15: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Import',
-  c16: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Privilege',
-  c17: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Privileges',
-  c18: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Processes',
-  c19: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Query',
-  c20: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Status',
-  c21: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Variables',
-  c22: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Ddl.Alter',
-  c23: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Ddl.Column.CreateFunc',
-  c24: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Ddl.Column.DeleteFunc',
-  c25: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Ddl.Column.MoveFunc',
-  c26: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Ddl.Column.UpdateFunc',
-  c27: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Ddl.Create',
-  c28: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Ddl.QueryFunc',
-  c29: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Ddl.Table',
-  c30: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Ddl.TableFunc',
-  c31: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dml.Delete',
-  c32: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dml.Insert',
-  c33: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dml.Update',
-  c34: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.Options.Fields.Columns',
-  c35: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.Options.Fields.Filters',
-  c36: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.Options.Fields.Form.Columns',
-  c37: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.Options.Fields.Form.Filters',
-  c38: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.Options.Fields.Form.Sorting',
-  c39: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.Options.Fields.Sorting',
-  c40: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.Options.Values',
-  c41: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.ResultSet',
-  c42: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.Select',
-  c43: 'Lagdo.DbAdmin.Ajax.Admin.Db.View.Ddl.Form',
-  c44: 'Lagdo.DbAdmin.Ajax.Admin.Db.View.Ddl.View',
-  c45: 'Lagdo.DbAdmin.Ajax.Admin.Db.View.Ddl.ViewFunc',
-  c46: 'Lagdo.DbAdmin.Ajax.Admin.Db.View.Dql.Select',
-  c47: 'Lagdo.DbAdmin.Ajax.Admin.TabFunc',
+  c4: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.EditorFunc',
+  c5: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Events',
+  c6: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Export',
+  c7: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Import',
+  c8: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Query',
+  c9: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Routines',
+  c10: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Sequences',
+  c11: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Tables',
+  c12: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.UserTypes',
+  c13: 'Lagdo.DbAdmin.Ajax.Admin.Db.Database.Views',
+  c14: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Databases',
+  c15: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.EditorFunc',
+  c16: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Export',
+  c17: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Import',
+  c18: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Privilege',
+  c19: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Privileges',
+  c20: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Processes',
+  c21: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Query',
+  c22: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Status',
+  c23: 'Lagdo.DbAdmin.Ajax.Admin.Db.Server.Variables',
+  c24: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Ddl.Alter',
+  c25: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Ddl.Column.CreateFunc',
+  c26: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Ddl.Column.DeleteFunc',
+  c27: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Ddl.Column.MoveFunc',
+  c28: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Ddl.Column.UpdateFunc',
+  c29: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Ddl.Create',
+  c30: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Ddl.QueryFunc',
+  c31: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Ddl.Table',
+  c32: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Ddl.TableFunc',
+  c33: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dml.Delete',
+  c34: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dml.Insert',
+  c35: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dml.Update',
+  c36: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.Options.Fields.Columns',
+  c37: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.Options.Fields.Filters',
+  c38: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.Options.Fields.Form.Columns',
+  c39: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.Options.Fields.Form.Filters',
+  c40: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.Options.Fields.Form.Sorting',
+  c41: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.Options.Fields.Sorting',
+  c42: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.Options.Values',
+  c43: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.ResultSet',
+  c44: 'Lagdo.DbAdmin.Ajax.Admin.Db.Table.Dql.Select',
+  c45: 'Lagdo.DbAdmin.Ajax.Admin.Db.View.Ddl.Form',
+  c46: 'Lagdo.DbAdmin.Ajax.Admin.Db.View.Ddl.View',
+  c47: 'Lagdo.DbAdmin.Ajax.Admin.Db.View.Ddl.ViewFunc',
+  c48: 'Lagdo.DbAdmin.Ajax.Admin.Db.View.Dql.Select',
+  c49: 'Lagdo.DbAdmin.Ajax.Admin.TabFunc',
 };
 
 Lagdo = {
@@ -69,250 +71,255 @@ Lagdo = {
     Ajax: {
       Admin: {
         Admin: {
-          connect: (...args) => jx.rc(jx.c0, 'connect', args, { bags: ["dbadmin","dbadmin.tab"] }),
           server: (...args) => jx.rc(jx.c0, 'server', args, { bags: ["dbadmin","dbadmin.tab"] }),
         },
         Db: {
           Command: {
             Query: {
               FavoriteFunc: {
-                add: (...args) => jx.rc(jx.c1, 'add', args, { bags: ["dbadmin","dbadmin.tab"] }),
-                create: (...args) => jx.rc(jx.c1, 'create', args, { bags: ["dbadmin","dbadmin.tab"] }),
-                edit: (...args) => jx.rc(jx.c1, 'edit', args, { bags: ["dbadmin","dbadmin.tab"] }),
-                update: (...args) => jx.rc(jx.c1, 'update', args, { bags: ["dbadmin","dbadmin.tab"] }),
-                delete: (...args) => jx.rc(jx.c1, 'delete', args, { bags: ["dbadmin","dbadmin.tab"] }),
+                add: (...args) => jx.rc(jx.c1, 'add', args, { bags: ["dbadmin"] }),
+                create: (...args) => jx.rc(jx.c1, 'create', args, { bags: ["dbadmin"] }),
+                edit: (...args) => jx.rc(jx.c1, 'edit', args, { bags: ["dbadmin"] }),
+                update: (...args) => jx.rc(jx.c1, 'update', args, { bags: ["dbadmin"] }),
+                delete: (...args) => jx.rc(jx.c1, 'delete', args, { bags: ["dbadmin"] }),
               },
               FavoritePage: {
-                html: (...args) => jx.rc(jx.c2, 'html', args, { bags: ["dbadmin","dbadmin.tab"] }),
-                page: (...args) => jx.rc(jx.c2, 'page', args, { bags: ["dbadmin","dbadmin.tab"] }),
-                paginationAttributes: (...args) => jx.rc(jx.c2, 'paginationAttributes', args, { bags: ["dbadmin","dbadmin.tab"] }),
-                clear: (...args) => jx.rc(jx.c2, 'clear', args, { bags: ["dbadmin","dbadmin.tab"] }),
-                visible: (...args) => jx.rc(jx.c2, 'visible', args, { bags: ["dbadmin","dbadmin.tab"] }),
-                render: (...args) => jx.rc(jx.c2, 'render', args, { bags: ["dbadmin","dbadmin.tab"] }),
-                item: (...args) => jx.rc(jx.c2, 'item', args, { bags: ["dbadmin","dbadmin.tab"] }),
+                html: (...args) => jx.rc(jx.c2, 'html', args, { bags: ["dbadmin"] }),
+                page: (...args) => jx.rc(jx.c2, 'page', args, { bags: ["dbadmin"] }),
+                paginationAttributes: (...args) => jx.rc(jx.c2, 'paginationAttributes', args, { bags: ["dbadmin"] }),
+                clear: (...args) => jx.rc(jx.c2, 'clear', args, { bags: ["dbadmin"] }),
+                visible: (...args) => jx.rc(jx.c2, 'visible', args, { bags: ["dbadmin"] }),
+                render: (...args) => jx.rc(jx.c2, 'render', args, { bags: ["dbadmin"] }),
+                item: (...args) => jx.rc(jx.c2, 'item', args, { bags: ["dbadmin"] }),
               },
             },
           },
           Database: {
             Database: {
-              select: (...args) => jx.rc(jx.c3, 'select', args, { bags: ["dbadmin","dbadmin.tab"] }),
-              add: (...args) => jx.rc(jx.c3, 'add', args, { bags: ["dbadmin","dbadmin.tab"] }),
-              create: (...args) => jx.rc(jx.c3, 'create', args, { bags: ["dbadmin","dbadmin.tab"] }),
-              drop: (...args) => jx.rc(jx.c3, 'drop', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              select: (...args) => jx.rc(jx.c3, 'select', args, { bags: ["dbadmin"] }),
+              add: (...args) => jx.rc(jx.c3, 'add', args, { bags: ["dbadmin"] }),
+              create: (...args) => jx.rc(jx.c3, 'create', args, { bags: ["dbadmin"] }),
+              drop: (...args) => jx.rc(jx.c3, 'drop', args, { bags: ["dbadmin"] }),
+            },
+            EditorFunc: {
+              addTab: (...args) => jx.rc(jx.c4, 'addTab', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              cloneTab: (...args) => jx.rc(jx.c4, 'cloneTab', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              delTab: (...args) => jx.rc(jx.c4, 'delTab', args, { bags: ["dbadmin","dbadmin.tab"] }),
             },
             Events: {
-              show: (...args) => jx.rc(jx.c4, 'show', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              show: (...args) => jx.rc(jx.c5, 'show', args, { bags: ["dbadmin"] }),
             },
             Export: {
-              database: (...args) => jx.rc(jx.c5, 'database', args, { bags: ["dbadmin","dbadmin.tab"] }),
-              export: (...args) => jx.rc(jx.c5, 'export', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              database: (...args) => jx.rc(jx.c6, 'database', args, { bags: ["dbadmin"] }),
+              export: (...args) => jx.rc(jx.c6, 'export', args, { bags: ["dbadmin"] }),
             },
             Import: {
-              database: (...args) => jx.rc(jx.c6, 'database', args, { bags: ["dbadmin","dbadmin.tab"] }),
-              executeWebFile: (...args) => jx.rc(jx.c6, 'executeWebFile', args, { bags: ["dbadmin","dbadmin.tab"] }),
-              executeSqlFiles: (...args) => jx.rc(jx.c6, 'executeSqlFiles', args, { bags: ["dbadmin","dbadmin.tab"], upload: 'dbadmin-import-sql-files-input' }),
+              database: (...args) => jx.rc(jx.c7, 'database', args, { bags: ["dbadmin"] }),
+              executeWebFile: (...args) => jx.rc(jx.c7, 'executeWebFile', args, { bags: ["dbadmin"] }),
+              executeSqlFiles: (...args) => jx.rc(jx.c7, 'executeSqlFiles', args, { bags: ["dbadmin"], upload: 'dbadmin-import-sql-files-input' }),
             },
             Query: {
-              database: (...args) => jx.rc(jx.c7, 'database', args, { bags: ["dbadmin","dbadmin.tab"] }),
-              exec: (...args) => jx.rc(jx.c7, 'exec', args, { bags: ["dbadmin","dbadmin.tab"] }),
-              addTab: (...args) => jx.rc(jx.c7, 'addTab', args, { bags: ["dbadmin","dbadmin.tab"] }),
-              delTab: (...args) => jx.rc(jx.c7, 'delTab', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              database: (...args) => jx.rc(jx.c8, 'database', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              exec: (...args) => jx.rc(jx.c8, 'exec', args, { bags: ["dbadmin","dbadmin.tab"] }),
             },
             Routines: {
-              show: (...args) => jx.rc(jx.c8, 'show', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              show: (...args) => jx.rc(jx.c9, 'show', args, { bags: ["dbadmin"] }),
             },
             Sequences: {
-              show: (...args) => jx.rc(jx.c9, 'show', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              show: (...args) => jx.rc(jx.c10, 'show', args, { bags: ["dbadmin"] }),
             },
             Tables: {
-              show: (...args) => jx.rc(jx.c10, 'show', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              show: (...args) => jx.rc(jx.c11, 'show', args, { bags: ["dbadmin"] }),
             },
             UserTypes: {
-              show: (...args) => jx.rc(jx.c11, 'show', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              show: (...args) => jx.rc(jx.c12, 'show', args, { bags: ["dbadmin"] }),
             },
             Views: {
-              show: (...args) => jx.rc(jx.c12, 'show', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              show: (...args) => jx.rc(jx.c13, 'show', args, { bags: ["dbadmin"] }),
             },
           },
           Server: {
             Databases: {
-              show: (...args) => jx.rc(jx.c13, 'show', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              show: (...args) => jx.rc(jx.c14, 'show', args, { bags: ["dbadmin"] }),
+            },
+            EditorFunc: {
+              addTab: (...args) => jx.rc(jx.c15, 'addTab', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              cloneTab: (...args) => jx.rc(jx.c15, 'cloneTab', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              delTab: (...args) => jx.rc(jx.c15, 'delTab', args, { bags: ["dbadmin","dbadmin.tab"] }),
             },
             Export: {
-              server: (...args) => jx.rc(jx.c14, 'server', args, { bags: ["dbadmin","dbadmin.tab"] }),
-              export: (...args) => jx.rc(jx.c14, 'export', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              server: (...args) => jx.rc(jx.c16, 'server', args, { bags: ["dbadmin"] }),
+              export: (...args) => jx.rc(jx.c16, 'export', args, { bags: ["dbadmin"] }),
             },
             Import: {
-              server: (...args) => jx.rc(jx.c15, 'server', args, { bags: ["dbadmin","dbadmin.tab"] }),
-              executeWebFile: (...args) => jx.rc(jx.c15, 'executeWebFile', args, { bags: ["dbadmin","dbadmin.tab"] }),
-              executeSqlFiles: (...args) => jx.rc(jx.c15, 'executeSqlFiles', args, { bags: ["dbadmin","dbadmin.tab"], upload: 'dbadmin-import-sql-files-input' }),
+              server: (...args) => jx.rc(jx.c17, 'server', args, { bags: ["dbadmin"] }),
+              executeWebFile: (...args) => jx.rc(jx.c17, 'executeWebFile', args, { bags: ["dbadmin"] }),
+              executeSqlFiles: (...args) => jx.rc(jx.c17, 'executeSqlFiles', args, { bags: ["dbadmin"], upload: 'dbadmin-import-sql-files-input' }),
             },
             Privilege: {
-              add: (...args) => jx.rc(jx.c16, 'add', args, { bags: ["dbadmin","dbadmin.tab"] }),
-              create: (...args) => jx.rc(jx.c16, 'create', args, { bags: ["dbadmin","dbadmin.tab"] }),
-              edit: (...args) => jx.rc(jx.c16, 'edit', args, { bags: ["dbadmin","dbadmin.tab"] }),
-              update: (...args) => jx.rc(jx.c16, 'update', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              add: (...args) => jx.rc(jx.c18, 'add', args, { bags: ["dbadmin"] }),
+              create: (...args) => jx.rc(jx.c18, 'create', args, { bags: ["dbadmin"] }),
+              edit: (...args) => jx.rc(jx.c18, 'edit', args, { bags: ["dbadmin"] }),
+              update: (...args) => jx.rc(jx.c18, 'update', args, { bags: ["dbadmin"] }),
             },
             Privileges: {
-              show: (...args) => jx.rc(jx.c17, 'show', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              show: (...args) => jx.rc(jx.c19, 'show', args, { bags: ["dbadmin"] }),
             },
             Processes: {
-              show: (...args) => jx.rc(jx.c18, 'show', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              show: (...args) => jx.rc(jx.c20, 'show', args, { bags: ["dbadmin"] }),
             },
             Query: {
-              server: (...args) => jx.rc(jx.c19, 'server', args, { bags: ["dbadmin","dbadmin.tab"] }),
-              exec: (...args) => jx.rc(jx.c19, 'exec', args, { bags: ["dbadmin","dbadmin.tab"] }),
-              addTab: (...args) => jx.rc(jx.c19, 'addTab', args, { bags: ["dbadmin","dbadmin.tab"] }),
-              delTab: (...args) => jx.rc(jx.c19, 'delTab', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              server: (...args) => jx.rc(jx.c21, 'server', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              exec: (...args) => jx.rc(jx.c21, 'exec', args, { bags: ["dbadmin","dbadmin.tab"] }),
             },
             Status: {
-              show: (...args) => jx.rc(jx.c20, 'show', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              show: (...args) => jx.rc(jx.c22, 'show', args, { bags: ["dbadmin"] }),
             },
             Variables: {
-              show: (...args) => jx.rc(jx.c21, 'show', args, { bags: ["dbadmin","dbadmin.tab"] }),
+              show: (...args) => jx.rc(jx.c23, 'show', args, { bags: ["dbadmin"] }),
             },
           },
           Table: {
             Ddl: {
               Alter: {
-                render: (...args) => jx.rc(jx.c22, 'render', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table"] }),
+                render: (...args) => jx.rc(jx.c24, 'render', args, { bags: ["dbadmin","dbadmin.table"] }),
               },
               Column: {
                 CreateFunc: {
-                  add: (...args) => jx.rc(jx.c23, 'add', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table"] }),
-                  save: (...args) => jx.rc(jx.c23, 'save', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table"] }),
+                  add: (...args) => jx.rc(jx.c25, 'add', args, { bags: ["dbadmin","dbadmin.table"] }),
+                  save: (...args) => jx.rc(jx.c25, 'save', args, { bags: ["dbadmin","dbadmin.table"] }),
                 },
                 DeleteFunc: {
-                  exec: (...args) => jx.rc(jx.c24, 'exec', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table"] }),
-                  cancel: (...args) => jx.rc(jx.c24, 'cancel', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table"] }),
+                  exec: (...args) => jx.rc(jx.c26, 'exec', args, { bags: ["dbadmin","dbadmin.table"] }),
+                  cancel: (...args) => jx.rc(jx.c26, 'cancel', args, { bags: ["dbadmin","dbadmin.table"] }),
                 },
                 MoveFunc: {
-                  up: (...args) => jx.rc(jx.c25, 'up', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table"] }),
-                  down: (...args) => jx.rc(jx.c25, 'down', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table"] }),
+                  up: (...args) => jx.rc(jx.c27, 'up', args, { bags: ["dbadmin","dbadmin.table"] }),
+                  down: (...args) => jx.rc(jx.c27, 'down', args, { bags: ["dbadmin","dbadmin.table"] }),
                 },
                 UpdateFunc: {
-                  edit: (...args) => jx.rc(jx.c26, 'edit', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table"] }),
-                  save: (...args) => jx.rc(jx.c26, 'save', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table"] }),
-                  cancel: (...args) => jx.rc(jx.c26, 'cancel', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table"] }),
+                  edit: (...args) => jx.rc(jx.c28, 'edit', args, { bags: ["dbadmin","dbadmin.table"] }),
+                  save: (...args) => jx.rc(jx.c28, 'save', args, { bags: ["dbadmin","dbadmin.table"] }),
+                  cancel: (...args) => jx.rc(jx.c28, 'cancel', args, { bags: ["dbadmin","dbadmin.table"] }),
                 },
               },
               Create: {
-                render: (...args) => jx.rc(jx.c27, 'render', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table"] }),
+                render: (...args) => jx.rc(jx.c29, 'render', args, { bags: ["dbadmin","dbadmin.table"] }),
               },
               QueryFunc: {
-                changes: (...args) => jx.rc(jx.c28, 'changes', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table"] }),
-                createTable: (...args) => jx.rc(jx.c28, 'createTable', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table"] }),
-                alterTable: (...args) => jx.rc(jx.c28, 'alterTable', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table"] }),
+                changes: (...args) => jx.rc(jx.c30, 'changes', args, { bags: ["dbadmin","dbadmin.table"] }),
+                createTable: (...args) => jx.rc(jx.c30, 'createTable', args, { bags: ["dbadmin","dbadmin.table"] }),
+                alterTable: (...args) => jx.rc(jx.c30, 'alterTable', args, { bags: ["dbadmin","dbadmin.table"] }),
               },
               Table: {
-                show: (...args) => jx.rc(jx.c29, 'show', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table"] }),
+                show: (...args) => jx.rc(jx.c31, 'show', args, { bags: ["dbadmin","dbadmin.table"] }),
               },
               TableFunc: {
-                create: (...args) => jx.rc(jx.c30, 'create', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table"] }),
-                alter: (...args) => jx.rc(jx.c30, 'alter', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table"] }),
-                drop: (...args) => jx.rc(jx.c30, 'drop', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table"] }),
+                create: (...args) => jx.rc(jx.c32, 'create', args, { bags: ["dbadmin","dbadmin.table"] }),
+                alter: (...args) => jx.rc(jx.c32, 'alter', args, { bags: ["dbadmin","dbadmin.table"] }),
+                drop: (...args) => jx.rc(jx.c32, 'drop', args, { bags: ["dbadmin","dbadmin.table"] }),
               },
             },
             Dml: {
               Delete: {
-                exec: (...args) => jx.rc(jx.c31, 'exec', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                showQueryCode: (...args) => jx.rc(jx.c31, 'showQueryCode', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
+                exec: (...args) => jx.rc(jx.c33, 'exec', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                showQueryCode: (...args) => jx.rc(jx.c33, 'showQueryCode', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
               },
               Insert: {
-                show: (...args) => jx.rc(jx.c32, 'show', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                save: (...args) => jx.rc(jx.c32, 'save', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                showQueryForm: (...args) => jx.rc(jx.c32, 'showQueryForm', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                showQueryCode: (...args) => jx.rc(jx.c32, 'showQueryCode', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
+                show: (...args) => jx.rc(jx.c34, 'show', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                save: (...args) => jx.rc(jx.c34, 'save', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                showQueryForm: (...args) => jx.rc(jx.c34, 'showQueryForm', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                showQueryCode: (...args) => jx.rc(jx.c34, 'showQueryCode', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
               },
               Update: {
-                edit: (...args) => jx.rc(jx.c33, 'edit', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                save: (...args) => jx.rc(jx.c33, 'save', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                showQueryForm: (...args) => jx.rc(jx.c33, 'showQueryForm', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                showQueryCode: (...args) => jx.rc(jx.c33, 'showQueryCode', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
+                edit: (...args) => jx.rc(jx.c35, 'edit', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                save: (...args) => jx.rc(jx.c35, 'save', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                showQueryForm: (...args) => jx.rc(jx.c35, 'showQueryForm', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                showQueryCode: (...args) => jx.rc(jx.c35, 'showQueryCode', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
               },
             },
             Dql: {
               Options: {
                 Fields: {
                   Columns: {
-                    edit: (...args) => jx.rc(jx.c34, 'edit', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                    save: (...args) => jx.rc(jx.c34, 'save', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
+                    edit: (...args) => jx.rc(jx.c36, 'edit', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                    save: (...args) => jx.rc(jx.c36, 'save', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
                   },
                   Filters: {
-                    edit: (...args) => jx.rc(jx.c35, 'edit', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                    save: (...args) => jx.rc(jx.c35, 'save', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
+                    edit: (...args) => jx.rc(jx.c37, 'edit', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                    save: (...args) => jx.rc(jx.c37, 'save', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
                   },
                   Form: {
                     Columns: {
-                      show: (...args) => jx.rc(jx.c36, 'show', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                      add: (...args) => jx.rc(jx.c36, 'add', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                      del: (...args) => jx.rc(jx.c36, 'del', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
+                      show: (...args) => jx.rc(jx.c38, 'show', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                      add: (...args) => jx.rc(jx.c38, 'add', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                      del: (...args) => jx.rc(jx.c38, 'del', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
                     },
                     Filters: {
-                      show: (...args) => jx.rc(jx.c37, 'show', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                      add: (...args) => jx.rc(jx.c37, 'add', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                      del: (...args) => jx.rc(jx.c37, 'del', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
+                      show: (...args) => jx.rc(jx.c39, 'show', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                      add: (...args) => jx.rc(jx.c39, 'add', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                      del: (...args) => jx.rc(jx.c39, 'del', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
                     },
                     Sorting: {
-                      show: (...args) => jx.rc(jx.c38, 'show', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                      add: (...args) => jx.rc(jx.c38, 'add', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                      del: (...args) => jx.rc(jx.c38, 'del', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
+                      show: (...args) => jx.rc(jx.c40, 'show', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                      add: (...args) => jx.rc(jx.c40, 'add', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                      del: (...args) => jx.rc(jx.c40, 'del', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
                     },
                   },
                   Sorting: {
-                    edit: (...args) => jx.rc(jx.c39, 'edit', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                    save: (...args) => jx.rc(jx.c39, 'save', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
+                    edit: (...args) => jx.rc(jx.c41, 'edit', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                    save: (...args) => jx.rc(jx.c41, 'save', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
                   },
                 },
                 Values: {
-                  saveSelectLimit: (...args) => jx.rc(jx.c40, 'saveSelectLimit', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                  saveSelectTotal: (...args) => jx.rc(jx.c40, 'saveSelectTotal', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                  saveTextLength: (...args) => jx.rc(jx.c40, 'saveTextLength', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
+                  saveSelectLimit: (...args) => jx.rc(jx.c42, 'saveSelectLimit', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                  saveSelectTotal: (...args) => jx.rc(jx.c42, 'saveSelectTotal', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                  saveTextLength: (...args) => jx.rc(jx.c42, 'saveTextLength', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
                 },
               },
               ResultSet: {
-                html: (...args) => jx.rc(jx.c41, 'html', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                page: (...args) => jx.rc(jx.c41, 'page', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                paginationAttributes: (...args) => jx.rc(jx.c41, 'paginationAttributes', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                clear: (...args) => jx.rc(jx.c41, 'clear', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                visible: (...args) => jx.rc(jx.c41, 'visible', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                render: (...args) => jx.rc(jx.c41, 'render', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                item: (...args) => jx.rc(jx.c41, 'item', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
+                html: (...args) => jx.rc(jx.c43, 'html', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                page: (...args) => jx.rc(jx.c43, 'page', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                paginationAttributes: (...args) => jx.rc(jx.c43, 'paginationAttributes', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                clear: (...args) => jx.rc(jx.c43, 'clear', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                visible: (...args) => jx.rc(jx.c43, 'visible', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                render: (...args) => jx.rc(jx.c43, 'render', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                item: (...args) => jx.rc(jx.c43, 'item', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
               },
               Select: {
-                show: (...args) => jx.rc(jx.c42, 'show', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                edit: (...args) => jx.rc(jx.c42, 'edit', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
+                show: (...args) => jx.rc(jx.c44, 'show', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                edit: (...args) => jx.rc(jx.c44, 'edit', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select","dbadmin.tab"] }),
               },
             },
           },
           View: {
             Ddl: {
               Form: {
-                add: (...args) => jx.rc(jx.c43, 'add', args, { bags: ["dbadmin","dbadmin.tab"] }),
-                edit: (...args) => jx.rc(jx.c43, 'edit', args, { bags: ["dbadmin","dbadmin.tab"] }),
+                add: (...args) => jx.rc(jx.c45, 'add', args, { bags: ["dbadmin"] }),
+                edit: (...args) => jx.rc(jx.c45, 'edit', args, { bags: ["dbadmin"] }),
               },
               View: {
-                show: (...args) => jx.rc(jx.c44, 'show', args, { bags: ["dbadmin","dbadmin.tab"] }),
+                show: (...args) => jx.rc(jx.c46, 'show', args, { bags: ["dbadmin"] }),
               },
               ViewFunc: {
-                create: (...args) => jx.rc(jx.c45, 'create', args, { bags: ["dbadmin","dbadmin.tab"] }),
-                update: (...args) => jx.rc(jx.c45, 'update', args, { bags: ["dbadmin","dbadmin.tab"] }),
-                drop: (...args) => jx.rc(jx.c45, 'drop', args, { bags: ["dbadmin","dbadmin.tab"] }),
+                create: (...args) => jx.rc(jx.c47, 'create', args, { bags: ["dbadmin"] }),
+                update: (...args) => jx.rc(jx.c47, 'update', args, { bags: ["dbadmin"] }),
+                drop: (...args) => jx.rc(jx.c47, 'drop', args, { bags: ["dbadmin"] }),
               },
             },
             Dql: {
               Select: {
-                show: (...args) => jx.rc(jx.c46, 'show', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
-                edit: (...args) => jx.rc(jx.c46, 'edit', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.table","dbadmin.select"] }),
+                show: (...args) => jx.rc(jx.c48, 'show', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
+                edit: (...args) => jx.rc(jx.c48, 'edit', args, { bags: ["dbadmin","dbadmin.table","dbadmin.select"] }),
               },
             },
           },
         },
         TabFunc: {
-          add: (...args) => jx.rc(jx.c47, 'add', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.tabs"] }),
-          del: (...args) => jx.rc(jx.c47, 'del', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.tabs"] }),
-          editTitle: (...args) => jx.rc(jx.c47, 'editTitle', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.tabs"] }),
-          saveTitle: (...args) => jx.rc(jx.c47, 'saveTitle', args, { bags: ["dbadmin","dbadmin.tab","dbadmin.tabs"] }),
+          add: (...args) => jx.rc(jx.c49, 'add', args, { bags: ["dbadmin","dbadmin.tab"] }),
+          del: (...args) => jx.rc(jx.c49, 'del', args, { bags: ["dbadmin","dbadmin.tab"] }),
+          editTitle: (...args) => jx.rc(jx.c49, 'editTitle', args, { bags: ["dbadmin","dbadmin.tab"] }),
+          saveTitle: (...args) => jx.rc(jx.c49, 'saveTitle', args, { bags: ["dbadmin","dbadmin.tab"] }),
         },
       },
     },
@@ -713,7 +720,7 @@ jaxon.dom.ready(() => {
      *
      * @returns {void}
      */
-    self.setSqlQuery = (query) => editor.query?.session.setValue(query);
+    self.setQueryText = (query) => editor.query?.session.setValue(query);
 
     /**
      * @param {string} appTabId
@@ -858,6 +865,20 @@ jaxon.dom.ready(() => {
     };
 
     /**
+     * @param {string} appTabId
+     * @param {string} sourceTabId
+     *
+     * @returns {void}
+     */
+    self.copyQueryText = (appTabId, sourceTabId) => {
+        const sourceEditor = getTabEditor(appTabId, sourceTabId);
+        if (sourceEditor !== null) {
+            // Copy the query text from the source editor.
+            editor.query.session.setValue(sourceEditor.getValue());
+        }
+    };
+
+    /**
      * @param {string} containerId
      * @param {string} driver
      *
@@ -914,6 +935,35 @@ jaxon.dom.ready(() => {
      */
     const getFavoriteQuery = (node, prefix) => $(`#${prefix}` + getQueryId(node, 'td')).text();
 
+    /**
+     * @var {object}
+     */
+    const toast = {
+        lib: '',
+        messages: {
+            copied: 'Copied!',
+            inserted: 'Inserted!',
+        },
+    };
+
+    /**
+     * @param {string}
+     *
+     * @returns {void}
+     */
+    self.setToastLib = (lib) => toast.lib = lib;
+
+    /**
+     * @param {string}
+     *
+     * @returns {void}
+     */
+    const showInfoMessage = (message) => {
+        if (toast.lib !== '') {
+            jaxon.dialog.alert(toast.lib, { type: 'info', text: message });
+        }
+    };
+
     self.history =  {
         /**
          * @param {Element} node
@@ -921,7 +971,10 @@ jaxon.dom.ready(() => {
          *
          * @returns {void}
          */
-        copyQueryText: (node, prefix) => self.setSqlQuery(getHistoryQuery(node, prefix)),
+        copyQueryText: (node, prefix) => {
+            self.setQueryText(getHistoryQuery(node, prefix));
+            showInfoMessage(toast.messages.copied);
+        },
 
         /**
          * @param {Element} node
@@ -929,7 +982,10 @@ jaxon.dom.ready(() => {
          *
          * @returns {void}
          */
-        insertQuerytext: (node, prefix) => editor.query.insert(getHistoryQuery(node, prefix)),
+        insertQuerytext: (node, prefix) => {
+            editor.query.insert(getHistoryQuery(node, prefix));
+            showInfoMessage(toast.messages.inserted);
+        },
     };
 
     self.favorite = {
@@ -954,7 +1010,10 @@ jaxon.dom.ready(() => {
          *
          * @returns {void}
          */
-        copyQueryText: (node, prefix) => self.setSqlQuery(getFavoriteQuery(node, prefix)),
+        copyQueryText: (node, prefix) => {
+            self.setQueryText(getFavoriteQuery(node, prefix));
+            showInfoMessage(toast.messages.copied);
+        },
 
         /**
          * @param {Element} node
@@ -962,9 +1021,14 @@ jaxon.dom.ready(() => {
          *
          * @returns {void}
          */
-        insertQuerytext: (node, prefix) => editor.query.insert(getFavoriteQuery(node, prefix)),
+        insertQuerytext: (node, prefix) => {
+            editor.query.insert(getFavoriteQuery(node, prefix));
+            showInfoMessage(toast.messages.inserted);
+        },
     };
 })(jaxon.dbadmin);
+
+jaxon.dom.ready(() => jaxon.dbadmin.setToastLib('notyf'));
 
 /**
  * Bootbox dialogs plugin
@@ -1149,4 +1213,81 @@ jaxon.dom.ready(() => jaxon.dialog.register('sweetalert', (self, options) => {
     }).then((result) => {
         result.isConfirmed ? yesCb() : noCb();
     });
+}));
+
+/**
+ * Class: jaxon.dialog.libs.notyf
+ */
+
+jaxon.dom.ready(() => jaxon.dialog.register('notyf', (self, options) => {
+    // Dialogs options
+    const {
+        alert: alertOptions = {},
+    } = options;
+
+    const xTypes = {
+        success: 'success',
+        info: 'info',
+        warning: 'warning',
+        error: 'error',
+    };
+
+    /*
+     * Todo: Define a custom icon for the warning and info messages,
+     * and re-enable the default one on the success and error messages.
+     */
+    const notyf = new Notyf({
+        duration: 5000,
+        ripple: false,
+        dismissible: true,
+        position: { x: 'center', y: 'top' },
+        types: [{
+            type: 'success',
+            className: 'notyf__toast--success',
+            backgroundColor: '#3dc763',
+            icon: false,
+            // icon: {
+            //     className: 'notyf__icon--success',
+            //     tagName: 'i',
+            // },
+        }, {
+            type: 'error',
+            className: 'notyf__toast--error',
+            backgroundColor: '#ed3d3d',
+            icon: false,
+            // icon: {
+            //     className: 'notyf__icon--error',
+            //     tagName: 'i',
+            // },
+        },{
+            type: 'warning',
+            background: '#FEBE10',
+            icon: false,
+            // icon: {
+            //     className: 'material-icons',
+            //     tagName: 'i',
+            //     color: 'white',
+            //     text: 'i',
+            // },
+        }, {
+            type: 'info',
+            background: '#318CE7',
+            icon: false,
+        }],
+        ...alertOptions,
+    });
+
+    /**
+     * Show an alert message
+     *
+     * @param {object} alert The alert parameters
+     * @param {string} alert.type The alert type
+     * @param {string} alert.message The alert message
+     * @param {string} alert.title The alert title
+     *
+     * @returns {void}
+     */
+    self.alert = ({ type, message, title }) => {
+        notyf.open({ type: xTypes[type] ?? xTypes.info, message });
+    };
 }));

@@ -2,6 +2,7 @@
 
 use App\Http\Middleware\DbAdminPackageConfig;
 use Lagdo\DbAdmin\Db\Config\UserFileReader;
+use Lagdo\DbAdmin\Db\DbAdminPackage;
 
 return [
     'app' => [
@@ -21,7 +22,10 @@ return [
         ],
         'directories' => [],
         'packages' => [
-            Lagdo\DbAdmin\Db\DbAdminPackage::class => [
+            DbAdminPackage::class => [
+                'toast' => [
+                    'lib' => 'notyf',
+                ],
                 'provider' => function(array $options) {
                     $di = jaxon()->di();
                     $reader = $di->g(UserFileReader::class);
@@ -48,6 +52,9 @@ return [
                 'modal' => 'bootbox',
                 'alert' => 'sweetalert',
                 'confirm' => 'sweetalert',
+            ],
+            'lib' => [
+                'use' => ['notyf'],
             ],
         ],
     ],

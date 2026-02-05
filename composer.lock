@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5b6c61e5728037bde159c7c7d85969aa",
+    "content-hash": "a9d5ab0d42c8acae1177ca313d953982",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1920,16 +1920,16 @@
         },
         {
             "name": "lagdo/jaxon-dbadmin",
-            "version": "v0.28.1",
+            "version": "v0.29.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lagdo/jaxon-dbadmin.git",
-                "reference": "3dadd6783b1d997f77ddc475e9bff7e899c1ebc1"
+                "reference": "2e4ea698c591365158e85a91f0fc43a68e3884de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lagdo/jaxon-dbadmin/zipball/3dadd6783b1d997f77ddc475e9bff7e899c1ebc1",
-                "reference": "3dadd6783b1d997f77ddc475e9bff7e899c1ebc1",
+                "url": "https://api.github.com/repos/lagdo/jaxon-dbadmin/zipball/2e4ea698c591365158e85a91f0fc43a68e3884de",
+                "reference": "2e4ea698c591365158e85a91f0fc43a68e3884de",
                 "shasum": ""
             },
             "require": {
@@ -1988,7 +1988,7 @@
                 "issues": "https://github.com/lagdo/jaxon-dbadmin/issues",
                 "source": "https://github.com/lagdo/jaxon-dbadmin"
             },
-            "time": "2026-02-04T16:04:26+00:00"
+            "time": "2026-02-05T10:36:40+00:00"
         },
         {
             "name": "lagdo/jaxon-ui-builder",
