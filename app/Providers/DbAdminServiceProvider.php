@@ -5,6 +5,7 @@ namespace App\Providers;
 use Dotenv\Dotenv;
 use Illuminate\Support\ServiceProvider;
 use Lagdo\DbAdmin\Db\Config\AuthInterface;
+use Lagdo\DbAdmin\Db\Config\UserFileReader;
 use Lagdo\DbAdmin\Db\DbAdminPackage;
 
 use function auth;
@@ -37,6 +38,11 @@ class DbAdminServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
+        // Set the path to the user access config file.
+        jaxon()->callback()->boot(fn() => jaxon()->di()
+            ->g(UserFileReader::class)
+            ->config($this->getDbAdminConfigFile()));
+
         // The authentication and config file need to be set in the Jaxon DI.
         jaxon()->di()->set(AuthInterface::class,
             fn() => new class implements AuthInterface {
@@ -49,7 +55,6 @@ class DbAdminServiceProvider extends ServiceProvider
                     return auth()->user()?->role?->name ?? '';
                 }
             });
-        jaxon()->di()->set('dbadmin_config_file_path', $this->getDbAdminConfigFile(...));
 
         // Make the DbADmin package available in the Laravel container.
         $this->app->singleton(DbAdminPackage::class,
