@@ -1,14 +1,17 @@
 <?php
 
-use App\Http\Controllers\ExportController;
 use Illuminate\Support\Facades\Route;
+use Lagdo\DbAdmin\Db\DbAdminPackage;
 use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
 
 Route::get('/', fn() => view('dbadmin'))
-    ->middleware(['auth', 'jaxon.dbadmin.config', 'jaxon.config']);
+    ->middleware(['auth', 'jaxon.dbadmin.config']);
 
-Route::get('/export/{filename}', ExportController::class)
-    ->middleware(['auth', 'jaxon.dbadmin.config', 'jaxon.config'])
+Route::get('/export/{filename}', function(string $filename) {
+    $reader = jaxon()->package(DbAdminPackage::class)->getOption('export.reader');
+    $content = !is_callable($reader) ? "No export reader set." : $reader($filename);
+    return response($content)->header('Content-Type', 'text/plain');
+})->middleware(['auth', 'jaxon.dbadmin.config'])
     ->name('export');;
 
 Route::get('/audit', fn() => view('dbaudit'))
