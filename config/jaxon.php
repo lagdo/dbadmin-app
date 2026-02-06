@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Middleware\DbAdminPackageConfig;
 use Jaxon\Di\Container;
 use Lagdo\DbAdmin\Db\Config\UserFileReader;
 use Lagdo\DbAdmin\Db\DbAdminPackage;
@@ -11,14 +10,6 @@ return [
             'cache' => [
                 'enabled' => true,
                 'dir' => storage_path('jaxon/attributes'),
-            ],
-        ],
-        'request' => [
-            'route' => 'jaxon.ajax', // The route name
-            'middlewares' => [
-                'web', // Includes the Illuminate\Session\Middleware\StartSession
-                // middleware, which returns a 419 error when the sessions has expired.
-                DbAdminPackageConfig::class,
             ],
         ],
         'directories' => [],
